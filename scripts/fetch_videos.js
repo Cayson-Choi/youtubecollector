@@ -15,7 +15,7 @@ const OUTPUT_FILE = path.join(__dirname, '../src/data/videos.json');
 const CHANNELS_FILE = path.join(__dirname, '../src/data/channels.json');
 
 const CATEGORY_KEYWORDS = {
-  'NanoBanana': ['나노바나나', 'nanobanana', 'nano banana', '나노', 'nano'],
+  'NanoBanana': ['나노바나나', 'nanobanana', 'nano banana', '나노 바나나'],
   'Gemini': ['gemini', '제미나이', 'gemini pro', 'gemini flash', 'gemini 2.0', '구글 ai', 'deepmind'],
   'ChatGPT': ['chatgpt', 'chat gpt', 'gpt', 'gpt-4', 'gpt-3', '챗gpt', '챗지피티', 'openai', 'o1', 'o3', 'o4'],
   'Claude': ['claude', '클로드', 'claude sonnet', 'claude opus', 'anthropic', '앤스로픽'],
