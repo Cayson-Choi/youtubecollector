@@ -31,8 +31,8 @@ echo.
 echo ---------------------------------------------------
 echo   [Step 1] Data Collection
 echo ---------------------------------------------------
-set /p DAYS="Enter days to look back (default 7): "
-if "%DAYS%"=="" set DAYS=7
+set /p DAYS="Enter days to look back (default 30): "
+if "%DAYS%"=="" set DAYS=30
 
 echo.
 echo   Collecting videos for the last %DAYS% days...

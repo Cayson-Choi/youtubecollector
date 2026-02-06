@@ -112,7 +112,7 @@ export default function AICollectorApp() {
             <div className="leading-tight">
               <div className="text-sm font-black tracking-tight text-white/90">AI Insight Collector</div>
               <div className="text-[11px] text-white/50 font-medium">
-                {videosData.length} weekly updates · {CATEGORIES.length} topics
+                {videosData.length} monthly updates · {CATEGORIES.length} topics
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function AICollectorApp() {
                     Live Repository
                 </div>
                 <h1 className="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">
-                    This Week in <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-fuchsia-400">Trending AI</span>
+                    This Month in <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-fuchsia-400">Trending AI</span>
                 </h1>
                 <p className="text-zinc-300 max-w-xl text-sm leading-relaxed">
                     A curated feed of the latest tutorials, news, and demos from the Korean AI community.
