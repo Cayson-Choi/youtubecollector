@@ -38,7 +38,10 @@ const CATEGORY_KEYWORDS = {
   'CapCut': ['capcut', '캡컷'],
   'Spline': ['spline', 'spline 3d', '스플라인'],
   'n8n': ['n8n', '엔에잇엔'],
-  'AGI': ['agi', '범용 인공지능', '인공 일반 지능']
+  'AGI': ['agi', '범용 인공지능', '인공 일반 지능'],
+  'Notion': ['notion', '노션'],
+  'Kling': ['kling', '클링', 'kling ai'],
+  'Stitch': ['stitch', '스티치', 'stich']
 };
 
 const getDateByDays = (days = 7) => {

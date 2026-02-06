@@ -27,7 +27,10 @@ const CATEGORIES = [
   'Runway',
   'Windsurf',
   'DeepSeek',
-  'Llama'
+  'Llama',
+  'Notion',
+  'Kling',
+  'Stitch'
 ];
 
 export default function AICollectorApp() {
