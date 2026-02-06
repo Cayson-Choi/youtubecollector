@@ -107,7 +107,9 @@ const fetchChannelVideos = async (channelId, handle, days = 7) => {
                     item.snippet.title,
                     item.snippet.description
                 );
-                if (categories.length === 0) categories.push('General');
+                
+                // If no categories match, return null (to be filtered out later)
+                if (categories.length === 0) return null;
 
                 return {
                     id: item.snippet.resourceId.videoId, // PlaylistItems uses resourceId.videoId
@@ -119,7 +121,8 @@ const fetchChannelVideos = async (channelId, handle, days = 7) => {
                     category: categories[0],
                     categories: categories
                 };
-            });
+            })
+            .filter(item => item !== null); // Filter out the nulls (non-matching videos)
 
         console.log(`   ✅ Found ${videos.length} videos from last ${days} days`);
         return videos;
