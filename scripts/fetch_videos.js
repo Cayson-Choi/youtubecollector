@@ -18,22 +18,27 @@ const CATEGORY_KEYWORDS = {
   'NanoBanana': ['나노바나나', 'nanobanana', 'nano banana', '나노 바나나'],
   'Gemini': ['gemini', '제미나이', 'gemini pro', 'gemini flash', 'gemini 2.0', '구글 ai', 'deepmind'],
   'ChatGPT': ['chatgpt', 'chat gpt', 'gpt', 'gpt-4', 'gpt-3', '챗gpt', '챗지피티', 'openai', 'o1', 'o3', 'o4'],
-  'Claude': ['claude', '클로드', 'claude sonnet', 'claude opus', 'anthropic', '앤스로픽'],
+  'Claude': ['claude', '클로드', 'claude sonnet', 'claude opus', 'claude code', '클로드 코드', 'anthropic', '앤스로픽'],
   'NotebookLM': ['notebooklm', 'notebook lm', '노트북lm', '노트북엘엠'],
   'Antigravity': ['antigravity', '안티그래비티', '앤티그래비티'],
   'Midjourney': ['midjourney', 'mid journey', '미드저니', '미드저니'],
   'Runway': ['runway', 'runway ml', '런웨이', '런에이', 'gen-2', 'gen-3', 'gen 2', 'gen 3'],
-  'Sora': ['sora', '소라', 'openai sora', 'openai video'],
+  'Sora': ['sora', '소라', 'openai sora', 'openai video', '소라2', '소라 2', 'sora2', 'sora 2'],
   'DeepSeek': ['deepseek', 'deep seek', '딥시크'],
   'Perplexity': ['perplexity', '퍼플렉시티', '퍼플렉시티', 'perplexity ai'],
   'Windsurf': ['windsurf', 'wind surf', '윈드서프', '윈드서퍼'],
   'Cursor': ['cursor', 'cursor ai', '커서', 'cursor ide'],
-  'Grok': ['grok', 'grok ai', '그록', 'xai', 'x ai'],
+  'Grok': ['grok', 'grok ai', '그록'],
   'Llama': ['llama', '라마', 'llama 3', 'llama 4', 'meta ai', 'meta llama'],
   'Suno': ['suno', 'suno ai', '수노'],
-  'OpenClaw': ['openclaw', 'open claw', '오픈클로', '오픈클로우', '몰트봇', 'moltbot', '클로드봇'],
+  'OpenClaw': ['openclaw', 'open claw', '오픈클로', '오픈클로우', '몰트봇', 'moltbot', '클로드봇', 'clawdbot'],
   'ZenSpark': ['zenspark', 'zen spark', '젠스파크'],
-  'Flow': ['flow', 'flow ai', '플로우', '플로']
+  'Flow': ['flow', 'flow ai', '플로우', '플로'],
+  'Replit': ['replit', '리플릿', '레플릿'],
+  'CapCut': ['capcut', '캡컷'],
+  'Spline': ['spline', 'spline 3d', '스플라인'],
+  'n8n': ['n8n', '엔에잇엔'],
+  'AGI': ['agi', '범용 인공지능', '인공 일반 지능']
 };
 
 const getDateByDays = (days = 7) => {
