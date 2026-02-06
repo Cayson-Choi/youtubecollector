@@ -43,13 +43,27 @@ const getDateByDays = (days = 7) => {
 };
 
 const determineCategories = (title, description) => {
-  const text = (title + ' ' + description).toLowerCase();
+  // Only check Title as requested (ignore description)
+  const text = title.toLowerCase(); 
   const matchedCategories = new Set();
 
   for (const [cat, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
-    if (keywords.some(k => text.includes(k))) {
-      matchedCategories.add(cat);
-    }
+    // Check strict word boundary for short English words (to avoid Flow vs TensorFlow)
+    const isMatch = keywords.some(k => {
+        // If keyword is Korean or multi-word, use simple includes
+        if (/[가-힣]/.test(k) || k.includes(' ')) {
+            return text.includes(k);
+        }
+        // If single English word, use Regex for word boundary
+        try {
+            const regex = new RegExp(`\\b${k}\\b`, 'i');
+            return regex.test(text);
+        } catch (e) {
+            return text.includes(k); // Fallback
+        }
+    });
+
+    if (isMatch) matchedCategories.add(cat);
   }
 
   return Array.from(matchedCategories);
