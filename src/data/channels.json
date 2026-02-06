@@ -1,11 +1,5 @@
 [
   {
-    "id": "UCQne2J7rk8o_ceP5W7XqY9w",
-    "handle": "@toesahanappa",
-    "title": "퇴사한 이형",
-    "category": "Career/AI"
-  },
-  {
     "id": "UCZS5EalNT9Bx2KH4LPErfyA",
     "title": "미리의 시스템 연구소 Miri System Lab",
     "handle": "@MiriSystemLab",
@@ -58,5 +52,11 @@
     "title": "에이커, 돈이되는 AI와 이커머스",
     "handle": "@에이커-돈이되는AI",
     "thumbnail": "https://yt3.ggpht.com/mtj22fIoL88KIEq_SuTDUrda4HvNLFRSPxs7v_E4qd5YcV6EtCC9btH1CqPDk2v9UZFEk9Du1w=s88-c-k-c0xffffffff-no-rj-mo"
+  },
+  {
+    "id": "UCbRPfngJms9A4QOczFl6qqg",
+    "title": "퇴사한아빠",
+    "handle": "@toesahanappa",
+    "thumbnail": "https://yt3.ggpht.com/rcjNyYuZDVv6ihQPnGm6rZoM8WHdsVUPi9FuM6yRQ3sTfg4MYEKqPVBy_S8pHhVNkbGP_oInAw=s88-c-k-c0x00ffffff-no-rj"
   }
 ]
