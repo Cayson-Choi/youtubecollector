@@ -148,8 +148,9 @@ app.delete('/api/channels/:id', (req, res) => {
 
 // 4. Trigger Fetch Script
 app.post('/api/fetch', (req, res) => {
-  console.log('🚀 Triggering Fetch Video Script...');
-  exec('node scripts/fetch_videos.js', (error, stdout, stderr) => {
+  const days = req.body.days || 7;
+  console.log(`🚀 Triggering Fetch Video Script (last ${days} days)...`);
+  exec(`node scripts/fetch_videos.js ${days}`, (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
       return res.status(500).json({ error: 'Fetch failed', details: stderr });
@@ -161,7 +162,8 @@ app.post('/api/fetch', (req, res) => {
 
 // 5. Deploy: Fetch + Commit + Push
 app.post('/api/deploy', async (req, res) => {
-  console.log('🚀 Starting Deployment: Fetch → Commit → Push');
+  const days = req.body.days || 7;
+  console.log(`🚀 Starting Deployment: Fetch (${days} days) → Commit → Push`);
 
   const execOptions = {
     cwd: __dirname,
@@ -173,11 +175,11 @@ app.post('/api/deploy', async (req, res) => {
 
   try {
     // Step 1: Fetch videos (continue even if this fails due to quota)
-    deployLog.push('Step 1: Fetching videos...');
-    console.log('Step 1: Fetching videos...');
+    deployLog.push(`Step 1: Fetching videos (last ${days} days)...`);
+    console.log(`Step 1: Fetching videos (last ${days} days)...`);
 
     try {
-      const fetchOutput = execSync('node scripts/fetch_videos.js', execOptions);
+      const fetchOutput = execSync(`node scripts/fetch_videos.js ${days}`, execOptions);
       console.log('✅ Videos fetched');
       deployLog.push('✅ Videos fetched successfully');
     } catch (fetchError) {

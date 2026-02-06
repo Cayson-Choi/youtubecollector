@@ -164,9 +164,9 @@ ipcMain.handle('open-browser', async () => {
 });
 
 // Deploy
-ipcMain.handle('deploy', async () => {
+ipcMain.handle('deploy', async (event, days = 7) => {
   try {
-    const response = await axios.post('http://localhost:3001/api/deploy');
+    const response = await axios.post('http://localhost:3001/api/deploy', { days: parseInt(days) });
     return { success: true, data: response.data };
   } catch (error) {
     return { success: false, error: error.response?.data || error.message };
@@ -174,9 +174,9 @@ ipcMain.handle('deploy', async () => {
 });
 
 // Fetch videos
-ipcMain.handle('fetch-videos', async () => {
+ipcMain.handle('fetch-videos', async (event, days = 7) => {
   try {
-    const response = await axios.post('http://localhost:3001/api/fetch');
+    const response = await axios.post('http://localhost:3001/api/fetch', { days: parseInt(days) });
     return { success: true, data: response.data };
   } catch (error) {
     return { success: false, error: error.response?.data || error.message };

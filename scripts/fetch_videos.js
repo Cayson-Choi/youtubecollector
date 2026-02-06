@@ -36,9 +36,9 @@ const CATEGORY_KEYWORDS = {
   'Flow': ['flow', 'flow ai', '플로우', '플로']
 };
 
-const getOneWeekAgoDate = () => {
+const getDateByDays = (days = 7) => {
   const date = new Date();
-  date.setDate(date.getDate() - 7); // 1 week (changed from 90 days)
+  date.setDate(date.getDate() - days);
   return date.toISOString();
 };
 
@@ -73,7 +73,7 @@ const getChannelUploadsPlaylistId = async (channelId) => {
 };
 
 // Fetch videos from playlist - Uses 1 quota (vs 100 for search)
-const fetchChannelVideos = async (channelId, handle) => {
+const fetchChannelVideos = async (channelId, handle, days = 7) => {
     try {
         console.log(`🔍 Scanning Channel: ${handle}...`);
 
@@ -96,11 +96,11 @@ const fetchChannelVideos = async (channelId, handle) => {
         }
 
         // Filter by date and map to our format
-        const oneWeekAgo = new Date(getOneWeekAgoDate());
+        const targetDate = new Date(getDateByDays(days));
         const videos = response.data.items
             .filter(item => {
                 const publishedDate = new Date(item.snippet.publishedAt);
-                return publishedDate >= oneWeekAgo;
+                return publishedDate >= targetDate;
             })
             .map(item => {
                 const categories = determineCategories(
@@ -121,7 +121,7 @@ const fetchChannelVideos = async (channelId, handle) => {
                 };
             });
 
-        console.log(`   ✅ Found ${videos.length} videos from last 7 days`);
+        console.log(`   ✅ Found ${videos.length} videos from last ${days} days`);
         return videos;
 
     } catch (error) {
@@ -132,6 +132,9 @@ const fetchChannelVideos = async (channelId, handle) => {
 };
 
 const main = async () => {
+  // Get days from command line argument (default: 7)
+  const days = parseInt(process.argv[2]) || 7;
+
   console.log('\n🚀 AI Insight Collector - Video Fetcher\n');
 
   if (!YOUTUBE_API_KEY) {
@@ -146,7 +149,7 @@ const main = async () => {
   }
 
   const channels = JSON.parse(fs.readFileSync(CHANNELS_FILE, 'utf-8'));
-  console.log(`📡 Fetching videos from ${channels.length} channels (last 7 days)...`);
+  console.log(`📡 Fetching videos from ${channels.length} channels (last ${days} days)...`);
   console.log(`⚡ Using efficient PlaylistItems API (2 quota per channel vs 100 with Search API)\n`);
 
   let allVideos = [];
@@ -157,7 +160,7 @@ const main = async () => {
       const channel = channels[i];
       console.log(`[${i + 1}/${channels.length}] ${channel.handle || channel.title}`);
 
-      const videos = await fetchChannelVideos(channel.id, channel.handle || channel.title);
+      const videos = await fetchChannelVideos(channel.id, channel.handle || channel.title, days);
 
       if (videos.length > 0) {
           successCount++;
