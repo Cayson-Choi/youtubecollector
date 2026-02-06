@@ -148,7 +148,7 @@ export default function AICollectorApp() {
               </div>
             </div>
 
-            <div className="p-2 space-y-0.5">
+            <div className="p-2 space-y-0.5 max-h-[60vh] overflow-y-auto overflow-x-hidden custom-scrollbar">
                <button
                   onClick={() => setSelectedCategory('All')}
                   className={`w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${

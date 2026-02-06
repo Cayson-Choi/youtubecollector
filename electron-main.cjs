@@ -24,7 +24,10 @@ function createWindow() {
   mainWindow.loadFile('electron-renderer.html');
 
   // Open DevTools in development
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
+
+  // Disable cache for development
+  mainWindow.webContents.session.clearCache();
 
   mainWindow.on('close', (event) => {
     if (apiServer || viteServer) {
@@ -55,78 +58,59 @@ function createTray() {
   });
 }
 
-app.whenReady().then(() => {
-  createWindow();
-  // createTray(); // Disabled - no icon available
-});
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    stopServers();
-    app.quit();
-  }
-});
-
-app.on('activate', () => {
-  if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow();
-  }
-});
-
-// Start servers
-ipcMain.handle('start-servers', async () => {
+// Helper to start servers
+async function startServers() {
   try {
     const isWindows = process.platform === 'win32';
+    console.log('🚀 Auto-starting servers...');
 
     // Start API Server
-    apiServer = spawn('node', ['server.js'], {
-      cwd: __dirname,
-      shell: isWindows,
-      windowsHide: true
-    });
+    if (!apiServer) {
+      apiServer = spawn('node', ['server.js'], {
+        cwd: __dirname,
+        shell: isWindows,
+        windowsHide: true
+      });
 
-    apiServer.stdout.on('data', (data) => {
-      console.log(`API: ${data}`);
-    });
+      apiServer.stdout.on('data', (data) => console.log(`API: ${data}`));
+      apiServer.stderr.on('data', (data) => console.error(`API Error: ${data}`));
+    }
 
-    apiServer.stderr.on('data', (data) => {
-      console.error(`API Error: ${data}`);
-    });
-
-    apiServer.on('error', (error) => {
-      console.error(`API spawn error: ${error}`);
-    });
-
-    // Wait a bit for API server to start
+    // Wait for API
     await new Promise(resolve => setTimeout(resolve, 2000));
 
     // Start Vite Server
-    viteServer = spawn('npm', ['run', 'dev'], {
-      cwd: __dirname,
-      shell: true,  // Need shell for npm to work correctly
-      windowsHide: true
-    });
-
-    viteServer.stdout.on('data', (data) => {
-      console.log(`Vite: ${data}`);
-    });
-
-    viteServer.stderr.on('data', (data) => {
-      console.error(`Vite Error: ${data}`);
-    });
-
-    viteServer.on('error', (error) => {
-      console.error(`Vite spawn error: ${error}`);
-    });
-
-    // Wait for Vite to start
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    if (!viteServer) {
+        viteServer = spawn('npm', ['run', 'dev'], {
+            cwd: __dirname,
+            shell: true,
+            windowsHide: true
+        });
+        
+        viteServer.stdout.on('data', (data) => console.log(`Vite: ${data}`));
+        viteServer.stderr.on('data', (data) => console.error(`Vite Error: ${data}`));
+    }
 
     return { success: true };
   } catch (error) {
     console.error('Server start error:', error);
     return { success: false, error: error.message };
   }
+}
+
+app.whenReady().then(async () => {
+  createWindow();
+  
+  // Auto-start servers on launch
+  await startServers();
+  
+  // Optional: Reload window to ensure connection
+  if (mainWindow) mainWindow.reload();
+});
+
+// Manual start handler (keep for backward compatibility)
+ipcMain.handle('start-servers', async () => {
+  return await startServers();
 });
 
 // Stop servers
