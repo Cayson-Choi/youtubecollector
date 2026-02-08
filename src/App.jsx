@@ -30,7 +30,8 @@ const CATEGORIES = [
   'Llama',
   'Notion',
   'Kling',
-  'Stitch'
+  'Stitch',
+  'Opal'
 ];
 
 export default function AICollectorApp() {
