@@ -10,6 +10,7 @@ const CATEGORIES = [
   'Claude',
   'NotebookLM',
   'Antigravity',
+  'Opal',
   'Cursor',
   'OpenClaw',
   'ZenSpark',
@@ -30,8 +31,7 @@ const CATEGORIES = [
   'Llama',
   'Notion',
   'Kling',
-  'Stitch',
-  'Opal'
+  'Stitch'
 ];
 
 export default function AICollectorApp() {
