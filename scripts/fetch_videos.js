@@ -107,6 +107,7 @@ const CATEGORY_KEYWORDS = {
   Kling: ["kling", "클링", "kling ai"],
   Stitch: ["stitch", "스티치", "stich"],
   Opal: ["opal", "오팔"],
+  MCP: ["mcp", "엠씨피", "model context protocol", "모델 컨텍스트 프로토콜"],
 };
 
 const getDateByDays = (days = 7) => {
