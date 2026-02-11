@@ -4,10 +4,12 @@ import videosData from './data/videos.json';
 import VideoPlayer from './components/VideoPlayer';
 
 const CATEGORIES = [
+  'MCP',
   'NanoBanana',
   'Gemini',
   'ChatGPT',
   'Claude',
+  'Notion',
   'NotebookLM',
   'Antigravity',
   'Opal',
@@ -29,10 +31,8 @@ const CATEGORIES = [
   'Windsurf',
   'DeepSeek',
   'Llama',
-  'Notion',
   'Kling',
-  'Stitch',
-  'MCP'
+  'Stitch'
 ];
 
 export default function AICollectorApp() {
