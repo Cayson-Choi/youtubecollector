@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react';
-import { X, Calendar, User, ExternalLink } from 'lucide-react';
+import React, { useRef, useEffect, useState } from 'react';
+import { X, Calendar, User, ExternalLink, Play } from 'lucide-react';
 
 export default function VideoPlayer({ video, onClose }) {
   const modalRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   // Close when clicking outside
   useEffect(() => {
@@ -49,11 +50,12 @@ export default function VideoPlayer({ video, onClose }) {
             ) : (
                 // Real Video
                 <iframe
-                src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                src={`https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1&origin=${window.location.origin}`}
                 title={video.title}
                 className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
                 />
             )}
           </div>
