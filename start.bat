@@ -11,20 +11,46 @@ echo.
 echo   1. [Just Start] Start Servers ^& Open Browser
 echo   2. [Update] Collect Videos, Deploy, then Start
 echo   3. [Channel] Manage Channels (Add/Remove)
-echo   4. [Exit] Close
+echo   4. [Auto Update] 30days Auto-Collect ^& Deploy ^& Start
+echo   5. [Exit] Close
 echo.
-set /p CHOICE="Choose an option (1-4): "
+set /p CHOICE="Choose an option (1-5): "
 
 if "%CHOICE%"=="1" goto START_SERVERS
 if "%CHOICE%"=="2" goto COLLECT_DEPLOY
 if "%CHOICE%"=="3" goto MANAGE_CHANNELS
-if "%CHOICE%"=="4" goto EOF
+if "%CHOICE%"=="4" goto AUTO_UPDATE
+if "%CHOICE%"=="5" goto EOF
 
 goto MENU
 
 :MANAGE_CHANNELS
 call node scripts/manage_channels.js
 goto MENU
+
+:AUTO_UPDATE
+echo.
+echo ---------------------------------------------------
+echo   [Auto Update Mode - 30 Days]
+echo ---------------------------------------------------
+echo   Automatically collecting videos, deploying, and starting...
+echo.
+
+set DAYS=30
+echo   Collecting videos for the last %DAYS% days...
+call node scripts/fetch_videos.js %DAYS%
+
+echo.
+echo   Deploying to GitHub...
+git add .
+git commit -m "Auto-update: %date% %time%"
+git push origin main
+echo   ✅ Deployment Completed!
+
+echo.
+echo   Starting servers...
+timeout /t 2 >nul
+goto START_SERVERS
 
 :COLLECT_DEPLOY
 echo.
