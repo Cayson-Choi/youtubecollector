@@ -15,9 +15,17 @@ call node scripts/fetch_videos.js 30
 echo.
 echo   Deploying to GitHub...
 git add .
-git commit -m "Scheduled Auto-update: %date% %time%"
-git push origin main
-echo   ✅ Deployment Completed!
+
+:: Check if there are changes to commit
+git diff-index --quiet HEAD
+if %ERRORLEVEL% NEQ 0 (
+    echo   📝 Changes detected, committing...
+    git commit -m "Scheduled Auto-update: %date% %time%"
+    git push origin main
+    echo   ✅ Deployment Completed!
+) else (
+    echo   ℹ️  No changes detected, skipping deployment.
+)
 
 echo.
 echo ===================================================
