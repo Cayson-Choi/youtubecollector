@@ -140,7 +140,7 @@ const main = async () => {
   // Get days from command line argument (default: 7)
   const days = parseInt(process.argv[2]) || 7;
 
-  console.log("\n🚀 AI Insight Collector - Video Fetcher\n");
+  console.log("\n🚀 Trending AI Insights - Video Fetcher\n");
 
   if (!YOUTUBE_API_KEY) {
     console.error("❌ YouTube API Key not found in .env file!");

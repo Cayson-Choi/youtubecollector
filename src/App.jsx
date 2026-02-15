@@ -120,7 +120,7 @@ export default function AICollectorApp() {
               </div>
             </div>
             <div className="leading-tight">
-              <div className="text-sm font-black tracking-tight text-white/90">AI Insight Collector</div>
+              <div className="text-sm font-black tracking-tight text-white/90">Trending AI Insights</div>
               <div className="text-[11px] text-white/50 font-medium">
                 {safeVideosData.length} monthly updates · {CATEGORIES.length} topics
               </div>
@@ -316,7 +316,7 @@ export default function AICollectorApp() {
           <footer className="mt-16 pb-8 border-t border-white/5 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
                 <div>
-                     <div className="text-sm font-bold text-white mb-1">AI Insight Collector</div>
+                     <div className="text-sm font-bold text-white mb-1">Trending AI Insights</div>
                      <div className="text-xs text-zinc-400">Automated curation for AI engineers & designers.</div>
                 </div>
                 <div className="text-right">

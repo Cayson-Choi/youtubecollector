@@ -5,7 +5,7 @@ chcp 65001 >nul
 :MENU
 cls
 echo ===================================================
-echo   AI Insight Collector - Integrated Launcher
+echo   Trending AI Insights - Integrated Launcher
 echo ===================================================
 echo.
 echo   1. [Just Start] Start Servers ^& Open Browser
@@ -88,7 +88,7 @@ goto START_SERVERS
 :START_SERVERS
 cls
 echo ===================================================
-echo   Starting AI Insight Collector...
+echo   Starting Trending AI Insights...
 echo ===================================================
 echo.
 
