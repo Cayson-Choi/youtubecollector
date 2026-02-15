@@ -1,4 +1,9 @@
 export const CATEGORY_KEYWORDS = {
+  Seedance: ["seedance", "시댄스", "sea dance"],
+  Kling: ["kling", "클링", "kling ai"],
+  Opal: ["opal", "오팔"],
+  Notion: ["notion", "노션"],
+  MCP: ["mcp", "엠씨피", "model context protocol", "모델 컨텍스트 프로토콜"],
   NanoBanana: ["나노바나나", "nanobanana", "nano banana", "나노 바나나"],
   Gemini: [
     "gemini",
@@ -86,11 +91,7 @@ export const CATEGORY_KEYWORDS = {
   Spline: ["spline", "spline 3d", "스플라인"],
   n8n: ["n8n", "엔에잇엔"],
   AGI: ["agi", "범용 인공지능", "인공 일반 지능"],
-  Notion: ["notion", "노션"],
-  Kling: ["kling", "클링", "kling ai"],
   Stitch: ["stitch", "스티치", "stich"],
-  Opal: ["opal", "오팔"],
-  MCP: ["mcp", "엠씨피", "model context protocol", "모델 컨텍스트 프로토콜"],
 };
 
 export const CATEGORIES = Object.keys(CATEGORY_KEYWORDS);

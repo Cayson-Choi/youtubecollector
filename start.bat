@@ -105,13 +105,13 @@ timeout /t 3 >nul
 :: 3. Open Browser
 echo [3/3] Opening Browser...
 timeout /t 2 >nul
-start http://localhost:5173
+start http://localhost:5176
 
 echo.
 echo ===================================================
 echo   Done! Servers are running.
-echo   - API: http://localhost:3001
-echo   - Web: http://localhost:5173
+echo   - API: http://localhost:3002
+echo   - Web: http://localhost:5176
 echo   Do not close this window!
 echo ===================================================
 pause
