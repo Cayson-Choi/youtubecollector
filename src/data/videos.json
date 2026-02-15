@@ -265,9 +265,9 @@
     "categories": [
       "Seedance",
       "Kling",
+      "OpenClaw",
       "ChatGPT",
-      "Claude",
-      "OpenClaw"
+      "Claude"
     ]
   },
   {
@@ -341,9 +341,9 @@
     "categories": [
       "Seedance",
       "Kling",
+      "OpenClaw",
       "ChatGPT",
-      "Claude",
-      "OpenClaw"
+      "Claude"
     ]
   },
   {
@@ -665,11 +665,11 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/t9Sheen6Kts/hqdefault.jpg",
     "channelTitle": "뽁숑이의 AI 스케치업",
     "publishedAt": "2026-01-26T15:47:41Z",
-    "category": "NanoBanana",
+    "category": "Flow",
     "categories": [
+      "Flow",
       "NanoBanana",
-      "NotebookLM",
-      "Flow"
+      "NotebookLM"
     ]
   },
   {
