@@ -3,45 +3,22 @@ import { Grid3X3, Layers, ExternalLink, Search, Play } from 'lucide-react';
 import videosData from './data/videos.json';
 import VideoPlayer from './components/VideoPlayer';
 
-const CATEGORIES = [
-  'MCP',
-  'NanoBanana',
-  'Gemini',
-  'ChatGPT',
-  'Claude',
-  'Notion',
-  'NotebookLM',
-  'Antigravity',
-  'Opal',
-  'Cursor',
-  'OpenClaw',
-  'ZenSpark',
-  'Sora',
-  'Grok',
-  'Flow',
-  'Replit',
-  'CapCut',
-  'Spline',
-  'n8n',
-  'AGI',
-  'Suno',
-  'Perplexity',
-  'Midjourney',
-  'Runway',
-  'Windsurf',
-  'DeepSeek',
-  'Llama',
-  'Kling',
-  'Stitch'
-];
+import { CATEGORIES } from './data/categories';
 
 export default function AICollectorApp() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+  
+  // Infinite Scroll State
+  const [visibleCount, setVisibleCount] = useState(24);
+  const observerTarget = React.useRef(null);
+
+  // Safety Check: Ensure videosData is an array
+  const safeVideosData = useMemo(() => Array.isArray(videosData) ? videosData : [], []);
 
   const filteredVideos = useMemo(() => {
-    return videosData.filter((v) => {
+    return safeVideosData.filter((v) => {
       // Check if selectedCategory is in the video's categories array
       // Fallback: If 'categories' is missing, use old 'category' field for backward compatibility
       const videoCats = v.categories || [v.category];
@@ -58,16 +35,47 @@ export default function AICollectorApp() {
       
       return matchCategory && matchSearch;
     });
+  }, [selectedCategory, searchQuery, safeVideosData]);
+
+  // Reset visible count when filter/category changes
+  React.useEffect(() => {
+    setVisibleCount(24);
   }, [selectedCategory, searchQuery]);
+
+  const visibleVideos = useMemo(() => {
+    return filteredVideos.slice(0, visibleCount);
+  }, [filteredVideos, visibleCount]);
+
+  // Intersection Observer for Infinite Scroll
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+            setVisibleCount((prev) => Math.min(prev + 24, filteredVideos.length));
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (observerTarget.current) {
+      observer.observe(observerTarget.current);
+    }
+
+    return () => {
+      if (observerTarget.current) {
+        observer.unobserve(observerTarget.current);
+      }
+    };
+  }, [filteredVideos]);
 
   const categoryCount = useMemo(() => {
     const counts = {};
     CATEGORIES.forEach((c) => {
       counts[c] = 0;
     });
-    counts['All'] = videosData.length;
+    counts['All'] = safeVideosData.length;
     
-    videosData.forEach((v) => {
+    safeVideosData.forEach((v) => {
        const videoCats = v.categories || [v.category];
        videoCats.forEach(cat => {
            // Only count if it's one of our main tracked categories
@@ -77,7 +85,7 @@ export default function AICollectorApp() {
        });
     });
     return counts;
-  }, []);
+  }, [safeVideosData]);
 
   const year = new Date().getFullYear();
 
@@ -114,7 +122,7 @@ export default function AICollectorApp() {
             <div className="leading-tight">
               <div className="text-sm font-black tracking-tight text-white/90">AI Insight Collector</div>
               <div className="text-[11px] text-white/50 font-medium">
-                {videosData.length} monthly updates · {CATEGORIES.length} topics
+                {safeVideosData.length} monthly updates · {CATEGORIES.length} topics
               </div>
             </div>
           </div>
@@ -240,7 +248,7 @@ export default function AICollectorApp() {
 
           {/* Video Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-            {filteredVideos.map((video) => (
+            {visibleVideos.map((video) => (
               <div
                 key={video.id}
                 onClick={() => setSelectedVideo(video)}
@@ -285,6 +293,13 @@ export default function AICollectorApp() {
               </div>
             ))}
           </div>
+
+          {/* Loader / End of List Observer */}
+          {filteredVideos.length > visibleCount && (
+             <div ref={observerTarget} className="flex justify-center py-8">
+                 <div className="w-6 h-6 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+             </div>
+          )}
 
           {/* Empty State */}
           {filteredVideos.length === 0 && (
