@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**AI Insight Collector** is a YouTube video aggregator that tracks and categorizes AI-related content from curated channels. It consists of a React frontend, Express backend, and automated data collection system that fetches videos via YouTube API and deploys updates to GitHub.
+**Trending AI Insights** is a YouTube video aggregator that tracks and categorizes AI-related content from curated channels. It consists of a React frontend, Express backend, and automated data collection system that fetches videos via YouTube API and deploys updates to GitHub.
 
 ## Development Commands
 
