@@ -5,34 +5,35 @@ import VideoPlayer from './components/VideoPlayer';
 
 import { CATEGORIES } from './data/categories';
 
+// Helper function to get video categories (supports both old and new format)
+const getVideoCategories = (video) => video.categories || [video.category];
+
 export default function AICollectorApp() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
-  
+
   // Infinite Scroll State
   const [visibleCount, setVisibleCount] = useState(24);
   const observerTarget = React.useRef(null);
 
-  // Safety Check: Ensure videosData is an array
-  const safeVideosData = useMemo(() => Array.isArray(videosData) ? videosData : [], []);
+  // Safety Check: Ensure videosData is an array (no need for useMemo - this is static)
+  const safeVideosData = Array.isArray(videosData) ? videosData : [];
 
   const filteredVideos = useMemo(() => {
     return safeVideosData.filter((v) => {
-      // Check if selectedCategory is in the video's categories array
-      // Fallback: If 'categories' is missing, use old 'category' field for backward compatibility
-      const videoCats = v.categories || [v.category];
-      
+      const videoCats = getVideoCategories(v);
+
       const matchCategory = selectedCategory === 'All' || videoCats.includes(selectedCategory);
       const sq = searchQuery.trim().toLowerCase();
-      
+
       // Also search within categories
       const matchSearch =
         !sq ||
         (v.title || '').toLowerCase().includes(sq) ||
         (v.channelTitle || '').toLowerCase().includes(sq) ||
         videoCats.some(c => c.toLowerCase().includes(sq));
-      
+
       return matchCategory && matchSearch;
     });
   }, [selectedCategory, searchQuery, safeVideosData]);
@@ -74,9 +75,9 @@ export default function AICollectorApp() {
       counts[c] = 0;
     });
     counts['All'] = safeVideosData.length;
-    
+
     safeVideosData.forEach((v) => {
-       const videoCats = v.categories || [v.category];
+       const videoCats = getVideoCategories(v);
        videoCats.forEach(cat => {
            // Only count if it's one of our main tracked categories
            if (counts[cat] !== undefined) {

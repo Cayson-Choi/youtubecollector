@@ -104,6 +104,29 @@ youtubecollector/
 └── package.json
 ```
 
+### 아키텍처 다이어그램
+
+```
+┌─────────────────┐       ┌──────────────────┐       ┌─────────────┐
+│  React Frontend │◄─────►│  Express Backend │◄─────►│ YouTube API │
+│    (Port 5176)  │       │    (Port 3002)   │       │             │
+└────────┬────────┘       └─────────┬────────┘       └─────────────┘
+         │                          │
+         │                          │
+         ▼                          ▼
+  Static Import              File System (JSON)
+  (videos.json)              - channels.json
+                             - videos.json
+```
+
+**데이터 흐름:**
+1. 사용자가 Channel Manager에서 채널 추가
+2. Backend가 YouTube API로 채널 정보 조회
+3. channels.json에 저장
+4. 비디오 수집 시 YouTube API에서 최신 영상 가져옴
+5. videos.json에 저장
+6. Frontend가 videos.json을 static import로 읽어서 표시
+
 ## 🎮 사용법
 
 ### 채널 추가
@@ -141,7 +164,7 @@ uninstall_scheduler.bat
 auto_update_scheduled.bat
 ```
 
-또는 UI에서 "배포하기" 버튼 클릭
+또는 Channel Manager UI에서 "배포하기 (GitHub)" 버튼 클릭 (서버 실행 필요)
 
 ## 🔧 개발 명령어
 
@@ -168,9 +191,17 @@ npm run lint
 
 ## ⚙️ 환경 변수
 
-| 변수 | 설명 | 필수 |
-|------|------|------|
-| `VITE_YOUTUBE_API_KEY` | YouTube Data API 키 | ✅ |
+| 변수 | 설명 | 필수 | 기본값 |
+|------|------|------|--------|
+| `VITE_YOUTUBE_API_KEY` | YouTube Data API 키 | ✅ | - |
+| `PORT` | 백엔드 서버 포트 | ⬜ | `3002` |
+| `VITE_PORT` | 프론트엔드 포트 | ⬜ | `5176` |
+| `VITE_API_URL` | API 서버 URL | ⬜ | `http://localhost:3002` |
+| `ALLOWED_ORIGINS` | CORS 허용 도메인 (쉼표로 구분) | ⬜ | localhost 주소들 |
+| `DEBUG` | 디버그 모드 활성화 | ⬜ | `false` |
+| `NODE_ENV` | 환경 구분 | ⬜ | `development` |
+
+자세한 설정은 `.env.example` 파일을 참고하세요.
 
 ## 🎯 카테고리 추가
 
@@ -184,6 +215,36 @@ export const CATEGORY_KEYWORDS = {
 ```
 
 다음 비디오 수집 시 자동으로 새 카테고리가 적용됩니다.
+
+## 🔐 보안 설정
+
+프로덕션 환경에서 사용 시 아래 설정을 권장합니다:
+
+### 1. CORS 설정
+
+`.env` 파일에 허용할 도메인 추가:
+
+```env
+ALLOWED_ORIGINS=http://localhost:5176,https://your-domain.vercel.app
+```
+
+### 2. YouTube API 키 보호
+
+- **API 키 제한 설정 (Google Cloud Console):**
+  1. "사용자 인증 정보" → API 키 선택
+  2. "애플리케이션 제한사항" → "HTTP 리퍼러" 선택
+  3. 허용할 도메인 추가 (예: `https://your-domain.vercel.app/*`)
+
+### 3. Vercel 환경 변수
+
+프로덕션 배포 시 Vercel 대시보드에서 환경 변수 설정:
+- `VITE_YOUTUBE_API_KEY`: YouTube API 키
+- `ALLOWED_ORIGINS`: 프로덕션 도메인
+
+### 4. Git 보안
+
+- `.env` 파일이 `.gitignore`에 포함되어 있는지 확인
+- API 키를 절대 커밋하지 마세요
 
 ## 🐛 문제 해결
 

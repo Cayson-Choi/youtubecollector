@@ -58,10 +58,16 @@ npm run lint
 │   │   ├── ChannelManager.jsx   # Channel management UI
 │   │   └── ...                  # Other UI components
 │   ├── data/
-│   │   ├── categories.js        # CATEGORY_KEYWORDS mapping (exported const)
+│   │   ├── categories.js        # CATEGORY_KEYWORDS object & CATEGORIES array (both exported)
 │   │   ├── channels.json        # Tracked YouTube channels
 │   │   └── videos.json          # Collected video data (auto-generated)
-│   └── utils/                   # Helper utilities
+│   ├── utils/                   # Helper utilities
+│   │   ├── api.js               # YouTube API integration
+│   │   ├── fileUtils.js         # File I/O utilities
+│   │   └── validation.js        # Input validation
+│   └── config/                  # Configuration files
+│       ├── constants.js         # App constants
+│       └── env.js               # Environment validation
 ├── scripts/
 │   ├── fetch_videos.js          # YouTube API video fetcher
 │   └── manage_channels.js       # CLI channel manager
@@ -104,10 +110,23 @@ Process: Get channel → Get uploads playlist ID → Fetch playlist items → Fi
 
 Required in `.env`:
 ```
+# YouTube API (Required)
 VITE_YOUTUBE_API_KEY=your_youtube_api_key_here
+
+# Server Configuration (Optional)
+PORT=3002
+VITE_PORT=5176
+VITE_API_URL=http://localhost:3002
+
+# CORS (Optional, comma-separated)
+ALLOWED_ORIGINS=http://localhost:5176,http://localhost:5173
+
+# Debug (Optional)
+DEBUG=false
+NODE_ENV=development
 ```
 
-Used by both Vite (frontend) and Node scripts (backend).
+See `.env.example` for a complete template. The YouTube API key is used by both Vite (frontend) and Node scripts (backend).
 
 ### Auto-Update System
 
@@ -117,10 +136,35 @@ Windows Task Scheduler runs `auto_update_scheduled.bat` periodically:
 3. Auto-commits and pushes to GitHub if changes detected
 4. Vercel auto-deploys on push
 
+### Production Data Updates
+
+Frontend reads `videos.json` as a static import, requiring rebuild for updates. There are three methods to update production data:
+
+**Method 1: Manual Update**
+```bash
+node scripts/fetch_videos.js 30
+git add src/data/videos.json
+git commit -m "Update videos"
+git push
+```
+
+**Method 2: UI Deployment (Requires server)**
+1. Start server: `node server.js`
+2. Open Channel Manager UI
+3. Click "배포하기 (GitHub)" button
+4. Server fetches → commits → pushes automatically
+
+**Method 3: Scheduled Automation**
+- Windows Task Scheduler runs `auto_update_scheduled.bat`
+- Executes automatically at configured intervals
+
+After any push to GitHub, Vercel automatically rebuilds and deploys the frontend with updated data.
+
 ## Key Design Patterns
 
 ### Video Filtering in App.jsx
-- Uses `useMemo` for performance optimization
+- Uses `useMemo` for filtered results (performance optimization)
+- Helper function `getVideoCategories()` for backward compatibility
 - Multi-category support: each video can belong to multiple categories
 - Backward compatible: falls back to old `category` field if `categories` array missing
 - Search queries check title, channel name, AND categories
@@ -133,9 +177,11 @@ Windows Task Scheduler runs `auto_update_scheduled.bat` periodically:
 
 ### Git Automation in server.js `/api/deploy`
 - Only commits if actual changes exist in `videos.json` or `channels.json`
-- Uses `execSync` with large buffer (50MB) to handle big outputs
+- Uses `execFile` for shell injection prevention, `execSync` with validated inputs for git commands
+- Large buffer (50MB) to handle big git outputs
 - Continues deployment even if fetch fails (quota limits)
 - Returns detailed deployment log to frontend
+- Input validation via `validateDays()` prevents command injection
 
 ## Common Development Patterns
 

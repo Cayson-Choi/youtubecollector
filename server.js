@@ -1,183 +1,180 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import path from 'path';
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-import { exec, execSync } from 'child_process';
-import open from 'open';
-import axios from 'axios';
-import dotenv from 'dotenv';
+import { execFile, execSync } from 'child_process';
+import { promisify } from 'util';
 
-dotenv.config();
+// Import utilities
+import { PORT, ALLOWED_ORIGINS, GIT_EXEC_OPTIONS } from './src/config/constants.js';
+import { validateEnvironment } from './src/config/env.js';
+import { validateYouTubeUrl, validateDays, extractHandle } from './src/utils/validation.js';
+import { loadChannels, saveChannels, addChannel, removeChannel } from './src/utils/fileUtils.js';
+import { fetchChannelByHandle, getApiErrorMessage } from './src/utils/api.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Validate environment on startup
+try {
+  validateEnvironment();
+} catch (error) {
+  console.error('❌ Environment validation failed:');
+  console.error(error.message);
+  process.exit(1);
+}
 
 const app = express();
-const PORT = 3002;
+const execFileAsync = promisify(execFile);
 
-app.use(cors());
+// CORS configuration with allowed origins
+app.use(cors({
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+
+    if (ALLOWED_ORIGINS.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 app.use(bodyParser.json());
-
-// Paths
-const CHANNELS_FILE = path.join(__dirname, 'src/data/channels.json');
-const YOUTUBE_API_KEY = process.env.VITE_YOUTUBE_API_KEY || process.env.YOUTUBE_API_KEY;
 
 // 1. Get Channels
 app.get('/api/channels', (req, res) => {
-  if (fs.existsSync(CHANNELS_FILE)) {
-    const data = fs.readFileSync(CHANNELS_FILE, 'utf-8');
-    res.json(JSON.parse(data));
-  } else {
-    res.json([]);
+  try {
+    const channels = loadChannels();
+    res.json(channels);
+  } catch (error) {
+    console.error('Error loading channels:', error);
+    res.status(500).json({ error: 'Failed to load channels' });
   }
 });
 
 // 2. Add Channel
 app.post('/api/channels', async (req, res) => {
   const { url } = req.body;
-  if (!url) return res.status(400).json({ error: 'URL is required' });
 
-  // Decode URL (for Korean handles)
-  // e.g. @%EB%9D%BC... -> @라핀_AI_자동화
-  const decodedUrl = decodeURIComponent(url);
-
-  // Parse Handle from URL
-  let handle = '';
-  if (decodedUrl.includes('@')) {
-    handle = '@' + decodedUrl.split('@')[1].split('/')[0].split('?')[0];
-  } else {
-    handle = decodedUrl; // Fallback if user just sends handle
+  // Validate input
+  if (!url) {
+    return res.status(400).json({ error: 'URL is required' });
   }
 
+  if (!validateYouTubeUrl(url)) {
+    return res.status(400).json({ error: 'Invalid YouTube URL or handle format' });
+  }
+
+  const handle = extractHandle(url);
   console.log(`Processing Handle: ${handle}`);
 
   try {
-    // 1. Try 'forHandle' Lookup (Most Accurate)
-    let response = await axios.get('https://www.googleapis.com/youtube/v3/channels', {
-      params: {
-        part: 'snippet',
-        forHandle: handle,
-        key: YOUTUBE_API_KEY
-      }
-    });
+    // Fetch channel data using shared API utility
+    const channelData = await fetchChannelByHandle(handle);
 
-    // 2. Fallback to Search if forHandle fails (sometimes API requires exact match without @ or vice versa)
-    if (!response.data.items || response.data.items.length === 0) {
-       console.log('forHandle lookup failed, retrying with Search...');
-       const query = handle; 
-       response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
-        params: {
-          part: 'snippet',
-          q: query,
-          type: 'channel',
-          key: YOUTUBE_API_KEY,
-          maxResults: 1
-        }
-      });
+    if (!channelData) {
+      return res.status(404).json({ error: 'Channel not found on YouTube' });
     }
 
-    if (response.data.items && response.data.items.length > 0) {
-      const item = response.data.items[0];
-      // Search API returns 'id.channelId', Channels API returns 'id' directly
-      const channelId = item.id?.channelId || item.id; 
-      
-      const newChannel = {
-        id: channelId,
-        title: item.snippet.title || item.snippet.channelTitle,
+    // Add channel to file (with deduplication)
+    const added = addChannel(channelData);
+
+    if (!added) {
+      return res.status(409).json({ error: 'Channel already exists' });
+    }
+
+    res.json(channelData);
+
+  } catch (error) {
+    console.error('Error adding channel:', error.message);
+
+    const status = error.response?.status || 500;
+
+    // Mock Fallback for 403 (Demo/Development)
+    if (status === 403 && process.env.NODE_ENV !== 'production') {
+      console.log('⚠️  Using mock channel (quota exceeded)');
+      const mockChannel = {
+        id: `mock-${Date.now()}`,
+        title: `Mock Channel (${handle})`,
         handle: handle,
-        thumbnail: item.snippet.thumbnails?.default?.url
+        thumbnail: '',
       };
 
-      // Save to file
-      let channels = [];
-      if (fs.existsSync(CHANNELS_FILE)) {
-        channels = JSON.parse(fs.readFileSync(CHANNELS_FILE, 'utf-8'));
-      }
-      
-      if (!channels.find(c => c.id === newChannel.id)) {
-        channels.push(newChannel);
-        fs.writeFileSync(CHANNELS_FILE, JSON.stringify(channels, null, 2));
-        res.json(newChannel);
-      } else {
-        res.status(409).json({ error: 'Channel already exists' });
-      }
+      addChannel(mockChannel);
+      return res.json(mockChannel);
+    }
 
-    } else {
-      res.status(404).json({ error: 'Channel not found on YouTube' });
-    }
-  } catch (error) {
-    console.error(error);
-    const status = error.response?.status || 500;
-    
-    // Mock Fallback for 403 (Demo)
-    if(status === 403){
-         const mockChannel = {
-            id: `mock-${Date.now()}`,
-            title: `Mock Channel (${handle})`,
-            handle: handle,
-            thumbnail: ''
-         };
-         let channels = [];
-         if (fs.existsSync(CHANNELS_FILE)) {
-            channels = JSON.parse(fs.readFileSync(CHANNELS_FILE, 'utf-8'));
-         }
-         channels.push(mockChannel);
-         fs.writeFileSync(CHANNELS_FILE, JSON.stringify(channels, null, 2));
-         return res.json(mockChannel);
-    }
-    res.status(status).json({ error: error.message });
+    // Return user-friendly error message
+    const errorMessage = getApiErrorMessage(error);
+    res.status(status).json({ error: errorMessage });
   }
 });
 
 // 3. Delete Channel
 app.delete('/api/channels/:id', (req, res) => {
   const { id } = req.params;
-  if (fs.existsSync(CHANNELS_FILE)) {
-    let channels = JSON.parse(fs.readFileSync(CHANNELS_FILE, 'utf-8'));
-    channels = channels.filter(c => c.id !== id);
-    fs.writeFileSync(CHANNELS_FILE, JSON.stringify(channels, null, 2));
+
+  try {
+    const removed = removeChannel(id);
+
+    if (!removed) {
+      return res.status(404).json({ error: 'Channel not found' });
+    }
+
     res.json({ success: true });
-  } else {
-    res.status(404).json({ error: 'File not found' });
+  } catch (error) {
+    console.error('Error removing channel:', error);
+    res.status(500).json({ error: 'Failed to remove channel' });
   }
 });
 
 // 4. Trigger Fetch Script
-app.post('/api/fetch', (req, res) => {
-  const days = req.body.days || 7;
-  console.log(`🚀 Triggering Fetch Video Script (last ${days} days)...`);
-  exec(`node scripts/fetch_videos.js ${days}`, (error, stdout, stderr) => {
-    if (error) {
-      console.error(`exec error: ${error}`);
-      return res.status(500).json({ error: 'Fetch failed', details: stderr });
+app.post('/api/fetch', async (req, res) => {
+  try {
+    const days = validateDays(req.body.days || 7);
+    console.log(`🚀 Triggering Fetch Video Script (last ${days} days)...`);
+
+    // Use execFile to prevent shell injection
+    const { stdout, stderr } = await execFileAsync(
+      'node',
+      ['scripts/fetch_videos.js', days.toString()],
+      { maxBuffer: 10 * 1024 * 1024 } // 10MB buffer
+    );
+
+    console.log('Fetch output:', stdout);
+
+    if (stderr) {
+      console.warn('Fetch warnings:', stderr);
     }
-    console.log(`stdout: ${stdout}`);
+
     res.json({ success: true, message: 'Fetch completed' });
-  });
+
+  } catch (error) {
+    console.error('Fetch error:', error.message);
+    res.status(500).json({
+      error: 'Fetch failed',
+      message: error.code === 'ENOENT'
+        ? 'Fetch script not found'
+        : 'An error occurred while fetching videos'
+    });
+  }
 });
 
 // 5. Deploy: Fetch + Commit + Push
 app.post('/api/deploy', async (req, res) => {
-  const days = req.body.days || 7;
-  console.log(`🚀 Starting Deployment: Fetch (${days} days) → Commit → Push`);
-
-  const execOptions = {
-    cwd: __dirname,
-    encoding: 'utf-8',
-    maxBuffer: 50 * 1024 * 1024 // 50MB buffer to handle large outputs
-  };
-
-  let deployLog = [];
-
   try {
+    const days = validateDays(req.body.days || 7);
+    console.log(`🚀 Starting Deployment: Fetch (${days} days) → Commit → Push`);
+
+    let deployLog = [];
+
     // Step 1: Fetch videos (continue even if this fails due to quota)
     deployLog.push(`Step 1: Fetching videos (last ${days} days)...`);
     console.log(`Step 1: Fetching videos (last ${days} days)...`);
 
     try {
-      const fetchOutput = execSync(`node scripts/fetch_videos.js ${days}`, execOptions);
+      const { stdout } = await execFileAsync(
+        'node',
+        ['scripts/fetch_videos.js', days.toString()],
+        GIT_EXEC_OPTIONS
+      );
       console.log('✅ Videos fetched');
       deployLog.push('✅ Videos fetched successfully');
     } catch (fetchError) {
@@ -191,8 +188,11 @@ app.post('/api/deploy', async (req, res) => {
 
     let hasChanges = false;
     try {
-      // Check only the files we care about
-      const statusOutput = execSync('git status --porcelain src/data/videos.json src/data/channels.json', execOptions);
+      // Check only the files we care about - using array arguments to prevent injection
+      const statusOutput = execSync(
+        'git status --porcelain src/data/videos.json src/data/channels.json',
+        GIT_EXEC_OPTIONS
+      );
       hasChanges = statusOutput.trim().length > 0;
       console.log('Git status for data files:', statusOutput.toString());
       deployLog.push(`Changes in data files: ${hasChanges ? 'Yes' : 'No'}`);
@@ -207,14 +207,14 @@ app.post('/api/deploy', async (req, res) => {
       return res.json({
         success: true,
         message: 'No changes to deploy - video and channel data unchanged',
-        log: deployLog
+        log: deployLog,
       });
     }
 
     // Step 3: Git add (only specific files)
     deployLog.push('Step 3: Adding files to git...');
     console.log('Step 3: Git add...');
-    execSync('git add src/data/videos.json src/data/channels.json', execOptions);
+    execSync('git add src/data/videos.json src/data/channels.json', GIT_EXEC_OPTIONS);
     deployLog.push('✅ Files staged');
 
     // Step 4: Git commit
@@ -224,22 +224,31 @@ app.post('/api/deploy', async (req, res) => {
     const commitMsg = `Auto-update content: ${timestamp}`;
 
     try {
-      const commitOutput = execSync(`git commit -m "${commitMsg}"`, execOptions);
+      // Safe commit message (no user input in commit message)
+      const commitOutput = execSync(
+        `git commit -m "Auto-update content: ${timestamp}"`,
+        GIT_EXEC_OPTIONS
+      );
       console.log('✅ Committed:', commitOutput.toString());
       deployLog.push(`✅ Committed: ${commitMsg}`);
     } catch (commitError) {
-      const errorMsg = commitError.message + (commitError.stderr?.toString() || '') + (commitError.stdout?.toString() || '');
+      const errorMsg =
+        commitError.message +
+        (commitError.stderr?.toString() || '') +
+        (commitError.stdout?.toString() || '');
 
       // Check various "nothing to commit" messages
-      if (errorMsg.includes('nothing to commit') ||
-          errorMsg.includes('nothing added to commit') ||
-          errorMsg.includes('no changes added to commit')) {
+      if (
+        errorMsg.includes('nothing to commit') ||
+        errorMsg.includes('nothing added to commit') ||
+        errorMsg.includes('no changes added to commit')
+      ) {
         console.log('⚠️ Nothing to commit (files unchanged)');
         deployLog.push('⚠️ No actual changes in files (already up to date)');
         return res.json({
           success: true,
           message: 'No changes to deploy - files are already up to date',
-          log: deployLog
+          log: deployLog,
         });
       }
 
@@ -250,7 +259,7 @@ app.post('/api/deploy', async (req, res) => {
     // Step 5: Git push
     deployLog.push('Step 5: Pushing to GitHub...');
     console.log('Step 5: Git push...');
-    const pushOutput = execSync('git push', execOptions);
+    const pushOutput = execSync('git push', GIT_EXEC_OPTIONS);
 
     console.log('✅ Deployed to GitHub');
     console.log(pushOutput.toString());
@@ -260,23 +269,31 @@ app.post('/api/deploy', async (req, res) => {
       success: true,
       message: 'Deployed successfully to GitHub!',
       output: pushOutput.toString(),
-      log: deployLog
+      log: deployLog,
     });
-
   } catch (error) {
     console.error('❌ Deployment error:', error.message);
-    console.error('Error details:', error);
-    deployLog.push(`❌ Error: ${error.message}`);
+
+    // Don't expose internal error details to client in production
+    const errorMessage =
+      process.env.NODE_ENV === 'production'
+        ? 'Deployment failed. Please check server logs.'
+        : error.message;
 
     res.status(500).json({
       error: 'Deployment failed',
-      details: error.message,
-      stderr: error.stderr?.toString() || error.stdout?.toString() || '',
-      log: deployLog
+      message: errorMessage,
     });
   }
 });
 
 app.listen(PORT, () => {
-  console.log(`API Server running at http://localhost:${PORT}`);
+  console.log(`\n✅ API Server running at http://localhost:${PORT}`);
+  console.log(`📋 Allowed origins:`, ALLOWED_ORIGINS);
+  console.log(`\nEndpoints:`);
+  console.log(`  GET    /api/channels`);
+  console.log(`  POST   /api/channels`);
+  console.log(`  DELETE /api/channels/:id`);
+  console.log(`  POST   /api/fetch`);
+  console.log(`  POST   /api/deploy\n`);
 });

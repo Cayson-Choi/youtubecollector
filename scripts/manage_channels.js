@@ -1,32 +1,23 @@
-import fs from 'fs';
-import path from 'path';
 import readline from 'readline';
 import { fileURLToPath } from 'url';
-import axios from 'axios';
-import dotenv from 'dotenv';
+import path from 'path';
 
-dotenv.config();
+// Import utilities
+import { validateEnvironment } from '../src/config/env.js';
+import { validateYouTubeUrl, extractHandle } from '../src/utils/validation.js';
+import { loadChannels, saveChannels, addChannel as addChannelToFile, removeChannel as removeChannelFromFile } from '../src/utils/fileUtils.js';
+import { fetchChannelByHandle } from '../src/utils/api.js';
+
+// Validate environment on startup
+validateEnvironment();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const CHANNELS_FILE = path.join(__dirname, '../src/data/channels.json');
-const YOUTUBE_API_KEY = process.env.VITE_YOUTUBE_API_KEY || process.env.YOUTUBE_API_KEY;
 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
-const loadChannels = () => {
-    if (fs.existsSync(CHANNELS_FILE)) {
-        return JSON.parse(fs.readFileSync(CHANNELS_FILE, 'utf-8'));
-    }
-    return [];
-};
-
-const saveChannels = (channels) => {
-    fs.writeFileSync(CHANNELS_FILE, JSON.stringify(channels, null, 2), 'utf-8');
-};
 
 const askQuestion = (query) => {
     return new Promise(resolve => rl.question(query, resolve));
@@ -46,66 +37,38 @@ const listChannels = () => {
 };
 
 const handleUrl = async (inputUrl) => {
-    // 1. Decode URL (Fix %EC%... -> Korean)
-    const url = decodeURIComponent(inputUrl.trim());
-    
-    let handle = url;
-    if (url.includes('youtube.com/') || url.includes('youtu.be/')) {
-        const parts = url.split('/');
-        handle = parts[parts.length - 1].split('?')[0]; // Remove query params
+    // Validate URL format
+    if (!validateYouTubeUrl(inputUrl)) {
+        console.log('❌ Invalid YouTube URL or handle format!');
+        console.log('   Examples: https://youtube.com/@channelname or @channelname');
+        return;
     }
-    if (!handle.startsWith('@')) handle = '@' + handle; 
 
+    const handle = extractHandle(inputUrl);
     console.log(`🔍 Searching for ${handle}...`);
 
     try {
-        // Try exact handle lookup first
-        let response = await axios.get('https://www.googleapis.com/youtube/v3/channels', {
-            params: {
-                part: 'snippet',
-                forHandle: handle,
-                key: YOUTUBE_API_KEY
-            }
-        });
+        // Use shared API utility
+        const channelData = await fetchChannelByHandle(handle);
 
-        // Fallback to Search
-        if (!response.data.items || response.data.items.length === 0) {
-             console.log('   (Exact match not found, trying broad search...)');
-             response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
-                params: {
-                    part: 'snippet',
-                    q: handle,
-                    type: 'channel',
-                    maxResults: 1,
-                    key: YOUTUBE_API_KEY
-                }
-             });
+        if (!channelData) {
+            console.log('❌ Channel not found on YouTube!');
+            return;
         }
 
-        if (response.data.items && response.data.items.length > 0) {
-            const item = response.data.items[0];
-            const channelId = item.id?.channelId || item.id;
-            const title = item.snippet.title || item.snippet.channelTitle;
+        // Check if already exists
+        const channels = loadChannels();
+        if (channels.find(c => c.id === channelData.id)) {
+            console.log(`⚠️  Already exists: ${channelData.title}`);
+            return;
+        }
 
-            const channels = loadChannels();
-            
-            if (channels.find(c => c.id === channelId)) {
-                console.log(`⚠️  Already exists: ${title}`);
-                return;
-            }
-
-            const newChannel = {
-                id: channelId,
-                title: title,
-                handle: handle,
-                thumbnail: item.snippet.thumbnails?.default?.url
-            };
-
-            channels.push(newChannel);
-            saveChannels(channels);
-            console.log(`✅ Added: ${title}`);
+        // Add channel using utility
+        const added = addChannelToFile(channelData);
+        if (added) {
+            console.log(`✅ Added: ${channelData.title}`);
         } else {
-            console.log('❌ Channel not found!');
+            console.log(`⚠️  Failed to add channel`);
         }
 
     } catch (error) {
@@ -128,9 +91,14 @@ const removeChannel = async () => {
     const num = parseInt(numStr);
 
     if (num > 0 && num <= channels.length) {
-        const removed = channels.splice(num - 1, 1);
-        saveChannels(channels);
-        console.log(`✅ Removed: ${removed[0].title}`);
+        const channelToRemove = channels[num - 1];
+        const removed = removeChannelFromFile(channelToRemove.id);
+
+        if (removed) {
+            console.log(`✅ Removed: ${channelToRemove.title}`);
+        } else {
+            console.log('❌ Failed to remove channel');
+        }
     } else {
         console.log('❌ Invalid number.');
     }

@@ -1,6 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { X, Plus, Trash2, RefreshCw, AlertCircle, CheckCircle2, Upload } from 'lucide-react';
 
+// API configuration
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3002';
+const RETRY_ATTEMPTS = 3;
+const RETRY_DELAY = 1000;
+
+// Helper function for fetch with retry
+async function fetchWithRetry(url, options = {}, retries = RETRY_ATTEMPTS) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const response = await fetch(url, {
+        ...options,
+        signal: AbortSignal.timeout(30000), // 30s timeout
+      });
+      return response;
+    } catch (error) {
+      if (i === retries - 1) throw error;
+      await new Promise(resolve => setTimeout(resolve, RETRY_DELAY * (i + 1)));
+    }
+  }
+}
+
 export default function ChannelManager({ onClose }) {
   const [channels, setChannels] = useState([]);
   const [inputUrl, setInputUrl] = useState('');
@@ -8,6 +29,7 @@ export default function ChannelManager({ onClose }) {
   const [error, setError] = useState(null);
   const [isFetching, setIsFetching] = useState(false);
   const [isDeploying, setIsDeploying] = useState(false);
+  const [deployProgress, setDeployProgress] = useState('');
 
   useEffect(() => {
     loadChannels();
@@ -15,12 +37,15 @@ export default function ChannelManager({ onClose }) {
 
   const loadChannels = async () => {
     try {
-      const res = await fetch('http://localhost:3002/api/channels');
+      const res = await fetchWithRetry(`${API_URL}/api/channels`);
       if (res.ok) {
         setChannels(await res.json());
+      } else {
+        throw new Error('Failed to load channels');
       }
     } catch (e) {
-      console.error("API requires server.js running");
+      console.error("Failed to load channels:", e.message);
+      setError('서버에 연결할 수 없습니다. server.js가 실행 중인지 확인하세요.');
     }
   };
 
@@ -32,20 +57,41 @@ export default function ChannelManager({ onClose }) {
     setError(null);
 
     try {
-      const res = await fetch('http://localhost:3002/api/channels', {
+      const res = await fetchWithRetry(`${API_URL}/api/channels`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url: inputUrl })
       });
 
       if (!res.ok) {
-        throw new Error((await res.json()).error || 'Failed to add');
+        const data = await res.json();
+        const errorMessage = data.error || 'Failed to add channel';
+
+        // User-friendly error messages
+        if (res.status === 400) {
+          throw new Error('잘못된 URL 형식입니다. YouTube 채널 URL을 확인하세요.');
+        } else if (res.status === 404) {
+          throw new Error('채널을 찾을 수 없습니다. URL을 다시 확인하세요.');
+        } else if (res.status === 409) {
+          throw new Error('이미 등록된 채널입니다.');
+        } else if (res.status === 403) {
+          throw new Error('API 할당량이 초과되었습니다. 나중에 다시 시도하세요.');
+        } else {
+          throw new Error(errorMessage);
+        }
       }
 
       await loadChannels();
       setInputUrl('');
+      setError(null);
     } catch (err) {
-      setError(err.message);
+      if (err.name === 'TimeoutError') {
+        setError('요청 시간이 초과되었습니다. 다시 시도하세요.');
+      } else if (err.message.includes('fetch')) {
+        setError('서버에 연결할 수 없습니다. server.js가 실행 중인지 확인하세요.');
+      } else {
+        setError(err.message);
+      }
     } finally {
       setLoading(false);
     }
@@ -53,23 +99,46 @@ export default function ChannelManager({ onClose }) {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:3002/api/channels/${id}`, { method: 'DELETE' });
-      setChannels(channels.filter(c => c.id !== id));
+      const res = await fetchWithRetry(`${API_URL}/api/channels/${id}`, {
+        method: 'DELETE',
+      });
+
+      if (res.ok) {
+        setChannels(channels.filter(c => c.id !== id));
+        setError(null);
+      } else {
+        throw new Error('Failed to delete channel');
+      }
     } catch (e) {
       console.error(e);
+      setError('채널 삭제에 실패했습니다.');
     }
   };
 
   const handleRunFetch = async () => {
     setIsFetching(true);
+    setError(null);
+
     try {
-      const res = await fetch('http://localhost:3002/api/fetch', { method: 'POST' });
+      const res = await fetchWithRetry(`${API_URL}/api/fetch`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ days: 7 })
+      });
+
       if (res.ok) {
-        alert('업데이트가 완료되었습니다! (페이지를 새로고침하세요)');
+        alert('✅ 영상 수집이 완료되었습니다!\n\n페이지를 새로고침합니다.');
         window.location.reload();
+      } else {
+        const data = await res.json();
+        throw new Error(data.message || 'Fetch failed');
       }
     } catch (e) {
-      alert('오류가 발생했습니다.');
+      if (e.name === 'TimeoutError') {
+        alert('⚠️ 요청 시간이 초과되었습니다.\n수집은 백그라운드에서 계속 진행될 수 있습니다.');
+      } else {
+        alert(`❌ 오류가 발생했습니다: ${e.message}`);
+      }
     } finally {
       setIsFetching(false);
     }
@@ -81,20 +150,38 @@ export default function ChannelManager({ onClose }) {
     }
 
     setIsDeploying(true);
+    setDeployProgress('배포 시작...');
+    setError(null);
+
     try {
-      const res = await fetch('http://localhost:3002/api/deploy', { method: 'POST' });
+      setDeployProgress('영상 수집 중...');
+      const res = await fetchWithRetry(`${API_URL}/api/deploy`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ days: 7 })
+      }, 1); // Only 1 retry for deploy
+
       const data = await res.json();
 
       if (res.ok) {
+        setDeployProgress('배포 완료!');
         alert(`✅ 배포 완료!\n${data.message}\n\n페이지를 새로고침합니다.`);
         window.location.reload();
       } else {
-        alert(`❌ 배포 실패: ${data.error}\n${data.details || ''}`);
+        throw new Error(data.message || data.error || 'Deployment failed');
       }
     } catch (e) {
-      alert(`❌ 오류가 발생했습니다: ${e.message}`);
+      setDeployProgress('');
+      if (e.name === 'TimeoutError') {
+        alert('⚠️ 요청 시간이 초과되었습니다.\n배포는 백그라운드에서 계속 진행될 수 있습니다.');
+      } else if (e.message.includes('fetch')) {
+        alert('❌ 서버에 연결할 수 없습니다.\nserver.js가 실행 중인지 확인하세요.');
+      } else {
+        alert(`❌ 배포 실패: ${e.message}`);
+      }
     } finally {
       setIsDeploying(false);
+      setDeployProgress('');
     }
   };
 
@@ -198,7 +285,7 @@ export default function ChannelManager({ onClose }) {
                 {isDeploying ? (
                     <>
                         <RefreshCw className="w-4 h-4 animate-spin" />
-                        배포중... (수집 → 커밋 → 푸시)
+                        {deployProgress || '배포중... (수집 → 커밋 → 푸시)'}
                     </>
                 ) : (
                     <>

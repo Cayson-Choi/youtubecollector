@@ -18,6 +18,19 @@ export default function VideoPlayer({ video, onClose }) {
     };
   }, [onClose]);
 
+  // Close on ESC key press (Accessibility)
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [onClose]);
+
   if (!video) return null;
 
   const formattedDate = new Date(video.publishedAt).toLocaleDateString('ko-KR', {
@@ -27,8 +40,13 @@ export default function VideoPlayer({ video, onClose }) {
   });
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm animate-in fade-in duration-200">
-      <div 
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm animate-in fade-in duration-200"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="video-title"
+    >
+      <div
         ref={modalRef}
         className="w-full max-w-5xl bg-zinc-950 border border-white/10 rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row h-[85vh] md:h-[80vh]"
       >
@@ -74,14 +92,15 @@ export default function VideoPlayer({ video, onClose }) {
                             </span>
                             <span className="text-[11px] text-zinc-500">{formattedDate}</span>
                         </div>
-                        <h2 className="text-base font-bold text-white leading-snug line-clamp-2">
+                        <h2 id="video-title" className="text-base font-bold text-white leading-snug line-clamp-2">
                             {video.title}
                         </h2>
                      </div>
-                     
+
                      <button
                         onClick={onClose}
                         className="p-2 rounded-full hover:bg-white/10 text-zinc-400 hover:text-white transition-colors"
+                        aria-label="Close video player"
                      >
                         <X className="w-5 h-5" />
                     </button>

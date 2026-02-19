@@ -1,21 +1,18 @@
-import fs from "fs";
-import path from "path";
-import axios from "axios";
-import dotenv from "dotenv";
 import { fileURLToPath } from "url";
+import path from "path";
 
-// Load environment variables
-dotenv.config();
+// Import utilities
+import { validateEnvironment } from "../src/config/env.js";
+import { DEFAULT_DAYS, API_DELAY_MS } from "../src/config/constants.js";
+import { loadChannels, saveVideos } from "../src/utils/fileUtils.js";
+import { getChannelUploadsPlaylist, fetchPlaylistItems } from "../src/utils/api.js";
+import { CATEGORY_KEYWORDS } from "../src/data/categories.js";
+
+// Validate environment on startup
+validateEnvironment();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-const YOUTUBE_API_KEY =
-  process.env.VITE_YOUTUBE_API_KEY || process.env.YOUTUBE_API_KEY;
-const OUTPUT_FILE = path.join(__dirname, "../src/data/videos.json");
-const CHANNELS_FILE = path.join(__dirname, "../src/data/channels.json");
-
-import { CATEGORY_KEYWORDS } from "../src/data/categories.js";
 
 const getDateByDays = (days = 7) => {
   const date = new Date();
@@ -50,55 +47,25 @@ const determineCategories = (title, description) => {
   return Array.from(matchedCategories);
 };
 
-// Get channel's uploads playlist ID - Uses 1 quota (vs 100 for search)
-const getChannelUploadsPlaylistId = async (channelId) => {
-  const response = await axios.get(
-    "https://www.googleapis.com/youtube/v3/channels",
-    {
-      params: {
-        part: "contentDetails",
-        id: channelId,
-        key: YOUTUBE_API_KEY,
-      },
-    },
-  );
-
-  if (!response.data.items || response.data.items.length === 0) {
-    throw new Error("Channel not found");
-  }
-
-  return response.data.items[0].contentDetails.relatedPlaylists.uploads;
-};
-
-// Fetch videos from playlist - Uses 1 quota (vs 100 for search)
-const fetchChannelVideos = async (channelId, handle, days = 7) => {
+// Fetch videos from a channel's uploads playlist
+const fetchChannelVideos = async (channelId, handle, days = DEFAULT_DAYS) => {
   try {
     console.log(`🔍 Scanning Channel: ${handle}...`);
 
-    // Step 1: Get uploads playlist ID (1 quota)
-    const uploadsPlaylistId = await getChannelUploadsPlaylistId(channelId);
+    // Step 1: Get uploads playlist ID (1 quota) - using shared utility
+    const uploadsPlaylistId = await getChannelUploadsPlaylist(channelId);
 
-    // Step 2: Get videos from playlist (1 quota) - MUCH more efficient!
-    const response = await axios.get(
-      "https://www.googleapis.com/youtube/v3/playlistItems",
-      {
-        params: {
-          part: "snippet",
-          playlistId: uploadsPlaylistId,
-          maxResults: 20, // Get more videos since quota is cheaper
-          key: YOUTUBE_API_KEY,
-        },
-      },
-    );
+    // Step 2: Get videos from playlist (1 quota) - using shared utility
+    const items = await fetchPlaylistItems(uploadsPlaylistId, 20);
 
-    if (!response.data.items || response.data.items.length === 0) {
+    if (items.length === 0) {
       console.log(`   ⚠️  No videos found for ${handle}`);
       return [];
     }
 
     // Filter by date and map to our format
     const targetDate = new Date(getDateByDays(days));
-    const videos = response.data.items
+    const videos = items
       .filter((item) => {
         const publishedDate = new Date(item.snippet.publishedAt);
         return publishedDate >= targetDate;
@@ -125,7 +92,7 @@ const fetchChannelVideos = async (channelId, handle, days = 7) => {
           categories: categories,
         };
       })
-      .filter((item) => item !== null); // Filter out the nulls (non-matching videos)
+      .filter((item) => item !== null); // Filter out non-matching videos
 
     console.log(`   ✅ Found ${videos.length} videos from last ${days} days`);
     return videos;
@@ -137,56 +104,51 @@ const fetchChannelVideos = async (channelId, handle, days = 7) => {
 };
 
 const main = async () => {
+  const startTime = Date.now();
+
   // Get days from command line argument (default: 7)
-  const days = parseInt(process.argv[2]) || 7;
+  const days = parseInt(process.argv[2]) || DEFAULT_DAYS;
 
   console.log("\n🚀 Trending AI Insights - Video Fetcher\n");
 
-  if (!YOUTUBE_API_KEY) {
-    console.error("❌ YouTube API Key not found in .env file!");
-    console.error("   Please add VITE_YOUTUBE_API_KEY=your_key_here to .env");
+  const channels = loadChannels();
+
+  if (channels.length === 0) {
+    console.error("❌ No channels found!");
+    console.error("   Add channels using the Channel Manager or server API");
     return;
   }
 
-  if (!fs.existsSync(CHANNELS_FILE)) {
-    console.error("❌ Channels file not found!");
-    return;
-  }
-
-  const channels = JSON.parse(fs.readFileSync(CHANNELS_FILE, "utf-8"));
   console.log(
     `📡 Fetching videos from ${channels.length} channels (last ${days} days)...`,
   );
   console.log(
-    `⚡ Using efficient PlaylistItems API (2 quota per channel vs 100 with Search API)\n`,
+    `⚡ Using efficient PlaylistItems API (2 quota per channel vs 100 with Search API)`,
+  );
+  console.log(`⚡ Parallel processing enabled for optimal performance\n`,
   );
 
-  let allVideos = [];
-  let successCount = 0;
-  let errorCount = 0;
-
-  for (let i = 0; i < channels.length; i++) {
-    const channel = channels[i];
+  // **PERFORMANCE OPTIMIZATION: Parallel API calls**
+  // Instead of sequential for-loop, fetch all channels in parallel
+  const fetchPromises = channels.map((channel, i) => {
     console.log(
       `[${i + 1}/${channels.length}] ${channel.handle || channel.title}`,
     );
 
-    const videos = await fetchChannelVideos(
+    return fetchChannelVideos(
       channel.id,
       channel.handle || channel.title,
       days,
     );
+  });
 
-    if (videos.length > 0) {
-      successCount++;
-      allVideos = [...allVideos, ...videos];
-    } else {
-      errorCount++;
-    }
+  // Wait for all fetches to complete
+  const results = await Promise.all(fetchPromises);
+  const allVideos = results.flat();
 
-    // Small delay to be nice to API
-    await new Promise((r) => setTimeout(r, 200));
-  }
+  // Count successes and failures
+  const successCount = results.filter((r) => r.length > 0).length;
+  const errorCount = channels.length - successCount;
 
   // Deduplicate by ID
   const uniqueVideos = Array.from(
@@ -206,8 +168,11 @@ const main = async () => {
     });
   });
 
-  // Save to file
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(uniqueVideos, null, 2), "utf-8");
+  // Save to file using utility
+  saveVideos(uniqueVideos);
+
+  // Calculate elapsed time
+  const elapsedTime = ((Date.now() - startTime) / 1000).toFixed(1);
 
   // Summary
   console.log("\n" + "=".repeat(60));
@@ -218,7 +183,8 @@ const main = async () => {
   if (errorCount > 0) {
     console.log(`⚠️  Failed channels: ${errorCount}`);
   }
-  console.log(`\n📂 Saved to: ${OUTPUT_FILE}`);
+  console.log(`⏱️  Time elapsed: ${elapsedTime}s`);
+  console.log(`\n📂 Saved to: src/data/videos.json`);
 
   if (Object.keys(categoryStats).length > 0) {
     console.log("\n📈 Category Distribution:");
