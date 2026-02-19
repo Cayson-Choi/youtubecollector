@@ -53,19 +53,29 @@ npm run lint
 ├── server.js                    # Express API server (port 3002)
 ├── src/
 │   ├── App.jsx                  # Main React app with filtering and infinite scroll
-│   ├── components/              # React components
+│   ├── main.jsx                 # React entry point
+│   ├── index.css                # Global styles (TailwindCSS)
+│   ├── components/
 │   │   ├── VideoPlayer.jsx      # YouTube video player modal
-│   │   ├── ChannelManager.jsx   # Channel management UI
-│   │   └── ...                  # Other UI components
+│   │   ├── ChannelManager.jsx   # Channel management UI (not rendered in App.jsx, API server required)
+│   │   ├── PromptPanel.jsx      # Prompt panel component
+│   │   ├── SlideExample.jsx     # Slide example component
+│   │   ├── StyleThumbnail.jsx   # Style thumbnail component
+│   │   └── ThumbnailSlide.jsx   # Thumbnail slide component
 │   ├── data/
 │   │   ├── categories.js        # CATEGORY_KEYWORDS mapping (exported const)
 │   │   ├── channels.json        # Tracked YouTube channels
 │   │   └── videos.json          # Collected video data (auto-generated)
-│   └── utils/                   # Helper utilities
+│   └── utils/
+│       ├── colors.js            # Color utilities
+│       └── prompts.js           # Prompt utilities
 ├── scripts/
 │   ├── fetch_videos.js          # YouTube API video fetcher
 │   └── manage_channels.js       # CLI channel manager
-└── start.bat                    # Windows launcher with menu system
+├── start.bat                    # Windows launcher with menu system (5 options)
+├── auto_update_scheduled.bat    # Scheduled auto-update (fetch + deploy)
+├── setup_scheduler.bat          # Windows Task Scheduler registration
+└── uninstall_scheduler.bat      # Scheduler removal
 ```
 
 ### Data Flow
@@ -131,11 +141,19 @@ Windows Task Scheduler runs `auto_update_scheduled.bat` periodically:
 - Loads +24 videos per trigger
 - Resets to 24 when filters/search changes
 
-### Git Automation in server.js `/api/deploy`
-- Only commits if actual changes exist in `videos.json` or `channels.json`
+### Git Automation
+
+**`/api/deploy` endpoint (server.js):**
+- Only stages specific files: `src/data/videos.json` and `src/data/channels.json`
+- Only commits if actual changes exist in those data files
 - Uses `execSync` with large buffer (50MB) to handle big outputs
 - Continues deployment even if fetch fails (quota limits)
 - Returns detailed deployment log to frontend
+
+**Batch files (`start.bat` options 2/4, `auto_update_scheduled.bat`):**
+- Uses `git add .` which stages ALL changed files (not just data files)
+- `.gitignore` protects `.env`, `node_modules/`, `dist/`, `.claude/` from being committed
+- Any other modified files (code, config, docs) WILL be included in the commit
 
 ## Common Development Patterns
 
@@ -159,4 +177,5 @@ Windows Task Scheduler runs `auto_update_scheduled.bat` periodically:
 - The frontend reads `videos.json` as a static import, so data updates require rebuild or page refresh
 - Scheduled tasks use Windows Task Scheduler (Windows-only automation)
 - The server has a mock fallback for 403 errors during development (creates mock channel)
-- Git operations in `/api/deploy` only stage specific files to avoid committing unrelated changes
+- `ChannelManager.jsx` exists as a standalone component but is NOT currently rendered in `App.jsx`; channel management is done via CLI (`node scripts/manage_channels.js`) or API endpoints
+- `/api/deploy` only stages data files; batch files use `git add .` to stage all changes (protected by `.gitignore`)
