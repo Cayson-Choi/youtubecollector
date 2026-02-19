@@ -51,8 +51,6 @@ app.post('/api/channels', async (req, res) => {
     handle = decodedUrl; // Fallback if user just sends handle
   }
 
-  console.log(`Processing Handle: ${handle}`); // Log for debugging
-
   console.log(`Processing Handle: ${handle}`);
 
   try {

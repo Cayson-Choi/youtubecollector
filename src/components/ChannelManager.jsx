@@ -15,7 +15,7 @@ export default function ChannelManager({ onClose }) {
 
   const loadChannels = async () => {
     try {
-      const res = await fetch('http://localhost:3001/api/channels');
+      const res = await fetch('http://localhost:3002/api/channels');
       if (res.ok) {
         setChannels(await res.json());
       }
@@ -32,7 +32,7 @@ export default function ChannelManager({ onClose }) {
     setError(null);
 
     try {
-      const res = await fetch('http://localhost:3001/api/channels', {
+      const res = await fetch('http://localhost:3002/api/channels', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url: inputUrl })
@@ -53,7 +53,7 @@ export default function ChannelManager({ onClose }) {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:3001/api/channels/${id}`, { method: 'DELETE' });
+      await fetch(`http://localhost:3002/api/channels/${id}`, { method: 'DELETE' });
       setChannels(channels.filter(c => c.id !== id));
     } catch (e) {
       console.error(e);
@@ -63,7 +63,7 @@ export default function ChannelManager({ onClose }) {
   const handleRunFetch = async () => {
     setIsFetching(true);
     try {
-      const res = await fetch('http://localhost:3001/api/fetch', { method: 'POST' });
+      const res = await fetch('http://localhost:3002/api/fetch', { method: 'POST' });
       if (res.ok) {
         alert('업데이트가 완료되었습니다! (페이지를 새로고침하세요)');
         window.location.reload();
@@ -82,7 +82,7 @@ export default function ChannelManager({ onClose }) {
 
     setIsDeploying(true);
     try {
-      const res = await fetch('http://localhost:3001/api/deploy', { method: 'POST' });
+      const res = await fetch('http://localhost:3002/api/deploy', { method: 'POST' });
       const data = await res.json();
 
       if (res.ok) {
