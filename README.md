@@ -61,9 +61,11 @@ start.bat
 ```
 
 메뉴에서 옵션 선택:
-- `1`: 프론트엔드 + 백엔드 동시 실행
-- `2`: 프론트엔드만 실행
-- `3`: 백엔드만 실행
+- `1`: [Just Start] 서버 시작 + 브라우저 열기
+- `2`: [Update] 영상 수집 → 배포 → 서버 시작
+- `3`: [Channel] 채널 관리 (추가/삭제)
+- `4`: [Auto Update] 30일 자동수집 → 배포 → 서버 시작
+- `5`: [Exit] 종료
 
 **방법 2: 수동 실행**
 
@@ -88,19 +90,36 @@ http://localhost:5176
 ```
 youtubecollector/
 ├── src/
-│   ├── components/          # React 컴포넌트
-│   │   ├── VideoPlayer.jsx  # 비디오 재생 모달
-│   │   └── ChannelManager.jsx  # 채널 관리 UI
+│   ├── App.jsx                  # 메인 앱 (필터링, 무한 스크롤)
+│   ├── main.jsx                 # React 엔트리포인트
+│   ├── index.css                # 전역 스타일 (TailwindCSS)
+│   ├── components/
+│   │   ├── VideoPlayer.jsx      # 비디오 재생 모달
+│   │   ├── ChannelManager.jsx   # 채널 관리 UI (API 서버 필요)
+│   │   ├── PromptPanel.jsx      # 프롬프트 패널
+│   │   ├── SlideExample.jsx     # 슬라이드 예시
+│   │   ├── StyleThumbnail.jsx   # 스타일 썸네일
+│   │   └── ThumbnailSlide.jsx   # 썸네일 슬라이드
 │   ├── data/
-│   │   ├── categories.js    # 카테고리 키워드 정의
-│   │   ├── channels.json    # 구독 채널 목록
-│   │   └── videos.json      # 수집된 비디오 데이터
-│   └── App.jsx              # 메인 앱
+│   │   ├── categories.js        # 카테고리 키워드 정의
+│   │   ├── channels.json        # 구독 채널 목록
+│   │   └── videos.json          # 수집된 비디오 데이터
+│   └── utils/
+│       ├── colors.js            # 색상 유틸리티
+│       └── prompts.js           # 프롬프트 유틸리티
 ├── scripts/
-│   ├── fetch_videos.js      # 비디오 수집 스크립트
-│   └── manage_channels.js   # 채널 관리 CLI
-├── server.js                # Express API 서버
-├── start.bat                # Windows 런처
+│   ├── fetch_videos.js          # 비디오 수집 스크립트
+│   └── manage_channels.js       # 채널 관리 CLI
+├── server.js                    # Express API 서버 (포트 3002)
+├── start.bat                    # Windows 대화형 런처
+├── auto_update_scheduled.bat    # 자동 업데이트 (스케줄러용)
+├── setup_scheduler.bat          # Windows 작업 스케줄러 등록
+├── uninstall_scheduler.bat      # 스케줄러 해제
+├── .env.example                 # 환경변수 템플릿
+├── vite.config.js               # Vite 설정
+├── tailwind.config.js           # TailwindCSS 설정
+├── postcss.config.js            # PostCSS 설정
+├── vercel.json                  # Vercel 배포 설정
 └── package.json
 ```
 
@@ -131,9 +150,21 @@ youtubecollector/
 
 ### 채널 추가
 
-1. 브라우저에서 채널 관리 버튼 클릭
-2. YouTube 채널 URL 입력 (예: `https://youtube.com/@채널이름`)
-3. "추가" 버튼 클릭
+**방법 1: CLI 사용**
+
+```bash
+node scripts/manage_channels.js
+```
+
+**방법 2: start.bat 메뉴**
+
+`start.bat` 실행 후 옵션 `3` (Channel) 선택
+
+**방법 3: API 직접 호출** (서버 실행 중일 때)
+
+```bash
+curl -X POST http://localhost:3002/api/channels -H "Content-Type: application/json" -d "{\"url\": \"https://youtube.com/@채널이름\"}"
+```
 
 ### 비디오 수집
 
@@ -165,6 +196,8 @@ auto_update_scheduled.bat
 ```
 
 또는 Channel Manager UI에서 "배포하기 (GitHub)" 버튼 클릭 (서버 실행 필요)
+
+또는 서버 실행 중일 때 API 호출: `POST http://localhost:3002/api/deploy`
 
 ## 🔧 개발 명령어
 
@@ -254,7 +287,7 @@ ALLOWED_ORIGINS=http://localhost:5176,https://your-domain.vercel.app
 `vite.config.js`에서 포트 변경
 
 **백엔드 (3002):**
-`server.js`의 `PORT` 변수 변경 + `ChannelManager.jsx`의 fetch URL 업데이트
+`server.js`의 `PORT` 변수 변경
 
 ### YouTube API 할당량 초과
 

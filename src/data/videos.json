@@ -1,29 +1,5 @@
 [
   {
-    "id": "D4FIacKK3FI",
-    "title": "대부분 놓치고 있는 ChatGPT 꿀기능",
-    "description": "AI와의 채팅 기록… 쌓이기만 하고 찾기는 어려우셨죠?\n‘프로젝트(Project)’ 하나면 정리 + 자동화가 동시에 됩니다.\n\n✅ 프로젝트 = 업무 폴더\n\n- 기획안/예산안/보고서처럼 채팅을 카테고리별로 보관\n\n- 프로젝트마다 공통 지침(프롬프트)을 고정\n\n- 파일도 함께 첨부해두면, 매번 설명/첨부 반복 끝\n\n여러분도 “내가 자주 하는 작업 프롬프트”를 만들어서 사용해보세요\n\n앞으로 더 많은 꿀정보 놓치고 싶지 않다면 구독!",
-    "thumbnailUrl": "https://i.ytimg.com/vi/D4FIacKK3FI/hqdefault.jpg",
-    "channelTitle": "알린 ALINN",
-    "publishedAt": "2026-02-26T02:38:06Z",
-    "category": "ChatGPT",
-    "categories": [
-      "ChatGPT"
-    ]
-  },
-  {
-    "id": "rb-JgbT90jU",
-    "title": "아직도 ChatGPT만 쓰세요? 진짜 고수는 이렇게 씁니다 #shorts",
-    "description": "#ai #챗gpt #크롬추가기능 #ai팁 #ai사용법 #ai강의 #오빠두엑셀\n\n👇 실무에 꼭 필요한 엑셀의 거의 모든 것을 담았습니다!  \n \"진짜 쓰는 실무 엑셀\" 교재 구매하기\n- 교보문고 https://bit.ly/excel_kyobo\n- 예스24 https://bit.ly/excel_yes\n- 알라딘 https://bit.ly/excel_aladin\n\n⭐오빠두엑셀 위캔두 멤버쉽 채널 가입하기\nhttps://www.youtube.com/channel/UCZ6UHYBQFBe14WUgxlgmYfg/join\nPro: 라이브강의 풀영상 다시보기 제공\nPremium : 프리미엄 전용 워크샵 및 다시보기 영상 제공\n\n❤️ 오빠두엑셀 공식 홈페이지 : https://www.oppadu.com\n📚  엑셀 커뮤니티 바로가기 : https://www.oppadu.com/question\n\n00:00 강의 시작\n00:06 크롬 북마크 설정법\n00:48 Tab Resize 추가기능",
-    "thumbnailUrl": "https://i.ytimg.com/vi/rb-JgbT90jU/hqdefault.jpg",
-    "channelTitle": "오빠두엑셀 l 엑셀 강의 대표채널",
-    "publishedAt": "2026-02-25T12:40:01Z",
-    "category": "ChatGPT",
-    "categories": [
-      "ChatGPT"
-    ]
-  },
-  {
     "id": "9B5aTxQywgU",
     "title": "클로드 신제품 발표에 폭락빔을 맞은 기업들 ㅠㅠ",
     "description": "✅ 조코딩과 코딩 공부하기\nhttps://jocoding.net/\n\nVVIP 멤버십 후원\n그림자그림자님, RadaGT3님, 차딩Chading TV님, prochild님, eyuri chi님, 정진균님, Tae hwan Kim님, 주정뱅이님, 시원-r9u님, deflepsteve님 감사드립니다.\nhttps://www.youtube.com/@jocoding/join\n\n#AI #클로드 #보안",
@@ -42,11 +18,11 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/p6W4DH3X4nI/hqdefault.jpg",
     "channelTitle": "조코딩 JoCoding",
     "publishedAt": "2026-02-23T13:15:00Z",
-    "category": "Grok",
+    "category": "Gemini",
     "categories": [
-      "Grok",
       "Gemini",
-      "Claude"
+      "Claude",
+      "Grok"
     ]
   },
   {
@@ -93,11 +69,11 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/DieMeHC2k6Q/hqdefault.jpg",
     "channelTitle": "조코딩 JoCoding",
     "publishedAt": "2026-02-22T11:11:08Z",
-    "category": "Grok",
+    "category": "Gemini",
     "categories": [
-      "Grok",
       "Gemini",
-      "Claude"
+      "Claude",
+      "Grok"
     ]
   },
   {
@@ -135,6 +111,18 @@
     "category": "Seedance",
     "categories": [
       "Seedance"
+    ]
+  },
+  {
+    "id": "tkdYLGsXlmU",
+    "title": "[긴급] 노트북LM 역대급 업데이트! 이제 슬라이드 수정까지 AI가 다 합니다 (모르면 손해)",
+    "description": "구글이 작정했습니다. 설마 했던 기능이 드디어 들어왔어요!\n2026년 2월 18일 발표된 노트북LM의 '슬라이드 수정' 기능!\n\n이제 PPT 업무, 노트북LM 하나로 끝내버리세요.\n더 이상 복잡한 외부 툴 찾아 헤맬 필요 없어요.\n\n며칠 전 발표된 노트북LM '슬라이드 수정' 기능을 발빠르게 소개해드립니다. 이 영상 끝까지 보시고 소스 분석부터 결과물 수정까지 노트북LM 안에서 해결하세요.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/tkdYLGsXlmU/hqdefault.jpg",
+    "channelTitle": "백프롬",
+    "publishedAt": "2026-02-20T18:21:37Z",
+    "category": "NotebookLM",
+    "categories": [
+      "NotebookLM"
     ]
   },
   {
@@ -198,6 +186,18 @@
     ]
   },
   {
+    "id": "G3klPWNKEN8",
+    "title": "제발 소스 50개 채우지 마세요! 노트북LM 무제한으로 쓰는 법(비밀 꿀팁 5가지)",
+    "description": "이 영상에서는 지난 몇 주간 노트북LM의 모든 기능을 사용해보며 발견한 꿀팁 5가지를 공유합니다. \n\n소스 개수(무료 30개, 유료 300개)의 한계를 뛰어 넘는 법부터 전문가급 자료만 골라 내는 딥 리서치 기술 등, 이 영상을 통해 노트북LM을 좀 더 똑똑하게 사용법! 내 것으로 만들어가세요.\n\n영상이 도움 되셨다면 구독과 좋아요 부탁드립니다. 더 많은 유용한 AI 정보로 찾아오겠습니다.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/G3klPWNKEN8/hqdefault.jpg",
+    "channelTitle": "백프롬",
+    "publishedAt": "2026-02-18T01:45:01Z",
+    "category": "NotebookLM",
+    "categories": [
+      "NotebookLM"
+    ]
+  },
+  {
     "id": "2zEP3ojeTTA",
     "title": "클로드 코드 스킬 & 팀에이전트 | 명령어 한 줄이면 AI 팀이 알아서 고칩니다 (오푸스 4.6)",
     "description": "#클로드코드 #ClaudeCode #바이브코딩 #AI코딩 #팀에이전트 #TeamAgent #스킬 #오푸스4.6\n\nAI한테 \"이거 고쳐줘\" 했더니 오히려 더 망가진 적 있으시죠? \n혼자 시키면 한쪽만 파다가 수정이 점점 커집니다.\n\n이번 영상에서는 AI 여러 명한테 동시에 시키는 방법을 알려드립니다. \n클로드 코드의 스킬과 팀에이전트 두 가지를 다룹니다.\n\n📌 이 영상에서 다루는 내용\n- 스킬이란? (자주 쓰는 작업을 명령어 한 줄로 만드는 단축키)\n- 팀에이전트란? (AI 여러 명이 동시에 다른 방향으로 문제를 해결)\n- 스킬 + 팀에이전트를 합쳐서 /team 하나로 끝내는 법\n- 장단점 & 언제 쓰면 좋은지\n\n💡 코딩 몰라도 됩니다. \n명령어 한 줄만 치면 AI가 알아서 팀 꾸리고, 고치고, 검토까지 해줍니다.\n\n💬 바이브코딩 입문자 오픈채팅방 \n같이 배우고, 질문하고, 성장하는 공간입니다! \n서로 도와가며 함께 성장해요 🚀 \n👉 https://open.kakao.com/o/gMWvqQ2h \n👉 [입장코드: 1120]\n\n💼 1:1 컨설팅 / 기업 교육 / 맞춤 개발 문의 📧 \nlapin.builder@gmail.com\n\n00:00 코드 고쳐달라고 했더니 더 망가지는 이유 \n01:25 스킬이란?\n 05:07 팀에이전트란? \n06:37 스킬로 팀에이전트 만들기 \n07:55 장점과 단점 \n09:32 정리",
@@ -224,7 +224,7 @@
   {
     "id": "5jGc5kgWzgc",
     "title": "제미나이 하나로 5분만에 동물 인터뷰 AI 영상 만드는 법 外 | 1시간 풀영상",
-    "description": "#제미나이 #ai영상제작 #나노바나나  \n\n유튜브, '이거' 모르면 1년 해도 조회수 안 나옵니다.\n자세히 보기👉 https://youtu.be/QyYJBXShZYo\n\n\n아직도 비싼 유료 강의 들으시나요?\n무료 AI 툴로 고퀄리티 영상을 만들고,\n유튜브 조회수를 터뜨리는 모든 방법을 1시간 안에 담았습니다.\n\n제미나이, 미드저니, 그록(Grok), 하이루오 등 현재 가장 핫한 AI 툴 사용법부터\n동물 인터뷰, 먹방 ASMR, 애니메이션 쇼츠 제작까지.\n이 영상 하나만 끝까지 보시면 여러분도 당장 AI 유튜버로 수익화를 시작할 수 있습니다.\n\n필요한 부분은 아래 타임스탬프를 눌러 반복해서 시청해 보세요!\n\n[⏰ 타임스탬프 & 핵심 요약]\n00:00 제미나이로 5분 만에 '동물 인터뷰' 만들기 (강아지 프롬프트 무료 배포)\n11:00 핫한 '동물 먹방 ASMR' 만드는 가장 쉬운 방법\n19:00 초보도 가능한 AI 애니메이션 쇼츠 (GPT+미드저니 자동화)\n23:05 AI 영상 제작비 0원? 100만 원 아껴주는 무료 툴 올인원 정리\n30:40 첫 영상 200만 뷰 비법! 하이루오 AI로 5분 만에 릴스/쇼츠 완성\n36:48 일론 머스크의 '그록(Grok)' AI 활용법 완벽 가이드\n44:00 이미지 1장으로 30초 애니메이션 만들기 (프롬프트 필요 없음)\n52:03 전문가처럼 고퀄리티 AI 영상 만드는 디테일 팁",
+    "description": "#제미나이 #ai영상제작 #나노바나나  \n\n👇2026 유튜브, 이번엔 진짜 제대로 시작하고 싶다면?👇\nhttps://youtu.be/KUBtkiYHMbI\n\n아직도 비싼 유료 강의 들으시나요?\n무료 AI 툴로 고퀄리티 영상을 만들고,\n유튜브 조회수를 터뜨리는 모든 방법을 1시간 안에 담았습니다.\n\n제미나이, 미드저니, 그록(Grok), 하이루오 등 현재 가장 핫한 AI 툴 사용법부터\n동물 인터뷰, 먹방 ASMR, 애니메이션 쇼츠 제작까지.\n이 영상 하나만 끝까지 보시면 여러분도 당장 AI 유튜버로 수익화를 시작할 수 있습니다.\n\n필요한 부분은 아래 타임스탬프를 눌러 반복해서 시청해 보세요!\n\n[⏰ 타임스탬프 & 핵심 요약]\n00:00 제미나이로 5분 만에 '동물 인터뷰' 만들기 (강아지 프롬프트 무료 배포)\n11:00 핫한 '동물 먹방 ASMR' 만드는 가장 쉬운 방법\n19:00 초보도 가능한 AI 애니메이션 쇼츠 (GPT+미드저니 자동화)\n23:05 AI 영상 제작비 0원? 100만 원 아껴주는 무료 툴 올인원 정리\n30:40 첫 영상 200만 뷰 비법! 하이루오 AI로 5분 만에 릴스/쇼츠 완성\n36:48 일론 머스크의 '그록(Grok)' AI 활용법 완벽 가이드\n44:00 이미지 1장으로 30초 애니메이션 만들기 (프롬프트 필요 없음)\n52:03 전문가처럼 고퀄리티 AI 영상 만드는 디테일 팁",
     "thumbnailUrl": "https://i.ytimg.com/vi/5jGc5kgWzgc/hqdefault.jpg",
     "channelTitle": "AI:ON 에이아이온💡돈버는법💡",
     "publishedAt": "2026-02-17T07:00:04Z",
@@ -299,8 +299,8 @@
   },
   {
     "id": "rH2NhAEKbD8",
-    "title": "veo3보다 더 자연스러운 한국어 ai 영상 만들어주는 클링3.0 ai 활용법",
-    "description": "#ai영상제작 #클링ai #힉스필드ai \n\n유튜브, '이거' 모르면 1년 해도 조회수 안 나옵니다.\n자세히 보기👉 https://youtu.be/QyYJBXShZYo\n\n📌 힉스필드 바로가기 👉 https://higgsfield.ai/kling-3.0/?utm_source=AI:ON  \n\n\"이게 진짜 1년 만에 가능하다고?\" 😲\n윌 스미스 스파게티 영상 기억하시나요?\n조롱거리였던 AI 영상이 이제 영화를 만듭니다.\n\n이번 클링 3.0 (Kling 3.0) 업데이트는 그야말로 '혁명'입니다.\n특히 한국어 립싱크와 멀티샷 기능은\n소라(Sora)나 베오(Veo)를 압도하는 수준인데요.\n\n하지만 매달 나가는 구독료, 부담스러우셨죠?\n미드저니, 런웨이, 피카... 다 결제하면 월 20만 원은 우습게 깨집니다.\n\n✔ 영상 하나 만들려고 툴 3~4개 왔다 갔다\n✔ 복잡한 설정에 지치고\n✔ 결과물은 매번 복불복...\n\n솔직히 지치셨죠? 저도 똑같았습니다.\n그래서 제가 70시간 넘게 직접 테스트하고 찾은\n가장 가성비 넘치는 방법을 공개합니다.\n\n👉 여러 개 필요 없습니다.\n오늘 소개해드리는 ‘힉스필드(Higgsfield)’ 하나면\n클링 3.0부터 최신 모델까지 싹 다 가능합니다.\n\n[🎬 타임라인: 원하는 정보만 쏙쏙!]\n00:00 클링 3.0 업데이트, 커뮤니티가 뒤집어진 이유\n01:13 1년 전 vs 현재, AI 발전 속도 실화?\n02:36 기능1. 멀티샷: 햄스터 영화 한 편 뚝딱 만드는 법\n04:28 기능2. 한국어 대사: 립싱크 싱크로율 100% (소름 주의)\n05:26 기능3. 캐릭터 일관성: 고양이 바리스타 유지하는 꿀팁 (@기능)\n07:26 기능4. 오디오 퀄리티: 빗소리, 오케스트라 사운드 구현\n09:16 기능5. 창의성 테스트: 지브리 감성 & 부산 사투리 도전\n11:43 💰 월 20만원 아끼는 법: 힉스필드 활용 꿀팁\n\n🤔 “그래서 이 기술로 유튜브 어떻게 시작하죠?”\n이 질문 드는 게 정상입니다. 그래서 준비해뒀어요.\n\n👉 고정댓글 영상 꼭 확인하세요.\nAI 영상으로\n✔ 어떤 주제로\n✔ 어떻게 시작하고\n✔ 수익까지 연결하는지\n처음부터 구조로 설명해드립니다.\n\n💡 지금이 AI 영상 시작하기 가장 좋은 타이밍입니다.\n더 늦기 전에 시작하세요!\n\n#Kling3.0 #Veo3 #Sora2",
+    "title": "veo3보다 더 자연스러운 한국어 ai 영상 만들어주는 클링ai 활용법 | 2026년 최신 업데이트",
+    "description": "#ai영상제작 #클링ai #힉스필드ai \n\n👇유튜브, 이번엔 진짜 ‘제대로’ 시작해보고 싶다면?👇\nhttps://youtu.be/KUBtkiYHMbI\n\n📌 힉스필드 바로가기 👉 https://higgsfield.ai/kling-3.0/?utm_source=AI:ON  \n\n\"이게 진짜 1년 만에 가능하다고?\" 😲\n윌 스미스 스파게티 영상 기억하시나요?\n조롱거리였던 AI 영상이 이제 영화를 만듭니다.\n\n이번 클링 3.0 (Kling 3.0) 업데이트는 그야말로 '혁명'입니다.\n특히 한국어 립싱크와 멀티샷 기능은\n소라(Sora)나 베오(Veo)를 압도하는 수준인데요.\n\n하지만 매달 나가는 구독료, 부담스러우셨죠?\n미드저니, 런웨이, 피카... 다 결제하면 월 20만 원은 우습게 깨집니다.\n\n✔ 영상 하나 만들려고 툴 3~4개 왔다 갔다\n✔ 복잡한 설정에 지치고\n✔ 결과물은 매번 복불복...\n\n솔직히 지치셨죠? 저도 똑같았습니다.\n그래서 제가 70시간 넘게 직접 테스트하고 찾은\n가장 가성비 넘치는 방법을 공개합니다.\n\n👉 여러 개 필요 없습니다.\n오늘 소개해드리는 ‘힉스필드(Higgsfield)’ 하나면\n클링 3.0부터 최신 모델까지 싹 다 가능합니다.\n\n[🎬 타임라인: 원하는 정보만 쏙쏙!]\n00:00 클링 3.0 업데이트, 커뮤니티가 뒤집어진 이유\n01:13 1년 전 vs 현재, AI 발전 속도 실화?\n02:36 기능1. 멀티샷: 햄스터 영화 한 편 뚝딱 만드는 법\n04:28 기능2. 한국어 대사: 립싱크 싱크로율 100% (소름 주의)\n05:26 기능3. 캐릭터 일관성: 고양이 바리스타 유지하는 꿀팁 (@기능)\n07:26 기능4. 오디오 퀄리티: 빗소리, 오케스트라 사운드 구현\n09:16 기능5. 창의성 테스트: 지브리 감성 & 부산 사투리 도전\n11:43 💰 월 20만원 아끼는 법: 힉스필드 활용 꿀팁\n\n🤔 “그래서 이 기술로 유튜브 어떻게 시작하죠?”\n이 질문 드는 게 정상입니다. 그래서 준비해뒀어요.\n\n👉 고정댓글 영상 꼭 확인하세요.\nAI 영상으로\n✔ 어떤 주제로\n✔ 어떻게 시작하고\n✔ 수익까지 연결하는지\n처음부터 구조로 설명해드립니다.\n\n💡 지금이 AI 영상 시작하기 가장 좋은 타이밍입니다.\n더 늦기 전에 시작하세요!\n\n#Kling3.0 #Veo3 #Sora2",
     "thumbnailUrl": "https://i.ytimg.com/vi/rH2NhAEKbD8/hqdefault.jpg",
     "channelTitle": "AI:ON 에이아이온💡돈버는법💡",
     "publishedAt": "2026-02-15T00:00:52Z",
@@ -491,6 +491,18 @@
     ]
   },
   {
+    "id": "G_arORBb6zc",
+    "title": "노트북LM 7가지만 알면 상위 2%가 될 수 있습니다",
+    "description": "구글이 공개한 역대급 AI 리서치 도구 NotebookLM, 단순히 파일만 업로드해서 질문하고 계셨나요? 그렇다면 이 도구의 진정한 가치를 아직 발견하지 못하신 거랍니다.\n\n이 영상에서는 단순히 기능을 나열하는 것을 넘어, 업무 효율을 극대화하고 나만의 'AI 비서'를 만드는 탑 클래스의 7가지 핵심 기술을 공개합니다. 딥 리서치부터 소스 필터링, 그리고 멀티모달 전략까지. 이 영상 하나만 제대로 따라오시면 더 이상 정보의 홍수 속에서 헤매지 않고, 가장 정확하고 날카로운 인사이트를 뽑아낼 수 있습니다.\n\n이 도구를 어떻게 내 업무에 연결할 수 있는지 영상에서 자세한 시연과 함께 설명해 드려요. 지금 바로 AI와 함께 똑똑하게 일하고 나만의 자유로운 시간을 확보하세요.\n\n영상이 도움 되셨다면 구독과 좋아요 부탁드립니다. 더 많은 유용한 AI 정보로 찾아오겠습니다.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/G_arORBb6zc/hqdefault.jpg",
+    "channelTitle": "백프롬",
+    "publishedAt": "2026-02-09T01:45:01Z",
+    "category": "NotebookLM",
+    "categories": [
+      "NotebookLM"
+    ]
+  },
+  {
     "id": "yVD8auU-sDE",
     "title": "이 공간 하나로, 제안 연출이 이렇게 늘어납니다.건축인테리어 AI랜더링 기법 (나노바나나 + 믹스보드 + 스케치업) (by 뽁숑이)",
     "description": "스케치업에서 AI 렌더링한 공간을 기준으로\n스케치업 + AI(믹스보드)로 다양한 시안을 한 번에 뽑아내는 실무 워크플로우입니다.\n\n👇 자세한 과정(풀버전) 보러 가기\n▶ https://youtu.be/t9Sheen6Kts\n\n💡 뽁숑이의 AI 스케치업 : 제작 노트\n✔️Design & Modeling: SketchUp (직접 제작)\n✔️Rendering & Visualization: Generative AI Tools\n✔️Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 실사 같은 시각적 표현(렌더링) 및 영상 제작 과정에서만 AI 기술의 도움을 받았습니다.\n\n#인테리어 #건축 #스케치업 #AI #Shorts #공간디자인 #AI인테리어 #실내투시도 #Mixboard #NotebookLM #NanoBanana",
@@ -611,6 +623,18 @@
     ]
   },
   {
+    "id": "5fBuWkeQRYk",
+    "title": "AI 인테리어 앱, 이렇게 시작합니다.오팔(Opal) 입문자 가이드+스케치업 AI RENDER (by 뽁숑이) + 샘플코드 제공?!",
+    "description": "이 영상은\n👉 ‘완성형 앱 제작 강의’가 아닙니다.\n\n대신,\n✔️AI 인테리어 앱이 어떤 구조로 만들어지는지\n✔️OPAL이 어디에 쓰이고 어떤 역할을 하는지\n✔️인테리어 실무자가 어디까지 활용하면 좋은지\n를 입문자 기준에서 아주 쉽게 설명하는 시작편입니다.\n\n📌 이 영상에서 다루는 내용:\n✅ OPAL이 뭔지, AI와 어떠한 결합이 가능한지\n✅ 실감 나는 인테리어 이미지/앱 구조 개념\n✅ AI 인테리어 앱의 기본 흐름 이해\n✅ 개발 지식 없이 접근하는 방법\n✅ AI 프롬프트를 단순화 하는 오팔의 흐름\n✅ 오팔 입문자를 위한 아주 기초적인 이해\n\n📌 이런 분들께 강력 추천!\n✅ AI 인테리어에 관심은 있는데 어디서부터 시작해야 할지 막막한 분\n✅ OPAL(오팔)을 처음 접하는 완전 입문자\n✅ 개발 지식 없이 AI 기반 인테리어 앱을 만들어보고 싶은 분\n✅ 렌더링·이미지 생성은 해봤지만 ‘앱’이나 ‘구조화’는 처음인 분\n✅ 실무에서 바로 써먹을 수 있는 AI 활용 흐름이 필요한 인테리어 실무자\n✅ AI를 ‘구경’이 아니라 ‘도구’로 쓰고 싶은 분\n\n📌 뽁숑이 유튜브는? \nSketchUp / 인테리어 포트폴리오 / 실무 기초 모델링\nAutoCAD / SketchUp  \nINTERIOR PORTFOLIO / 실무 건축 기초 \n그리고 AI와 스케치업을 결합한 공간디자인\n\n▶️ [초간단 공간 만들기 시리즈] https://www.youtube.com/playlist?list=PL4a9sP2-60rPxLwGAFNQYooJnqfb3Nly3\n▶️ [스케치업과 노하우+팁] https://www.youtube.com/playlist?list=PL4a9sP2-60rP4A3mefLq-QVwWVDhGYOa1\n▶️ [스케치업&AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rNmlu9wqTImDiOOsjkuiLbI\n▶️ [입문자를 위한 스케치업] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPDu7Q26CcxSt488S3x4mXF\n\n⏱ 타임스탬프  \n00:00 인트로\n00:26 오팔(OPAL)은 무엇일까?\n01:43 기본의 이해\n02:13 다양한 예시들\n03:09 오팔의 기본 그리고 제미나이잼스\n04:38 입문을 위한 개념\n05:00 연결방법?\n07:33 간단한 테스트\n11:21 샘플을 위한 코드\n12:32 잼으로 만들기\n14:08 에필로그\n\n💡 뽁숑이의 AI 스케치업 : 제작 노트\n✔️Design & Modeling: SketchUp (직접 제작)\n✔️Rendering & Visualization: Generative AI Tools\n✔️Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 실사 같은 시각적 표현(렌더링) 및 영상 제작 과정에서만 AI 기술의 도움을 받았습니다.\n\n#OPAL입문자 #구글오팔건축인테리어 #인테리어OPAL #노코드건축인테리어AI #스케치업입문자 #SketchUpAI #스케치업강좌 #스케치업기초 #스케치업AI #AI인테리어 #AI실내디자인 #스케치업노하우 #스케치업실무 #AIDESIGN #제미나이잼 ＃GEMINIGEMS",
+    "thumbnailUrl": "https://i.ytimg.com/vi/5fBuWkeQRYk/hqdefault.jpg",
+    "channelTitle": "뽁숑이의 AI 스케치업",
+    "publishedAt": "2026-02-02T14:18:09Z",
+    "category": "Opal",
+    "categories": [
+      "Opal"
+    ]
+  },
+  {
     "id": "rFU4u3XIFyM",
     "title": "#ai영상 명화 르누아르 스타일 유화느낌 #midjourney",
     "description": "",
@@ -644,6 +668,18 @@
     "category": "Claude",
     "categories": [
       "Claude"
+    ]
+  },
+  {
+    "id": "24i_ogSv974",
+    "title": "이게 다 스케치업 + AI라고요? 연출이 이렇게 쉬워졌습니다 . 건축/인테리어를 위한 AI 워크플로우 (by 뽁숑이)",
+    "description": "스케치업으로 모델링한 공간을\nAI 어시스턴트로 3D를 보완하고,\n나노바나나로 실사화한 뒤 믹스보드로 다양한 연출을 적용했습니다.\n\n복잡한 작업 없이,\n스케치업과 AI만으로 공간 연출이 가능합니다.\n이제는 좀더 쉬워진 공간의 모델링에서 랜더링까지 간단하게 확인해보세요.\n\n📌 자세한 과정은 아래 풀버전 영상에서 확인하세요 ↓  \n▶ 초보도 바로 쓰는 나노바나나 프로 매뉴얼 : https://youtu.be/UHdWjK6vPzg\n▶ 이건 진짜 혁명입니다…디자인 툴의 끝판왕 등장! Mixboard 실전 : https://youtu.be/2Tt170a5xT4\n\n📂 전체 AI 렌더링 시리즈 보기 ↓  \n▶️ [초간단 공간 만들기 시리즈] https://www.youtube.com/playlist?list=PL4a9sP2-60rPxLwGAFNQYooJnqfb3Nly3\n▶️ [스케치업과 노하우+팁] https://www.youtube.com/playlist?list=PL4a9sP2-60rP4A3mefLq-QVwWVDhGYOa1\n▶️ [스케치업&AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rNmlu9wqTImDiOOsjkuiLbI\n▶️ [입문자를 위한 스케치업] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPDu7Q26CcxSt488S3x4mXF\n\n💡 뽁숑이의 AI 스케치업 : 제작 노트\n✔️Design & Modeling: SketchUp (직접 제작)\n✔️Rendering & Visualization: Generative AI Tools\n✔️Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 실사 같은 시각적 표현(렌더링) 및 영상 제작 과정에서만 AI 기술의 도움을 받았습니다.\n\n#AIRENDER #스케치업입문자 #나노바나나 #AIsketchup #AI활용법 #AI워크플로우 #SketchUpAI #스케치업강좌 #스케치업기초 #스케치업AI #AI인테리어 #스케치업노하우 #스케치업실무 #Mixboard",
+    "thumbnailUrl": "https://i.ytimg.com/vi/24i_ogSv974/hqdefault.jpg",
+    "channelTitle": "뽁숑이의 AI 스케치업",
+    "publishedAt": "2026-02-01T04:32:11Z",
+    "category": "Flow",
+    "categories": [
+      "Flow"
     ]
   },
   {
@@ -713,6 +749,30 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/mgNNRmuWBVc/hqdefault.jpg",
     "channelTitle": "AI 겸임교수 이종범",
     "publishedAt": "2026-01-28T03:09:54Z",
+    "category": "Claude",
+    "categories": [
+      "Claude"
+    ]
+  },
+  {
+    "id": "6rzjCQI02pM",
+    "title": "리플릿 신기능으로 코딩 없이 앱 만들고 앱스토어 등록까지 | 비개발자도 가능한 바이브 코딩 완벽 가이드",
+    "description": "#리플릿 #바이브코딩 #replit \n\n이번 영상에서는 리플릿(Replit)의 신기능을 활용해 코딩 없이 앱을 만들고 앱스토어 등록까지 완료하는 전 과정을 보여드립니다. 비개발자도 프롬프트만 입력하면 프론트엔드, 백엔드, 호스팅, 도메인 연결은 물론 앱 빌드와 앱스토어 심사 제출 전까지 한 번에 해결할 수 있습니다.\n\n영상에서 직접 \"오늘 점심 뭐 먹지\" 앱을 만들어보며 OpenAI API 연동, 지도 앱 연결, 레시피 생성 기능까지 추가하는 과정을 실습합니다. Expo Go를 통한 모바일 테스트부터 애플 개발자 프로그램 가입, 앱스토어 심사 전까지 초보자도 따라할 수 있도록 차근차근 안내해 드립니다.\n\n몇 천만 원 들던 앱 개발이 월 20달러로 가능한 시대, 아이디어만 있다면 누구나 앱을 만들 수 있습니다. 지금 바로 바이브 코딩을 시작해 보세요!\n\n🔥 지금 리플릿을 사용해보세요~! \nhttps://replit.com/refer/ceo37\n\n✨ 멤버십 회원이 되어 AI 겸임교수만의 비밀 노하우를 먼저 경험하세요! 🚀\n👉 https://www.youtube.com/channel/UCztt42h03X49HFRGW9--Bhg/join\n\n00:00 - 00:44 | 리플릿 바이브 코딩으로 앱스토어 등록 소개\n00:44 - 02:07 | 리플릿 앱 빌드 기능과 프롬프트 입력\n02:07 - 03:26 | 오픈AI API 연동과 맛집/레시피 기능 추가\n03:26 - 04:55 | Expo Go 설치와 모바일 앱 테스트\n04:55 - 06:05 | 리플릿 앱 퍼블리시 프로세스\n06:05 - 08:30 | 애플 개발자 프로그램 등록과 앱스토어 연동\n08:30 - 09:57 | 앱스토어 심사 정보 작성과 세팅\n09:57 - 13:41 | 리플릿 올인원 장점과 바이브 코딩 미래",
+    "thumbnailUrl": "https://i.ytimg.com/vi/6rzjCQI02pM/hqdefault.jpg",
+    "channelTitle": "AI 겸임교수 이종범",
+    "publishedAt": "2026-01-26T20:17:48Z",
+    "category": "Replit",
+    "categories": [
+      "Replit"
+    ]
+  },
+  {
+    "id": "Q61_JyDyUDA",
+    "title": "네이버 블로그도 AI가 알아서 척척 #클로드코드 #바이브코딩",
+    "description": "✨ 멤버십 회원이 되어 AI 겸임교수만의 비밀 노하우를 먼저 경험하세요! 🚀\n👉 https://www.youtube.com/channel/UCztt42h03X49HFRGW9--Bhg/join",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Q61_JyDyUDA/hqdefault.jpg",
+    "channelTitle": "AI 겸임교수 이종범",
+    "publishedAt": "2026-01-26T13:37:41Z",
     "category": "Claude",
     "categories": [
       "Claude"

@@ -53,10 +53,15 @@ npm run lint
 ├── server.js                    # Express API server (port 3002)
 ├── src/
 │   ├── App.jsx                  # Main React app with filtering and infinite scroll
-│   ├── components/              # React components
+│   ├── main.jsx                 # React entry point
+│   ├── index.css                # Global styles (TailwindCSS)
+│   ├── components/
 │   │   ├── VideoPlayer.jsx      # YouTube video player modal
-│   │   ├── ChannelManager.jsx   # Channel management UI
-│   │   └── ...                  # Other UI components
+│   │   ├── ChannelManager.jsx   # Channel management UI (not rendered in App.jsx, API server required)
+│   │   ├── PromptPanel.jsx      # Prompt panel component
+│   │   ├── SlideExample.jsx     # Slide example component
+│   │   ├── StyleThumbnail.jsx   # Style thumbnail component
+│   │   └── ThumbnailSlide.jsx   # Thumbnail slide component
 │   ├── data/
 │   │   ├── categories.js        # CATEGORY_KEYWORDS object & CATEGORIES array (both exported)
 │   │   ├── channels.json        # Tracked YouTube channels
@@ -71,7 +76,10 @@ npm run lint
 ├── scripts/
 │   ├── fetch_videos.js          # YouTube API video fetcher
 │   └── manage_channels.js       # CLI channel manager
-└── start.bat                    # Windows launcher with menu system
+├── start.bat                    # Windows launcher with menu system (5 options)
+├── auto_update_scheduled.bat    # Scheduled auto-update (fetch + deploy)
+├── setup_scheduler.bat          # Windows Task Scheduler registration
+└── uninstall_scheduler.bat      # Scheduler removal
 ```
 
 ### Data Flow
@@ -176,12 +184,18 @@ After any push to GitHub, Vercel automatically rebuilds and deploys the frontend
 - Resets to 24 when filters/search changes
 
 ### Git Automation in server.js `/api/deploy`
-- Only commits if actual changes exist in `videos.json` or `channels.json`
+- Only stages specific files: `src/data/videos.json` and `src/data/channels.json`
+- Only commits if actual changes exist in those data files
 - Uses `execFile` for shell injection prevention, `execSync` with validated inputs for git commands
 - Large buffer (50MB) to handle big git outputs
 - Continues deployment even if fetch fails (quota limits)
 - Returns detailed deployment log to frontend
 - Input validation via `validateDays()` prevents command injection
+
+**Batch files (`start.bat` options 2/4, `auto_update_scheduled.bat`):**
+- Uses `git add .` which stages ALL changed files (not just data files)
+- `.gitignore` protects `.env`, `node_modules/`, `dist/`, `.claude/` from being committed
+- Any other modified files (code, config, docs) WILL be included in the commit
 
 ## Common Development Patterns
 
@@ -205,4 +219,5 @@ After any push to GitHub, Vercel automatically rebuilds and deploys the frontend
 - The frontend reads `videos.json` as a static import, so data updates require rebuild or page refresh
 - Scheduled tasks use Windows Task Scheduler (Windows-only automation)
 - The server has a mock fallback for 403 errors during development (creates mock channel)
-- Git operations in `/api/deploy` only stage specific files to avoid committing unrelated changes
+- `ChannelManager.jsx` exists as a standalone component but is NOT currently rendered in `App.jsx`; channel management is done via CLI (`node scripts/manage_channels.js`) or API endpoints
+- `/api/deploy` only stages data files; batch files use `git add .` to stage all changes (protected by `.gitignore`)
