@@ -1,5 +1,43 @@
 [
   {
+    "id": "pwJqBwzXsXw",
+    "title": "AI 버튜버 테스트 방송 (gpt-oss-120b)",
+    "description": "AI 버튜버 테스트 방송 (gpt-oss-120b)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/pwJqBwzXsXw/hqdefault_live.jpg",
+    "channelTitle": "조코딩 JoCoding",
+    "publishedAt": "2026-03-06T23:53:12Z",
+    "category": "ChatGPT",
+    "categories": [
+      "ChatGPT"
+    ]
+  },
+  {
+    "id": "kKpfFufsI48",
+    "title": "나노바나나2 + FLOW + 노트북LM, 인테리어 영상 제작 흐름 (by 뽁숑이)",
+    "description": "스케치업 공간을 기준으로\n나노바나나2로 실사화하고\nFLOW와 노트북LM을 활용해 인테리어 홍보 영상을 만들었습니다.\n\nAI를 활용하면\n공간 연출과 영상 제작까지 연결할 수 있습니다.\n\n📌 자세한 과정은 아래 풀버전 영상에서 확인하세요 ↓  \n▶ 나노바나나2와 FLOW그리고 노트북LM으로 인테리어 영상 만들기(by 뽁숑이) : https://youtu.be/-APcWRgFZms\n\n📂 전체 AI 렌더링 시리즈 보기 ↓  \n▶️ [초간단 공간 만들기 시리즈] https://www.youtube.com/playlist?list=PL4a9sP2-60rPxLwGAFNQYooJnqfb3Nly3\n▶️ [스케치업과 노하우+팁] https://www.youtube.com/playlist?list=PL4a9sP2-60rP4A3mefLq-QVwWVDhGYOa1\n▶️ [스케치업&AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rNmlu9wqTImDiOOsjkuiLbI\n▶️ [입문자를 위한 스케치업] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPDu7Q26CcxSt488S3x4mXF\n\n💡 뽁숑이의 AI 스케치업 : 제작 노트\n✔️Design & Modeling: SketchUp (직접 제작)\n✔️Rendering & Visualization: Generative AI Tools\n✔️Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 실사 같은 시각적 표현(렌더링) 및 영상 제작 과정에서만 AI 기술의 도움을 받았습니다.\n\n#노트북LM #스케치업 #AI인테리어 #SketchUp #생성형AI #건축디자인 #나노바나나2 #FlowAI #AI디자인 #렌더링 #SketchUpAI #FlowAI #AI워크플로우 #NANOBANANA2 #스케치업강좌",
+    "thumbnailUrl": "https://i.ytimg.com/vi/kKpfFufsI48/hqdefault.jpg",
+    "channelTitle": "뽁숑이의 AI 스케치업",
+    "publishedAt": "2026-03-06T11:45:48Z",
+    "category": "NanoBanana",
+    "categories": [
+      "NanoBanana",
+      "NotebookLM",
+      "Flow"
+    ]
+  },
+  {
+    "id": "kmADXRnkdQg",
+    "title": "PPT에 클로드가 들어왔다! | 회사 서식 그대로, 보고서 자동화 하는 법 (ft. 슬라이드 마스터)",
+    "description": "#claude #powerpoint #파워포인트 #ppt자동화 #aippt #코파일럿 #파워포인트ai #ppt강의 #오빠두엑셀\n\n🚀[Claude x PPT 슬라이드 마스터] 가이드북\n이번 영상에 '좋아요'와 '댓글'을 남긴 후, 아래 설문을 제출해 주세요!\n실습 자료와 프롬프트가 정리된 노션 가이드북을 바로 받으실 수 있습니다.👇\nhttps://forms.gle/AZLEyjggRvqTAXfL8\n\n🔥라이브 256회 다시보기 (멤버십 라이브)\n: 진짜 회사에서 통하는 PPT 자동화 도구 | Claude x 슬라이드 마스터\nhttps://youtu.be/4XyPZBEDBGA\n\n00:00 강의 시작\n01:06 기존 AI → PPT 도구를 실무에서 적용하기 어려운 이유\n02:04 PPT 슬라이드 마스터 기초 사용법 알아보기\n05:17 PPT 슬라이드 마스터 레이아웃 설정하기\n08:41 실무에서 유용한 슬라이드 마스터 활용법\n09:51 PPT 슬라이드 마스터에 색상 팔레트 추가하기\n13:30 한 번 등록하면 평생쓰는 색 테마 적용하는 방법\n15:26 Claude in PPT 추가기능 설치 및 설정방법\n17:19 예제 1: 오탈자 검색 및 자동 수정하기\n18:52 예제 2: 서식 내 본문, 차트 모든 텍스트 번역하기\n20:21 예제 3: 본문 내용을 자동으로 시각화하기\n22:21 예제 4: 기존 PPT 파일을 회사 서식으로 리디자인\n25:04 예제 5: 엑셀 데이터를 회사 PPT 보고서로 옮기기\n28:41 예제 6: 제목, 목차, 요약 클로징 슬라이드 추가하기",
+    "thumbnailUrl": "https://i.ytimg.com/vi/kmADXRnkdQg/hqdefault.jpg",
+    "channelTitle": "오빠두엑셀 l 엑셀 강의 대표채널",
+    "publishedAt": "2026-03-06T11:15:05Z",
+    "category": "Claude",
+    "categories": [
+      "Claude"
+    ]
+  },
+  {
     "id": "6Z23q9RF3o0",
     "title": "챗GPT 5.4 완벽 정리 | 100만 토큰 컨텍스트 윈도우, 할루시네이션 감소, 달라진 점 총정리",
     "description": "#챗GPT #ChatGPT #코덱스\n\n챗GPT 5.4가 드디어 출시되었습니다! 기존 GPT 5.3 코덱스의 코딩 능력과 5.2의 사고력을 하나로 합친 통합 모델, GPT 5.4의 모든 것을 정리했습니다.\n\n이번 영상에서는 GPT 5.4에서 달라진 핵심 변화를 빠르게 알려드립니다. 코덱스와 API에서 사용 가능한 100만 토큰 컨텍스트 윈도우, 대폭 줄어든 할루시네이션, 그리고 스프레드시트 편집과 프레젠테이션 제작까지 가능한 새로운 스킬 기능까지 총정리했습니다.\n\n실전 비교도 준비했습니다. 동일한 PRD(제품 요구 문서)를 코덱스와 클로드 코드에 각각 넣고 AI 맞춤형 식단 큐레이션 서비스를 바이브 코딩으로 만들어 봤습니다. 과연 GPT 5.4 코덱스가 클로드 코드를 위협할 수 있을까요?\n\n5.3 인스턴트, 5.4 싱킹, 5.4 프로의 차이점과 요금제별 사용 가능 범위, 오토 라우팅 기능의 개선 사항, 코덱스 앱 윈도우 버전 출시, 페스트 모드까지 초보자도 따라할 수 있도록 10분 안에 전부 설명해 드립니다.\nAI 도구의 변화 속도가 점점 빨라지고 있습니다. 지금 바로 GPT 5.4를 체험해 보세요!\n\nGPT 5.4 소개: https://openai.com/index/introducing-gpt-5-4/\nSlides skill: https://github.com/openai/skills/tree/main/skills/.curated/slides\nSpreadsheet skill: https://github.com/openai/skills/tree/main/skills/.curated/spreadsheet\n\n\n✨ 멤버십 회원이 되어 AI 겸임교수만의 비밀 노하우를 먼저 경험하세요! 🚀\n👉 https://www.youtube.com/channel/UCztt42h03X49HFRGW9--Bhg/join\n\n00:00 - 00:35 | GPT 5.4 출시 소개와 주요 개선점\n00:35 - 01:12 | ChatGPT 5.4 모델 선택과 싱킹 모드 설정\n01:12 - 02:48 | AI 식단 큐레이션 서비스 5.4 vs 5.2 비교 시연\n02:48 - 03:41 | 바이브 코딩 PRD 생성과 코드 실행 결과\n03:41 - 05:53 | 코덱스·API 100만 토큰 컨텍스트 윈도우 설정\n05:53 - 07:01 | 페스트 모드와 할루시네이션 감소 특징\n07:01 - 09:50 | 코덱스 vs 클로드 코드 결과물 비교\n09:50 - 14:35 | GPT 5.4 모델 라인업·플랜별 비교와 바이브 코딩 강의 예고\n\n#Codex #클로드코드 #바이브코딩 #100만토큰 #AI코딩 #ContextWindow",
@@ -660,18 +698,6 @@
     "category": "Claude",
     "categories": [
       "Claude"
-    ]
-  },
-  {
-    "id": "3F3kfTNUAXk",
-    "title": "AI 렌더링 앱 공유｜OPAL 기준으로 제대로 써봤습니다. 인테리어 스케치업 실사 랜더링 앱 공유  (by 뽁숑이)",
-    "description": "AI 렌더링 앱,\n과연 실무에서 쓸 수 있을까요?\n\n이번 영상에서는\nSketchUp 이미지를 기준으로 OPAL을 활용해\nAI 렌더링 앱을 실제로 사용해보고,\n\n✔️ 어떤 결과까지 가능한지\n✔️ 어떤 부분은 기대하면 안 되는지\n✔️ 어떤 상황에서 쓰면 좋은지\n\n를 기준으로 OPAL을 통한 앱을 공유해드립니다.\n입문자분들이 사용하신다면 도움이 될겁니다.\n또한 OPAL의 노드를 이해할수있는 구조가 될겁니다.\n\n📌 이 영상에서 다루는 내용:\n✅ OPAL을 거친 이미지가 왜 결과를 안정시키는지\n✅ SketchUp 이미지가 AI 결과에 어떤 영향을 주는지\n✅ OPAL을 통한 앱을 사용하는 방법(공유)\n✅ 다양한 설계의 사용방법(OPAL + AI)\n\n📌 이런 분들께 강력 추천!\n✅ AI 렌더링 앱을 써볼까 말까 고민 중인 분\n✅ SketchUp 결과물을 빠르게 비주얼화하고 싶은 분\n✅ OPAL 기반 워크플로우가 궁금한 분\n✅ 툴 말고 ‘기준’을 알고 싶은 입문자·실무자\n\n📌 뽁숑이 유튜브는? \nSketchUp / 인테리어 포트폴리오 / 실무 기초 모델링\nAutoCAD / SketchUp  \nINTERIOR PORTFOLIO / 실무 건축 기초 \n그리고 AI와 스케치업을 결합한 공간디자인\n\n▶️ [초간단 공간 만들기 시리즈] https://www.youtube.com/playlist?list=PL4a9sP2-60rPxLwGAFNQYooJnqfb3Nly3\n▶️ [스케치업과 노하우+팁] https://www.youtube.com/playlist?list=PL4a9sP2-60rP4A3mefLq-QVwWVDhGYOa1\n▶️ [스케치업&AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rNmlu9wqTImDiOOsjkuiLbI\n▶️ [입문자를 위한 스케치업] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPDu7Q26CcxSt488S3x4mXF\n\n⏱ 타임스탬프  \n00:00 인트로\n00:08 AI RENDER 공유\n01:16 앱을 사용하는 방법(오팔 앱)\n05:41 또 다른 앱을 사용하는방법(조닝+컨셉)\n09:52 에필로그\n\n💡 뽁숑이의 AI 스케치업 : 제작 노트\n✔️Design & Modeling: SketchUp (직접 제작)\n✔️Rendering & Visualization: Generative AI Tools\n✔️Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 실사 같은 시각적 표현(렌더링) 및 영상 제작 과정에서만 AI 기술의 도움을 받았습니다.\n\n#스케치업입문자 #SketchUpAI #스케치업강좌 #스케치업기초 #스케치업AI #AI인테리어 #스케치업노하우 #스케치업실무 #NANOBANANAPRO활용법 #나노바나나건축인테리어활용법 #NanobananaPro #구글오팔앱사용가이드 #조닝AI #무드보드AI",
-    "thumbnailUrl": "https://i.ytimg.com/vi/3F3kfTNUAXk/hqdefault.jpg",
-    "channelTitle": "뽁숑이의 AI 스케치업",
-    "publishedAt": "2026-02-10T13:15:40Z",
-    "category": "Opal",
-    "categories": [
-      "Opal"
     ]
   },
   {
