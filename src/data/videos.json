@@ -1,5 +1,42 @@
 [
   {
+    "id": "bBQbTjstXtA",
+    "title": "IT뉴스 - 바이브 제약, 클로드 2배 이벤트, Gemini Embedding 2, 엔비디아 Nemotron 3 Super, TADA TTS, Fish Audio S2 등",
+    "description": "IT뉴스 - 바이브 제약, 클로드 2배 이벤트, Gemini Embedding 2, 엔비디아 Nemotron 3 Super, TADA TTS, Fish Audio S2 등\n\n출처 모아보기\n\n조코딩과 코딩 공부하기\nhttps://jocoding.net/\n\n제보 메일: jebo@jocoding.net",
+    "thumbnailUrl": "https://i.ytimg.com/vi/bBQbTjstXtA/hqdefault.jpg",
+    "channelTitle": "조코딩 JoCoding",
+    "publishedAt": "2026-03-15T11:17:09Z",
+    "category": "Gemini",
+    "categories": [
+      "Gemini",
+      "Claude"
+    ]
+  },
+  {
+    "id": "U6_Mi7KoE5E",
+    "title": "NotebookLM으로 건축·인테리어 초기 컨셉 제안서 만드는 방법 (화면 녹화 활용) (by 뽁숑이)",
+    "description": "건축·인테리어 실무에서\n초기 컨셉 제안서를 만드는 데\n생각보다 많은 시간이 들어갑니다.\n\n이번 영상에서는\n현장 화면 또는 참고 화면을 녹화한 뒤,\n그 자료를 바탕으로 NotebookLM에서 실무형 초기 컨셉 제안서(PPT 구조)를 만드는 쉬운 방법을 정리했습니다.\n\n단순히 AI에게 “제안서 만들어줘”라고 던지는 방식이 아니라,\n어떤 자료를 넣고 / 어떤 방식으로 정리시키고 / 어떤 결과물로 뽑아내야 하는지를 실무 기준으로 설명합니다.\n\n즉,\n이 영상은 화면 녹화 → 자료 정리 → NotebookLM 활용 → 초기 컨셉 제안서 제작 흐름을 다루는 영상입니다.\n\n📌 이 영상에서 다루는 내용:\n✅ 화면 녹화 자료를 NotebookLM에 넣는 기본 방식\n✅ 어떤 영상/화면을 녹화해야 제안서 품질이 좋아지는지\n✅ 초기 컨셉 제안서용 자료를 정리하는 방법\n✅ NotebookLM으로 PPT 구조와 문서 흐름을 만드는 방법\n✅ 실무자가 바로 써먹을 수 있는 초기 컨셉 정리 방식\n✅ 초보자도 쉽게 따라할 수 있는 제안서 제작 워크플로우\n\n📌 이런 분들께 강력 추천!\n✅ 건축·인테리어 제안서 만드는 시간이 너무 오래 걸리는 분\n✅ 현장 자료나 참고 이미지를 제안서로 빠르게 정리하고 싶은 분\n✅ NotebookLM을 실무에 어떻게 써야 할지 모르겠는 분\n✅ 초기 컨셉 PPT를 쉽게 만드는 방법이 필요한 분\n✅ AI를 실무 문서 제작에 연결하고 싶은 분\n\n📌 뽁숑이 유튜브는? \nSketchUp / 인테리어 포트폴리오 / 실무 기초 모델링\nAutoCAD / SketchUp  \nINTERIOR PORTFOLIO / 실무 건축 기초 \n그리고 AI와 스케치업을 결합한 공간디자인\n\n▶️ [초간단 공간 만들기 시리즈] https://www.youtube.com/playlist?list=PL4a9sP2-60rPxLwGAFNQYooJnqfb3Nly3\n▶️ [스케치업과 노하우+팁] https://www.youtube.com/playlist?list=PL4a9sP2-60rP4A3mefLq-QVwWVDhGYOa1\n▶️ [스케치업&AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rNmlu9wqTImDiOOsjkuiLbI\n▶️ [입문자를 위한 스케치업] : https://www.youtube.com/playlist?list=PL4a9sP2-60rO2LeGQGmfF66KzQQBY0nd7\n▶️ [아이패드 스케치업+AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPDu7Q26CcxSt488S3x4mXF\n\n⏱ 타임스탬프  \n00:00 인트로\n00:08 노트북LM 제안서 쉽게 만드는것은?\n00:42 제안서 영상화?\n01:21 노트북 LM의 장점은?\n01:59 녹화를 하는 이유는?\n02:35 노트북 LM의 구조이해\n03:50 AI 딥리서치의 활용\n06:23 프롬프트는?\n08:45 리서치 결과물은?\n10:14 결과를 노트북LM으로\n11:06 노트북LM용 프롬프트는?\n12:09 슬라이드 제작방법은?\n14:11 결과물은 어떨까요?\n16:20 또다른 슬라이드 제작방법!\n18:30 에필로그\n\n\n💡 뽁숑이의 AI 스케치업 : 제작 노트\n✔️Design & Modeling: SketchUp (직접 제작)\n✔️Rendering & Visualization: Generative AI Tools\n✔️Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 실사 같은 시각적 표현(렌더링) 및 영상 제작 과정에서만 AI 기술의 도움을 받았습니다.\n\n#NotebookLM #노트북LM #건축제안서 #인테리어제안서 #AI문서작성 #AI업무자동화 #AI인테리어PPT제작 #스케치업입문자 #SketchUpAI #스케치업강좌 #스케치업기초 #스케치업AI #AI인테리어 #스케치업노하우 #AIDESIGN",
+    "thumbnailUrl": "https://i.ytimg.com/vi/U6_Mi7KoE5E/hqdefault.jpg",
+    "channelTitle": "뽁숑이의 AI 스케치업",
+    "publishedAt": "2026-03-15T03:15:20Z",
+    "category": "NotebookLM",
+    "categories": [
+      "NotebookLM"
+    ]
+  },
+  {
+    "id": "GMIdEv_4OuQ",
+    "title": "[AI 왕초보] 클릭 한 번에 30년 후 내 얼굴이?! 🤯 나노바나나2 기적의 이미지 합성 (배경 바꾸기 & 미래 2세 얼굴 예측까지!)",
+    "description": "여러분, 안녕하세요! 👋\n혹시 '내 미래의 아이는 어떻게 생겼을까?' 상상해 보신 적 있나요? 아니면 방구석에 앉아서 터키 카파도키아나 그리스 산토리니로 순식간에 여행을 떠나고 싶으신가요? ✈️\n\n오늘은 복잡한 포토샵 없이, AI를 처음 접하는 왕초보 분들도 단 1분 만에 전문가처럼 사진을 편집할 수 있는 마법 같은 도구, '나노바나나2(Nano Banana 2)'를 소개합니다!\n\n이번 영상에서는 여러분이 직접 따라 하면서 바로 결과물을 얻어갈 수 있는 3가지 꿀잼 실습을 준비했습니다.\n\n이 영상 하나만 끝까지 보시면, 여러분도 오늘부터 AI 이미지 합성의 달인이 될 수 있습니다.\n영상 보시면서 화면 멈춰놓고 꼭 한 번씩 따라 해보세요! 결과물이 얼마나 신기한지 깜짝 놀라실 겁니다. 😆\n\n영상이 도움이 되셨다면 구독과 좋아요, 그리고 결과물이 어땠는지 댓글로 꼭 남겨주세요! 여러분의 댓글은 다음 튜토리얼을 만드는 데 큰 힘이 됩니다. 💪\n\n#AI이미지,\n#나노바나나2,\n#NanoBanana2,\n#AI튜토리얼,\n#이미지합성,\n#초보자코딩,\n#배경합성,\n#사진합성,\n#얼굴나이,\n#2세예측,\n#미래얼굴,\n#AI웹툴,\n#AI활용법,\n#크리에이터꿀팁,\n#생성형AI,\n#AI디자인,\n#무료AI,\n#포토샵대체,\n#IT트렌드,\n#방구석여행",
+    "thumbnailUrl": "https://i.ytimg.com/vi/GMIdEv_4OuQ/hqdefault.jpg",
+    "channelTitle": "오토코더",
+    "publishedAt": "2026-03-15T01:00:00Z",
+    "category": "NanoBanana",
+    "categories": [
+      "NanoBanana"
+    ]
+  },
+  {
     "id": "Q9o6-OeeJfw",
     "title": "상사가 놀란 보고서의 비밀 🤫 GPT, Gemini를 전담 비서로 세팅하는 프롬프트 무료공개!",
     "description": "매번 AI가 뻔한 대답만 한다고요?\n그건 제대로 된 '세팅'이 없었기 때문입니다! 🙅‍♂️\n\n내가 고민할 필요 없이, AI가 내 업무 목적을 파악하고 먼저 질문하며 완벽한 보고서의 뼈대를 잡아주는 '비즈니스 AI 에이전트' 활용법!\n\n🎁 영상에 나온 *비즈니스 AI 에이전트 프롬프트 카탈로그]를 무료로 받고 싶으시다면?\n\n👇 지금 바로 화면 하단의 [▶ 관련 동영상] 링크를 클릭해서 풀영상에서 확인해 주세요! 프롬프트 카탈로그 핵심 세팅법과 원본을 모두 공개합니다.\n\n[해시태그]\n#챗GPT #제미나이 #Gemini #AI에이전트 #보고서작성 #프롬프트엔지니어링 #직장인꿀팁 #업무자동화 #퇴사한아빠 #리얼리더십 #직장인꿀팁 #보고서작성 #보고서잘쓰는법 #기획서작성 #업무자동화 #업무효율 #생산성향상 #일잘러 #일잘러특징 #칼퇴비법 #칼퇴 #엑셀보다쉬운AI",
@@ -275,18 +312,6 @@
     ]
   },
   {
-    "id": "Cs3-qphU92E",
-    "title": "지하철 타면서도 코딩 가능해진 클로드 코드",
-    "description": "✅ 조코딩과 코딩 공부하기\nhttps://jocoding.net/\n\nVVIP 멤버십 후원\n그림자그림자님, RadaGT3님, 차딩Chading TV님, prochild님, eyuri chi님, 정진균님, Tae hwan Kim님, 주정뱅이님, 시원-r9u님, deflepsteve님 감사드립니다.\nhttps://www.youtube.com/@jocoding/join\n\n#AI #클로드 #클로드코드",
-    "thumbnailUrl": "https://i.ytimg.com/vi/Cs3-qphU92E/hqdefault.jpg",
-    "channelTitle": "조코딩 JoCoding",
-    "publishedAt": "2026-03-04T10:17:59Z",
-    "category": "Claude",
-    "categories": [
-      "Claude"
-    ]
-  },
-  {
     "id": "Zu5vmDgyQME",
     "title": "나노바나나2 + FLOW 공간이 이렇게 영상이 됩니다. (by 뽁숑이)",
     "description": "스케치업으로 만든 공간을\n나노바나나2로 실사화하고\nFLOW로 영상 연출까지 이어봤습니다.\n\nAI 렌더에서\n영상까지 이어지는 작업 흐름입니다.\n\n📌 자세한 과정은 아래 풀버전 영상에서 확인하세요 ↓  \n▶ 나노바나나 2(NANOBANANA2)｜건축인테리어 기본 활용법 및 PRO 차이점 정리! (by 뽁숑이) : https://youtu.be/el11tWqSR4Q\n\n📂 전체 AI 렌더링 시리즈 보기 ↓  \n▶️ [초간단 공간 만들기 시리즈] https://www.youtube.com/playlist?list=PL4a9sP2-60rPxLwGAFNQYooJnqfb3Nly3\n▶️ [스케치업과 노하우+팁] https://www.youtube.com/playlist?list=PL4a9sP2-60rP4A3mefLq-QVwWVDhGYOa1\n▶️ [스케치업&AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rNmlu9wqTImDiOOsjkuiLbI\n▶️ [입문자를 위한 스케치업] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPDu7Q26CcxSt488S3x4mXF\n\n💡 뽁숑이의 AI 스케치업 : 제작 노트\n✔️Design & Modeling: SketchUp (직접 제작)\n✔️Rendering & Visualization: Generative AI Tools\n✔️Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 실사 같은 시각적 표현(렌더링) 및 영상 제작 과정에서만 AI 기술의 도움을 받았습니다.\n\n#AI인테리어 #FlowAI #나노바나나2건축인테리어 #AIRENDER연출 #스케치업AI가상현실 #AI공간연출 #프롬프트엔지니어링 #SketchUpAI #AI건축인테리어영상 #스케치업강좌 #스케치업기초 #스케치업AI #NANOBANANA2 #나노바나나프로",
@@ -297,18 +322,6 @@
     "categories": [
       "NanoBanana",
       "Flow"
-    ]
-  },
-  {
-    "id": "vmOxS1D22UA",
-    "title": "프로급 성능에 빠른 속도까지, 나노바나나 2 출시",
-    "description": "✅ 조코딩과 코딩 공부하기\nhttps://jocoding.net/\n\nVVIP 멤버십 후원\n그림자그림자님, RadaGT3님, 차딩Chading TV님, prochild님, eyuri chi님, 정진균님, Tae hwan Kim님, 주정뱅이님, 시원-r9u님, deflepsteve님 감사드립니다.\nhttps://www.youtube.com/@jocoding/join\n\n#AI #나노바나나2 #구글",
-    "thumbnailUrl": "https://i.ytimg.com/vi/vmOxS1D22UA/hqdefault.jpg",
-    "channelTitle": "조코딩 JoCoding",
-    "publishedAt": "2026-03-03T10:28:07Z",
-    "category": "NanoBanana",
-    "categories": [
-      "NanoBanana"
     ]
   },
   {
@@ -736,79 +749,6 @@
     "category": "Kling",
     "categories": [
       "Kling"
-    ]
-  },
-  {
-    "id": "CPmDxBDbilQ",
-    "title": "전세계에서 난리난 Seedance 2.0 직접 사용 후기: 현존 AI 영상 제작 끝판왕 등장. 직접 제작한 영상과 SNS 영상 비교!",
-    "description": "Seedance 2.0을 남들보다 빨리 직접 써보고 싶다면? https://app.chatartpro.com/video/?custom=imf_17651953476797  **구독자 전용 추가 20% 할인 코드 : EL20\n\"진짜 영화 산업 끝났나요?\" 🎬\n지금 전세계에서 난리 난 Seedance 2.0을 제가 직접 사용해 봤습니다. 압도적인 프롬프트 이해 능력과 구현 능력, 그리고 창의적이고 전문적인 표현 능력까지.. 특히 다양한 앵글과 카메라 무빙으로 구성하는 멀티샷은 타의 추종을 불허하네요....\n\n그냥 재미로라도 꼭 보시길 추천드립니다.\n우리는 정말이지, 미래로 변화하는 순간에 살고 있는 것 같습니다..\n\n📌 타임스탬프\n00:00 전세계에서 난리난 Seedance 2.0\n00:05 X에 공개된 Seedance 2.0 AI 영상\n01:25 ChatArt에 빠르게 공개된 Seedance 2.0\n2:12 [Text to Video] 이소룡 vs 이소룡\n02:37 [Text to Video] 다스베이더 vs 야스오\n03:30 [Text to Video] 다스베이더 vs 아이언맨\n03:48 [Text to Video] 애니메이션. 철이와 메텔, 그리고 짱구\n04:32 [Text to Video] 도서관 판타지 격투\n04:59 [Text to Video] 사막에서 펼쳐지는 동물 격투\n05:19 [Text to Video] 수묵화 스타일 액션\n05:40 [Image to Video] 털복숭이 캐릭터 코믹 다툼\n06:18 [Image to Video] 레트로 게임 이미지 영상화\n07:15 [Image to Video] 이어폰 부품 분해 영상화\n07:53 마무리. 직접 Seedance 2.0을 써보고 싶다면?\n\n🤖평생 무제한 AI?! 올인원 AI 서비스 챗아트(ChatArt) 내돈내산 후기 (seedance 2.0 직접 사용 가능!)\n→ 영상: https://youtu.be/HSou6-6rZ-M\n→ 챗아트 링크: https://www.chatartpro.com/?custom=imf_17651953476797\n→ 편집러라이프 20% 할인 코드: EL20\n\n🖼️ 영상에서 보여드렸던 Seedance 2.0 X 공개 링크\nhttps://x.com/markgadala/status/2021620587601551550?s=20\n\n---\n\n🎶 저작권 걱정 없는 고퀄의 유튜브 배경음악을 원한다면?!\n→ ARTLIST 구독 : https://artlist.io/Tris-2291264 *이 링크로 구독하면 🎁+2개월 추가 혜택!\n\n📺 내 영상도 뚝딱 TV 예능처럼! 편집러 라이프의 최강 프리미어 모션 프리셋\n→ 크티 콘텐츠 상점 : https://bit.ly/3D82faW\n\n⏰ 여러분의 영상 편집 시간 단축 + 퀄리티 Up을 도와줄\n👍편집러 강력 추천👍 프리미어/애프터이펙트 트랜지션/음향/각종효과!\n가) 필수 요소로 꾸려진 팩으로 시작한다면?\nTOKO 그래픽 팩 : http://1.envato.market/QO20XM\n나) 모든 걸 한방에 왕창 묶은 팩이 필요하다면?\nAEJuice 아이원잇올 번들 :  https://aejuice.com/?ref=tristan\n\n🎁어도비 제품 구독하고 편집러 라이프 채널 응원해주세요❤️\n→🔗https://prf.hn/l/MbLyGE3\n*이 링크를 통해 어도비 구독 시, 수익이 셰어됩니다. 편집러 라이프가 더 좋은 영상을 제작할 수 있도록 힘을 실어주세요!\n\n🖼️ 갓성비 평생회원으로 이미지 저작권의 고민을 영원히 끝내줄\n최고의 PNG 이미지 사이트\nhttps://kor.pngtree.com/?sce=af&id=hl\n\n#Seedance2.0 #AI영상제작 #AI비디오",
-    "thumbnailUrl": "https://i.ytimg.com/vi/CPmDxBDbilQ/hqdefault.jpg",
-    "channelTitle": "편집러 라이프",
-    "publishedAt": "2026-02-14T01:45:01Z",
-    "category": "Seedance",
-    "categories": [
-      "Seedance"
-    ]
-  },
-  {
-    "id": "_Dh1jndX6HY",
-    "title": "Fantasy, Steampunk and Cyberpunk - Grok & Kling Showcase Feb 2026 - 4K",
-    "description": "The best recent Gens I've made with Grok & Kling.\nMusic Suno\nUpscale Topaz\nEdited Davinci Resolve\n\nHope you enjoy",
-    "thumbnailUrl": "https://i.ytimg.com/vi/_Dh1jndX6HY/hqdefault.jpg",
-    "channelTitle": "OrctonAI",
-    "publishedAt": "2026-02-13T17:54:19Z",
-    "category": "Kling",
-    "categories": [
-      "Kling",
-      "Grok"
-    ]
-  },
-  {
-    "id": "EoWPfA1V5HA",
-    "title": "엑셀 함수 외우던 시대 끝났습니다! Claude 4.6 업데이트 | 실전 예제 10가지",
-    "description": "#claude #클로드 #copilot #코파일럿 #M365 #엑셀ai #pptai #엑셀에이전트 #코파일럿 #엑셀강의 #오빠두엑셀\n\n👇실습파일 다운로드\nhttps://www.notion.so/oppadu/2026-2-Claude-4-6-IN-PPT-300775de96e380df91ebe51aec6bd2c7?source=copy_link\n\n🔥라이브 254회 다시보기 (멤버십 라이브)\n: 클로드 엑셀+PPT 업데이트 | 실전 활용법 12가지\nhttps://youtu.be/bBnOlbAEOBU\n\n00:00 강의 시작\n00:56 Copilot 및 Claude 요금제별 사용법 및 차이점\n03:27 Copilot과 Claude 추가기능 설치 방법\n05:00 Claude in Excel 3가지 중요 설정 안내\n06:35 시트 내 오류 검토 및 함수 수정하기\n10:24 정제되지 않은 비정형 데이터를 표로 정리하기\n12:02 비어있는 서식에 실시간 필터링 보고서 만들기\n13:23 AI로 제작한 보고서 검토 및 수식 개선하기\n15:17 실시간 웹 페이지 검색 보고서 만들기\n16:10 PDF 문서에서 데이터 추출 및 분석 보고서 만들기\n17:47 웹에서 복/붙한 표에 자동 서식 적용하기\n20:08 Claude 모델을 활용해서 다양한 분석 보고서 만들기\n22:46 이제 회사용 PPT 보고서 AI가 정말 잘 만들어줍니다!",
-    "thumbnailUrl": "https://i.ytimg.com/vi/EoWPfA1V5HA/hqdefault.jpg",
-    "channelTitle": "오빠두엑셀 l 엑셀 강의 대표채널",
-    "publishedAt": "2026-02-13T14:15:01Z",
-    "category": "Claude",
-    "categories": [
-      "Claude"
-    ]
-  },
-  {
-    "id": "0htDKhRKEbo",
-    "title": "8명의 AI 팀원이 상호 작용하며 일하는 법  #바이브코딩 #클로드코드",
-    "description": "✨ 멤버십 회원이 되어 AI 겸임교수만의 비밀 노하우를 먼저 경험하세요! 🚀\n👉 https://www.youtube.com/channel/UCztt42h03X49HFRGW9--Bhg/join",
-    "thumbnailUrl": "https://i.ytimg.com/vi/0htDKhRKEbo/hqdefault.jpg",
-    "channelTitle": "AI 겸임교수 이종범",
-    "publishedAt": "2026-02-13T07:41:38Z",
-    "category": "Claude",
-    "categories": [
-      "Claude"
-    ]
-  },
-  {
-    "id": "Bo9-pFXV69A",
-    "title": "클링 3.0 업데이트 이미지 한장과 프롬프트만으로 제작 #ai영상",
-    "description": "",
-    "thumbnailUrl": "https://i.ytimg.com/vi/Bo9-pFXV69A/hqdefault.jpg",
-    "channelTitle": "좋아하는 일로 먹고 살기",
-    "publishedAt": "2026-02-13T03:25:27Z",
-    "category": "Kling",
-    "categories": [
-      "Kling"
-    ]
-  },
-  {
-    "id": "ijJMn_xAZH0",
-    "title": "영상계의 나노바나나 출시, 씨댄스2.0 완벽 가이드",
-    "description": "#ai영상 #ai활용 #seedance \n\n⚔️ 현재는 중국에서만 사용 가능하고,\n2/24일 전후로 글로벌 출시될거로 보입니다\n\n👁️‍🗨️ Seedance 2.0 소개 페이지\n: https://seed.bytedance.com/en/seedance2_0\n: https://dreamina.capcut.com/tools/seedance-2-0\n\n00:00 Seedance2.0 출시\n00:44 영상 편집 사례\n03:55 레퍼런스 생성 사례\n07:52 영상 늘리기 사례\n10:46 핵심포인트 3가지",
-    "thumbnailUrl": "https://i.ytimg.com/vi/ijJMn_xAZH0/hqdefault.jpg",
-    "channelTitle": "브랜드 도적단 / 반토막AI",
-    "publishedAt": "2026-02-13T01:26:30Z",
-    "category": "NanoBanana",
-    "categories": [
-      "NanoBanana"
     ]
   }
 ]
