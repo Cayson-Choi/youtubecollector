@@ -1,5 +1,18 @@
 [
   {
+    "id": "-vsUVH9nVwc",
+    "title": "구글 스티치 대규모 업데이트! design.md 내보내기로 클로드 코드에서 바로 서비스 구현하기",
+    "description": "#구글스티치 #바이브디자인 #VibeDesign\n\n구글이 또 한번 해냈습니다! 바이브 디자인의 끝판왕, 구글 스티치(Google Stitch)가 대규모 업데이트를 거쳐 완전히 새롭게 돌아왔습니다.\n이번 영상에서는 새로워진 스티치의 핵심 변화를 살펴보고, PRD 파일 하나로 AI 서비스를 통째로 디자인한 뒤 design.md 내보내기 기능을 활용해 클로드 코드(Claude Code)에서 실제 작동하는 서비스까지 구현하는 전체 과정을 보여드립니다.\n\n✨ 멤버십 회원이 되어 AI 겸임교수만의 비밀 노하우를 먼저 경험하세요! 🚀\n👉 https://www.youtube.com/channel/UCztt42h03X49HFRGW9--Bhg/join\n\n00:00 - 00:19 | 구글 스티치 새 버전 소개\n00:19 - 01:53 | 스티치 UI 변화와 무한 캔버스\n01:53 - 03:04 | 인스턴트 프로토타입 생성 및 테스트\n03:04 - 03:58 | 내보내기 옵션과 프로젝트 요약 기능\n03:58 - 05:31 | 디자인 MD 파일과 클로드 코드 연동\n05:31 - 06:46 | 클로드 코드 빌드 결과 확인\n06:46 - 08:02 | Gemini API 연동 이미지 분석 시연\n08:02 - 08:53 | 바이브 디자인에서 바이브 코딩까지 정리\n\n#클로드코드 #GoogleStitch #바이브코딩 #AIdesign #무료AI디자인 #디자인MD #프로토타입",
+    "thumbnailUrl": "https://i.ytimg.com/vi/-vsUVH9nVwc/hqdefault.jpg",
+    "channelTitle": "AI 겸임교수 이종범",
+    "publishedAt": "2026-03-19T22:34:55Z",
+    "category": "Claude",
+    "categories": [
+      "Claude",
+      "Stitch"
+    ]
+  },
+  {
     "id": "Zu_OEdtXmOo",
     "title": "클로드 시각화 미친 신규 업데이트 Claude interactive visualization",
     "description": "클로드가 3월에 조용히 놀라운 업데이트를 했어요.\n\n대화창 안에서 바로 인터랙티브 시각화가 되는 기능인데,\n말로만 설명하면 클로드가 직접 조작 가능한 차트를 만들어줘요.\n코딩 없이. 엑셀 없이. 디자인 툴 없이.\n\n\n✅ 이런 분들께 추천해요\n- 데이터를 정리하고 싶은데 엑셀이 어려운 분\n- 크리에이터 / 1인기업가 / 마케터\n- 미국 주식 포트폴리오 관리하시는 분\n- AI 툴 실용적으로 쓰고 싶은 분\n\n\n\n⏱ 목차\n00:00 - 소개 및 기능 개요: 코딩 없이 말로 만드는 인터랙티브 차트\n01:20 - 복리 시뮬레이터: 투자금, 기간, 수익률을 슬라이더로 조정하여 10/20/30년 후 수익 비교\n02:30 - 주식 포트폴리오 리밸런싱: 자산 규모와 수익률에 따른 매수/매도 전략 시각화\n03:40 - 지출 분석: 항목별 지출 현황 및 목표 금액 대비 과지출 분석\n04:40 - 이직 결정 매트릭스: 연봉, 성장성, 안정성 등 항목별 비교를 통한 최종 판단\n05:40 - 컬러 팔레트 생성기: 색상 명도/채도 조절 및 유사색/보색 팔레트 제작\n06:40 - 번아웃 진단 및 회복: 현재 번아웃 단계 진단 및 맞춤형 회복 루틴 제안\n07:40 - 콘텐츠 우선순위 매트릭스: 마감일과 중요도에 따른 업무 순서 조정\n08:30 - HTML로 저장 및 활용법: 인터랙티브 기능이 포함된 결과물을 파일로 저장하는 방법\n\n\n📌 영상에서 쓴 프롬프트 \n👇 아래 링크에서 확인하세요\nhttps://vaulted-decade-3b2.notion.site/328f563cd70680149060c2dd41f21a2a?source=copy_link\n\n\n⚠️ 주식 관련 내용은 투자 조언이 아닙니다.\n클로드 시각화 기능 활용 예시로만 참고해주세요.\n\n---\n🌻AI에 첫 입문하고 싶다면 \n👇AI 그림책 만들기 클래스 (댓글로 대기신청)\nhttps://blog.naver.com/nice554/224172691464\n\n🎓 AI로 수익화까지 연결하고 싶은 분들\n👇 AI 광고영상 클래스 (댓글로 대기신청)\nhttps://blog.naver.com/nice554/224198172595 \n\n---\n\n#클로드 #Claude #AI시각화 #클로드신기능\n#인터랙티브차트 #AI툴 #1인기업 #크리에이터\n#미국주식 #AI활용법 #코딩없이 #클로드활용법",
@@ -208,18 +221,6 @@
     ]
   },
   {
-    "id": "Lj9lPlLugJI",
-    "title": "[LIVE] OpenAI 내부자가 직접 알려주는 Codex 사용 꿀팁",
-    "description": "[LIVE] OpenAI 내부자가 직접 알려주는 Codex 사용 꿀팁",
-    "thumbnailUrl": "https://i.ytimg.com/vi/Lj9lPlLugJI/hqdefault.jpg",
-    "channelTitle": "조코딩 JoCoding",
-    "publishedAt": "2026-03-11T00:02:35Z",
-    "category": "ChatGPT",
-    "categories": [
-      "ChatGPT"
-    ]
-  },
-  {
     "id": "TS8ySAdd3nU",
     "title": "[충격] 똥손도 1분 만에 프로급 화장품 광고를 만든다고?! 😲 '나노바나나' AI 완벽 활용법 (초보자 맞춤형)",
     "description": "반갑습니다, 오토코더 입니다. 👋\n혹시 판매하실 제품의 홍보 사진이나 상세 페이지에 들어갈 이미지 때문에 고민이신가요? 스튜디오 대관, 조명 세팅, 모델 섭외... 생각만 해도 머리가 아프고 초기 비용이 만만치 않죠. 😭\n\n그래서 오늘은 초보자분들도 타이핑 몇 번으로 최고급 스튜디오 퀄리티의 홍보 이미지를 뽑아내는 마법 같은 방법을 준비했습니다! 바로 강력한 AI 이미지 생성 모델인 '나노바나나(Nano Banana)'를 활용하는 비법인데요. 🍌✨\n\n이번 영상에서는 가상의 'AutoCoder' 수분크림을 예시로 들어, 아래의 과정을 저와 함께 화면을 보며 직접 실습해 볼 겁니다.\n\n1️⃣ 기초 디자인: 텍스트만으로 그럴싸한 화장품 패키지 뚝딱 만들기\n2️⃣ 디테일 업업: 뚜껑을 열고 크림의 제형(질감)과 색상을 황금빛으로 변경해 고급스러움 더하기\n3️⃣ 구매 욕구 자극: 찰떡같은 모델을 등장시켜, 화장품을 직접 바르며 만족하는 '진짜 광고 같은' 컷 완성하기!\n\nAI 프롬프트(명령어)를 어떻게 써야 내가 원하는 각도와 질감, 분위기를 살릴 수 있는지 하나부터 열까지 꼼꼼하게 떠먹여 드립니다. 영상 끝까지 보시고 여러분만의 멋진 제품 이미지를 직접 만들어보세요! 🚀\n\n👇 오늘 영상이 여러분의 비즈니스와 콘텐츠 제작에 도움이 되셨다면 '구독'과 '좋아요' 꾹 눌러주세요! 👇\n\n#나노바나나,\n#AI이미지생성,\n#제미나이,\n#AI활용법,\n#초보자AI,\n#제품사진찍는법,\n#화장품광고,\n#상세페이지제작,\n#마케팅자동화,\n#AI디자인,\n#1인기업,\n#스마트스토어꿀팁,\n#콘텐츠크리에이터,\n#무료이미지,\n#AI툴추천,\n#프롬프트엔지니어링,\n#AutoCoder,\n#이미지편집,\n#유튜브크리에이터,\n#AI강의",
@@ -229,18 +230,6 @@
     "category": "NanoBanana",
     "categories": [
       "NanoBanana"
-    ]
-  },
-  {
-    "id": "APnH0o1Elbk",
-    "title": "레전드 갱신한 GPT 5.4 출시",
-    "description": "✅ 조코딩과 코딩 공부하기\nhttps://jocoding.net/\n\nVVIP 멤버십 후원\n그림자그림자님, RadaGT3님, 차딩Chading TV님, prochild님, eyuri chi님, 정진균님, Tae hwan Kim님, 주정뱅이님, 시원-r9u님, deflepsteve님 감사드립니다.\nhttps://www.youtube.com/@jocoding/join\n\n#AI #조코딩",
-    "thumbnailUrl": "https://i.ytimg.com/vi/APnH0o1Elbk/hqdefault.jpg",
-    "channelTitle": "조코딩 JoCoding",
-    "publishedAt": "2026-03-10T09:03:52Z",
-    "category": "ChatGPT",
-    "categories": [
-      "ChatGPT"
     ]
   },
   {
@@ -735,18 +724,6 @@
     "category": "Claude",
     "categories": [
       "Claude"
-    ]
-  },
-  {
-    "id": "IiI-0K4mOMM",
-    "title": "Seedance 2.0 - Fantasy, Steampunk and Action Scenes -  Early Access Test.",
-    "description": "A few clips from my testing in Seedance 2.0 early access CapCut CPP.\nLook out for the Authentic Friday night in an English town pub at the end....",
-    "thumbnailUrl": "https://i.ytimg.com/vi/IiI-0K4mOMM/hqdefault.jpg",
-    "channelTitle": "OrctonAI",
-    "publishedAt": "2026-02-17T18:45:15Z",
-    "category": "Seedance",
-    "categories": [
-      "Seedance"
     ]
   }
 ]
