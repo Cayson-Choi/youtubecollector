@@ -614,41 +614,5 @@
     "categories": [
       "Claude"
     ]
-  },
-  {
-    "id": "6Z23q9RF3o0",
-    "title": "챗GPT 5.4 완벽 정리 | 100만 토큰 컨텍스트 윈도우, 할루시네이션 감소, 달라진 점 총정리",
-    "description": "#챗GPT #ChatGPT #코덱스\n\n챗GPT 5.4가 드디어 출시되었습니다! 기존 GPT 5.3 코덱스의 코딩 능력과 5.2의 사고력을 하나로 합친 통합 모델, GPT 5.4의 모든 것을 정리했습니다.\n\n이번 영상에서는 GPT 5.4에서 달라진 핵심 변화를 빠르게 알려드립니다. 코덱스와 API에서 사용 가능한 100만 토큰 컨텍스트 윈도우, 대폭 줄어든 할루시네이션, 그리고 스프레드시트 편집과 프레젠테이션 제작까지 가능한 새로운 스킬 기능까지 총정리했습니다.\n\n실전 비교도 준비했습니다. 동일한 PRD(제품 요구 문서)를 코덱스와 클로드 코드에 각각 넣고 AI 맞춤형 식단 큐레이션 서비스를 바이브 코딩으로 만들어 봤습니다. 과연 GPT 5.4 코덱스가 클로드 코드를 위협할 수 있을까요?\n\n5.3 인스턴트, 5.4 싱킹, 5.4 프로의 차이점과 요금제별 사용 가능 범위, 오토 라우팅 기능의 개선 사항, 코덱스 앱 윈도우 버전 출시, 페스트 모드까지 초보자도 따라할 수 있도록 10분 안에 전부 설명해 드립니다.\nAI 도구의 변화 속도가 점점 빨라지고 있습니다. 지금 바로 GPT 5.4를 체험해 보세요!\n\nGPT 5.4 소개: https://openai.com/index/introducing-gpt-5-4/\nSlides skill: https://github.com/openai/skills/tree/main/skills/.curated/slides\nSpreadsheet skill: https://github.com/openai/skills/tree/main/skills/.curated/spreadsheet\n\n\n✨ 멤버십 회원이 되어 AI 겸임교수만의 비밀 노하우를 먼저 경험하세요! 🚀\n👉 https://www.youtube.com/channel/UCztt42h03X49HFRGW9--Bhg/join\n\n00:00 - 00:35 | GPT 5.4 출시 소개와 주요 개선점\n00:35 - 01:12 | ChatGPT 5.4 모델 선택과 싱킹 모드 설정\n01:12 - 02:48 | AI 식단 큐레이션 서비스 5.4 vs 5.2 비교 시연\n02:48 - 03:41 | 바이브 코딩 PRD 생성과 코드 실행 결과\n03:41 - 05:53 | 코덱스·API 100만 토큰 컨텍스트 윈도우 설정\n05:53 - 07:01 | 페스트 모드와 할루시네이션 감소 특징\n07:01 - 09:50 | 코덱스 vs 클로드 코드 결과물 비교\n09:50 - 14:35 | GPT 5.4 모델 라인업·플랜별 비교와 바이브 코딩 강의 예고\n\n#Codex #클로드코드 #바이브코딩 #100만토큰 #AI코딩 #ContextWindow",
-    "thumbnailUrl": "https://i.ytimg.com/vi/6Z23q9RF3o0/hqdefault.jpg",
-    "channelTitle": "AI 겸임교수 이종범",
-    "publishedAt": "2026-03-06T06:58:27Z",
-    "category": "ChatGPT",
-    "categories": [
-      "ChatGPT"
-    ]
-  },
-  {
-    "id": "JcqsqFNFiWw",
-    "title": "AI 바이브 코딩으로 프로그래밍 언어를 만들어봤습니다 | ChatGPT Codex",
-    "description": "차원이 다른 AI 바이브코딩 코드깎는노인클래스에서 경험하세요 https://cokac.com\n\n세상에 없던 완전 새로운 프로그래밍 언어를…\n바이브 코딩으로, 반나절만에 만들었다고 하면 믿으시겠습니까?\n이 믿기 힘든이야기 나눕니다.\n\n#인공지능 #ai #챗gpt #코딩",
-    "thumbnailUrl": "https://i.ytimg.com/vi/JcqsqFNFiWw/hqdefault.jpg",
-    "channelTitle": "코드깎는노인",
-    "publishedAt": "2026-03-05T23:17:46Z",
-    "category": "ChatGPT",
-    "categories": [
-      "ChatGPT"
-    ]
-  },
-  {
-    "id": "D_t8oAhb_6o",
-    "title": "나노바나나2 vs 프로 : 상세페이지에 못 쓰는 이유",
-    "description": "#나노바나나 #ai활용 #상세페이지 \n\n🔳 아웃페인팅 서비스\n- 캡컷 AI디자인\n: https://www.capcut.com/ai-design\n- 드리미나 캔버스\n: https://dreamina.capcut.com/ai-tool/canvas\n\n⚔️ 무료 강의 링크\n: https://bit.ly/3GNlQFc\n\n00:00 나노바나나2 출시\n00:31 나노바나나 모델 라인업\n01:01 나노바나나프로 vs 나노바나나2\n05:37 나노바나나2, 상세페이지에 못 쓰는 이유",
-    "thumbnailUrl": "https://i.ytimg.com/vi/D_t8oAhb_6o/hqdefault.jpg",
-    "channelTitle": "브랜드 도적단 / 반토막AI",
-    "publishedAt": "2026-03-05T14:30:39Z",
-    "category": "NanoBanana",
-    "categories": [
-      "NanoBanana"
-    ]
   }
 ]
