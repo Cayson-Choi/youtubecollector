@@ -1,5 +1,17 @@
 [
   {
+    "id": "_grzEuQbM4o",
+    "title": "스케치업 기본 → AI 렌더(나노바나나) → 믹스보드, 컨셉 뽑는 공식 (by 뽁숑이)",
+    "description": "스케치업에서 벽체만 간단하게 잡고\nAI 렌더링으로 실사화한 뒤,\n\n믹스보드를 활용해\n다양한 인테리어 컨셉을 만들어봤습니다.\n\n적게 만들고,\n더 많은 결과를 만드는 워크플로우입니다.\n빠르게 결과를 만드는 방법.\n\n📌 자세한 과정은 아래 풀버전 영상에서 확인하세요 ↓  \n▶ 스케치업 벽체만 잡고 AI로 무한 컨셉 뽑는 실전 workflow (by 뽁숑이) : https://youtu.be/Q1UOau7ojVw\n\n📂 전체 AI 렌더링 시리즈 보기 ↓  \n▶️ [스케치업&AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rNmlu9wqTImDiOOsjkuiLbI\n▶️ [초간단 공간 만들기 시리즈] https://www.youtube.com/playlist?list=PL4a9sP2-60rPxLwGAFNQYooJnqfb3Nly3\n▶️ [스케치업과 노하우+팁] https://www.youtube.com/playlist?list=PL4a9sP2-60rP4A3mefLq-QVwWVDhGYOa1\n▶️ [입문자를 위한 스케치업] : https://www.youtube.com/playlist?list=PL4a9sP2-60rO2LeGQGmfF66KzQQBY0nd7\n▶️ [아이패드 스케치업+AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPDu7Q26CcxSt488S3x4mXF\n\n💡 뽁숑이의 AI 스케치업 : 제작 노트\n✔️Design & Modeling: SketchUp (직접 제작)\n✔️Rendering & Visualization: Generative AI Tools\n✔️Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 실사 같은 시각적 표현(렌더링) 및 영상 제작 과정에서만 AI 기술의 도움을 받았습니다.\n\n#AI렌더링 #나노바나나2 #건축인테리어AI #스케치업입문자 #AIworkflow #SketchUpAI #스케치업강좌 #AI인테리어 #AI인테리어 #믹스보드 #AI렌더링 #스케치업 #스케치업실무 #AIDESIGN #NANOBANANA2",
+    "thumbnailUrl": "https://i.ytimg.com/vi/_grzEuQbM4o/hqdefault.jpg",
+    "channelTitle": "뽁숑이의 AI 스케치업",
+    "publishedAt": "2026-04-08T08:51:57Z",
+    "category": "NanoBanana",
+    "categories": [
+      "NanoBanana"
+    ]
+  },
+  {
     "id": "7tPh0QbPFEM",
     "title": "젠스파크 클로 완벽 가이드! 맥미니 없이 AI 에이전트 돌린다! Genspark Claw 설치부터 실전 활용까지",
     "description": "#젠스파크 #Genspark #WorkwithGenspark\n\n@GensparkProduct \n젠스파크: https://buly.kr/FsKCQTX\n⏰ 한정 기간 특가: → 월 $9.99부터 · 75% 할인 · 최대 10,000 보너스 크레딧 추가 제공🎉\n\n🚀 AI 비서를 고용하는 시대, 당신도 AI 비서 오너가 될 수 있습니다!\n젠스파크 클로(Genspark Claw)를 사용하면 클라우드 컴퓨터 위에서 24시간 365일 돌아가는 나만의 AI 비서를 가질 수 있습니다. 맥미니 구매도 필요 없고, 복잡한 설치도 없고, 여러 API를 따로 관리할 필요도 없습니다.\n텔레그램으로 연결하면 스마트폰에서 언제 어디서든 AI 비서에게 명령을 내릴 수 있죠. 마치 진짜 직원에게 업무를 지시하듯이요!\n이 영상에서는 젠스파크 클로로 나만의 AI 비서 '재갈군사'를 만들고, 실제 업무 3가지를 자동화하는 모습을 직접 보여드립니다.\n\n✨ 멤버십 회원이 되어 AI 겸임교수만의 비밀 노하우를 먼저 경험하세요! 🚀\n👉 https://www.youtube.com/channel/UCztt42h03X49HFRGW9--Bhg/join\n\n00:00 - 01:06 | 젠스파크 클로 소개와 개요\n01:06 - 02:33 | 가입 방법과 설치 과정\n02:33 - 03:45 | 텔레그램 연결 및 외부 접속 설정\n03:45 - 05:39 | AI 비서 세계관 설정과 뉴스 자동화\n05:39 - 07:47 | 엑셀 거래 장부 정리 자동화\n07:47 - 09:15 | 데이터 정리 결과 확인과 보안 장점\n09:15 - 12:05 | 유튜브 경쟁 채널 모니터링 자동화\n12:05 - 15:16 | 오픈클로 비교와 젠스파크 클로 장점 정리",
@@ -466,18 +478,6 @@
     "category": "Claude",
     "categories": [
       "Claude"
-    ]
-  },
-  {
-    "id": "U6_Mi7KoE5E",
-    "title": "NotebookLM으로 건축·인테리어 초기 컨셉 제안서 만드는 방법 (화면 녹화 활용) (by 뽁숑이)",
-    "description": "건축·인테리어 실무에서\n초기 컨셉 제안서를 만드는 데\n생각보다 많은 시간이 들어갑니다.\n\n이번 영상에서는\n현장 화면 또는 참고 화면을 녹화한 뒤,\n그 자료를 바탕으로 NotebookLM에서 실무형 초기 컨셉 제안서(PPT 구조)를 만드는 쉬운 방법을 정리했습니다.\n\n단순히 AI에게 “제안서 만들어줘”라고 던지는 방식이 아니라,\n어떤 자료를 넣고 / 어떤 방식으로 정리시키고 / 어떤 결과물로 뽑아내야 하는지를 실무 기준으로 설명합니다.\n\n즉,\n이 영상은 화면 녹화 → 자료 정리 → NotebookLM 활용 → 초기 컨셉 제안서 제작 흐름을 다루는 영상입니다.\n\n📌 이 영상에서 다루는 내용:\n✅ 화면 녹화 자료를 NotebookLM에 넣는 기본 방식\n✅ 어떤 영상/화면을 녹화해야 제안서 품질이 좋아지는지\n✅ 초기 컨셉 제안서용 자료를 정리하는 방법\n✅ NotebookLM으로 PPT 구조와 문서 흐름을 만드는 방법\n✅ 실무자가 바로 써먹을 수 있는 초기 컨셉 정리 방식\n✅ 초보자도 쉽게 따라할 수 있는 제안서 제작 워크플로우\n\n📌 이런 분들께 강력 추천!\n✅ 건축·인테리어 제안서 만드는 시간이 너무 오래 걸리는 분\n✅ 현장 자료나 참고 이미지를 제안서로 빠르게 정리하고 싶은 분\n✅ NotebookLM을 실무에 어떻게 써야 할지 모르겠는 분\n✅ 초기 컨셉 PPT를 쉽게 만드는 방법이 필요한 분\n✅ AI를 실무 문서 제작에 연결하고 싶은 분\n\n📌 뽁숑이 유튜브는? \nSketchUp / 인테리어 포트폴리오 / 실무 기초 모델링\nAutoCAD / SketchUp  \nINTERIOR PORTFOLIO / 실무 건축 기초 \n그리고 AI와 스케치업을 결합한 공간디자인\n\n▶️ [초간단 공간 만들기 시리즈] https://www.youtube.com/playlist?list=PL4a9sP2-60rPxLwGAFNQYooJnqfb3Nly3\n▶️ [스케치업과 노하우+팁] https://www.youtube.com/playlist?list=PL4a9sP2-60rP4A3mefLq-QVwWVDhGYOa1\n▶️ [스케치업&AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rNmlu9wqTImDiOOsjkuiLbI\n▶️ [입문자를 위한 스케치업] : https://www.youtube.com/playlist?list=PL4a9sP2-60rO2LeGQGmfF66KzQQBY0nd7\n▶️ [아이패드 스케치업+AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPDu7Q26CcxSt488S3x4mXF\n\n⏱ 타임스탬프  \n00:00 인트로\n00:08 노트북LM 제안서 쉽게 만드는것은?\n00:42 제안서 영상화?\n01:21 노트북 LM의 장점은?\n01:59 녹화를 하는 이유는?\n02:35 노트북 LM의 구조이해\n03:50 AI 딥리서치의 활용\n06:23 프롬프트는?\n08:45 리서치 결과물은?\n10:14 결과를 노트북LM으로\n11:06 노트북LM용 프롬프트는?\n12:09 슬라이드 제작방법은?\n14:11 결과물은 어떨까요?\n16:20 또다른 슬라이드 제작방법!\n18:30 에필로그\n\n\n💡 뽁숑이의 AI 스케치업 : 제작 노트\n✔️Design & Modeling: SketchUp (직접 제작)\n✔️Rendering & Visualization: Generative AI Tools\n✔️Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 실사 같은 시각적 표현(렌더링) 및 영상 제작 과정에서만 AI 기술의 도움을 받았습니다.\n\n#NotebookLM #노트북LM #건축제안서 #인테리어제안서 #AI문서작성 #AI업무자동화 #AI인테리어PPT제작 #스케치업입문자 #SketchUpAI #스케치업강좌 #스케치업기초 #스케치업AI #AI인테리어 #스케치업노하우 #AIDESIGN",
-    "thumbnailUrl": "https://i.ytimg.com/vi/U6_Mi7KoE5E/hqdefault.jpg",
-    "channelTitle": "뽁숑이의 AI 스케치업",
-    "publishedAt": "2026-03-15T03:15:20Z",
-    "category": "NotebookLM",
-    "categories": [
-      "NotebookLM"
     ]
   },
   {
