@@ -1,5 +1,41 @@
 [
   {
+    "id": "X-7JZ6KDDts",
+    "title": "요즘 AI는 클로드만 쓰는 이유",
+    "description": "자세한 사용법이 궁금하다면?\n본 영상 : https://youtu.be/iIFVJwzZiDc",
+    "thumbnailUrl": "https://i.ytimg.com/vi/X-7JZ6KDDts/hqdefault.jpg",
+    "channelTitle": "알린 ALINN",
+    "publishedAt": "2026-04-17T07:47:17Z",
+    "category": "Claude",
+    "categories": [
+      "Claude"
+    ]
+  },
+  {
+    "id": "iIFVJwzZiDc",
+    "title": "이걸 모르면 30%도 활용하지 못 하는 겁니다. 생산성을 미친듯이 올려주는 클로드 개꿀기능 Cowork 활용법",
+    "description": "*클로드 Cowork 전용 지침* 👉 https://www.alinn.co.kr/channels/L2NoYW5uZWxzLzE4Mjc0/A00003/posts/721126\n*수강생 만족도 99% AI 마스터 강의* 👉 https://www.alinn.co.kr\n*무료 자료가 넘쳐나는 게시판* 👉 https://www.alinn.co.kr/channels/L2NoYW5uZWxzLzE4Mjc0/A00003/posts?page=1\n*안 들어오면 손해인 ALINN 구독자 전용 오픈카톡방* 👉 https://open.kakao.com/o/ghNkhHhi\n*재능없이 유튜브 수익화 성공 비결 공개* 👉 https://www.alinn.co.kr/channels/L2NoYW5uZWxzLzE4Mjc0/C00007/classes/187710/information\n\nALINN 인스타그램 : instagram.com/ailifeinnovation\n비즈니스 및 협업 문의 : ailifeinnovation@gmail.com\n\n#ai #인공지능 #클로드 #claude #cowork \n\n0:00 하이라이트\n0:14 요즘 클로드만 쓰는 이유\n1:37 Cowork 소개\n3:09 설치 및 세팅법\n5:30 로컬 파일 연동\n7:20 커넥터 기능\n8:36 스킬(Skills) 활용법\n10:42 예약 작업 기능\n11:49 사용 시 유의사항",
+    "thumbnailUrl": "https://i.ytimg.com/vi/iIFVJwzZiDc/hqdefault.jpg",
+    "channelTitle": "알린 ALINN",
+    "publishedAt": "2026-04-17T07:47:08Z",
+    "category": "Claude",
+    "categories": [
+      "Claude"
+    ]
+  },
+  {
+    "id": "x31tWSx47HI",
+    "title": "클로드 오퍼스 4.7 (Claude Opus 4.7) 출시 리뷰 - 울트라 리뷰, X-High, 오토 모드 신기능 총정리",
+    "description": "#울트라리뷰 #UltraReview #클로드코드\n\n드디어 클로드 오퍼스 4.7(Claude Opus 4.7) 이 출시됐습니다!\n새로 공개된 오퍼스 4.7의 실제 성능을 직접 테스트로 확인해봅니다. 건설 도면을 읽어내는 강화된 비전 기능, 새로 추가된 X-High 추론 레벨, 클로드 코드의 Auto 모드, 그리고 전체 코드베이스를 통째로 감사해주는 울트라 리뷰(Ultra Review) 까지 — 이번 업데이트의 핵심 신기능을 빠짐없이 정리했습니다.\n\n실제로 제 회사 홈페이지 코드를 울트라 리뷰에 돌려서 18건의 실제 보안 취약점을 잡아낸 장면, 그리고 GPT-5.4·제미나이 3.1 Pro·미토스 프리뷰와의 벤치마크 비교까지 담았습니다.\n\n✨ 멤버십 회원이 되어 AI 겸임교수만의 비밀 노하우를 먼저 경험하세요! 🚀\n👉 https://www.youtube.com/channel/UCztt42h03X49HFRGW9--Bhg/join\n\n00:00 - 00:52 | Claude Opus 4.7 출시와 커뮤니티 반응\n00:52 - 03:04 | 비전 기능 업그레이드 건설 도면 인식 테스트\n03:04 - 04:29 | HTML 생성 시연과 모델 업데이트 타임라인\n04:29 - 05:58 | X-High 추론 레벨과 API 가격 정책\n05:58 - 07:06 | Auto 모드 신규 기능 소개\n07:06 - 10:49 | 울트라 리뷰 기능 코드 감사 시연\n10:49 - 12:09 | 울트라 플랜과 울트라 리뷰 차이점\n12:09 - 14:02 | 벤치마크 비교 결과와 총평",
+    "thumbnailUrl": "https://i.ytimg.com/vi/x31tWSx47HI/hqdefault.jpg",
+    "channelTitle": "AI 겸임교수 이종범",
+    "publishedAt": "2026-04-17T03:14:30Z",
+    "category": "Claude",
+    "categories": [
+      "Claude"
+    ]
+  },
+  {
     "id": "d4AM1P1HpqM",
     "title": "프롬프트 백날 고쳐도 AI가 헛소리한다면? 구글 노트북LM + 제미나이로 완벽 통제하는 실전 워크플로우  (by 뽁숑이)",
     "description": "AI로 공간 디자인이나 기획 작업을 하다 보면 갑자기 엉뚱한 결과가 나오거나, “능력 밖의 일입니다”라며 작업이 툭 끊기는 경험 다들 있으시죠?\n\n이번 영상은 단순히 프롬프트(명령어) 단어 몇 개를 바꾸는 1차원적인 팁이 아닙니다.\n구글 노트북LM(NotebookLM)과 제미나이(Gemini)를 융합하여, 긴 프로젝트에서도 AI가 문맥을 잊어버리지 않고 내 의도대로 정확하게 움직이도록 통제하는 [데이터 구조화 및 지침서 활용법]을 공개합니다.\n\n작업이 길어질수록 AI의 결과물 품질이 흔들려서 스트레스받으셨던 실무자분들께 가장 현실적이고 강력한 사기급 해결책이 될 것입니다!\n\n📌 이 영상에서 다루는 실전 AI 완벽 통제 가이드\n✅ AI가 헛소리를 하거나(할루시네이션) 오류를 내는 근본적인 이유\n✅ 단순 프롬프트 수정 방식이 결국 한계에 부딪히는 이유\n✅ 노트북LM을 활용해 AI에게 방대한 자료와 '문맥'을 구조화해서 먹이는 법\n✅ AI가 절대 딴소리 못하게 만드는 '나만의 맞춤형 지침서' 작성법\n✅ 노트북LM + 제미나이 융합을 통한 무결점 실무 workflow 구축\n\n📌 이런 분들께 강력 추천합니다!\n✅ 한 줄 프롬프트만 주야장천 바꾸다가 오히려 작업이 더 꼬이는 분\n✅ 컨셉 시안 등 호흡이 긴 작업에서 AI의 문맥(Context) 유지가 안 되는 분\n✅ 최신 핫 트렌드인 '노트북LM'을 건축/인테리어 실무에 바로 붙여보고 싶은 분\n✅ AI를 단순 장난감이 아닌, 완벽하게 통제 가능한 '천재 비서'로 쓰고 싶은 실무자\n\n📌 뽁숑이 유튜브는? \nSketchUp / 인테리어 포트폴리오 / 실무 기초 모델링 / AutoCAD \n그리고 AI와 스케치업을 결합한 공간디자인 트렌드를 다룹니다.\n\n▶️ [스케치업&AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rNmlu9wqTImDiOOsjkuiLbI\n▶️ [초간단 공간 만들기 시리즈] https://www.youtube.com/playlist?list=PL4a9sP2-60rPxLwGAFNQYooJnqfb3Nly3\n▶️ [스케치업과 노하우+팁] https://www.youtube.com/playlist?list=PL4a9sP2-60rP4A3mefLq-QVwWVDhGYOa1\n▶️ [입문자를 위한 스케치업] : https://www.youtube.com/playlist?list=PL4a9sP2-60rO2LeGQGmfF66KzQQBY0nd7\n▶️ [아이패드 스케치업+AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPDu7Q26CcxSt488S3x4mXF\n\n⏱ 타임스탬프 (AI가 딴소리하며 말썽을 부릴 때 찾아와서 복습하세요!)\n00:00 인트로\n00:45 툭하면 오류 나는 AI? 노트북LM이 구원투수인 이유\n02:15 프롬프트 노가다는 그만! AI 오류에 대한 근본적인 해결법\n04:09 [실제 사례] 맥락이 끊겨버린 AI의 처참한 실패 결과물\n06:04 🔥핵심🔥 AI를 완벽하게 통제하는 마스터키: '지침서' 세팅 비법\n07:36 [비교 필수] 지침서 하나 먹였을 뿐인데 소름 돋게 달라진 결과\n09:48 다른 공간/디자인 컨셉에 지침서 응용해보기\n11:05 [심화] 노트북LM과 제미나이(Gemini)의 미친 융합 실전 워크플로우\n19:21 에필로그 : AI를 내 비서처럼 통제하는 실무 디자인의 미래\n\n💡 뽁숑이의 디자인 제작 노트\n✔️Design & Modeling: SketchUp (직접 제작)\n✔️Rendering & Visualization: D5 Render / Generative AI Tools\n✔️Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 실사 같은 시각적 표현(렌더링) 및 영상 제작 과정에서만 AI 기술의 도움을 받았습니다.\n\n#노트북LM #NotebookLM #제미나이 #Gemini #프롬프트엔지니어링 #프롬프트작성법 #AI업무자동화 #AI오류해결 #스케치업AI #인테리어AI #건축AI #AI할루시네이션 #챗GPT활용법 #스케치업실무 #AI워크플로우",
