@@ -1,7 +1,7 @@
 [
   {
     "id": "wAZmUtViDV0",
-    "title": "회사에서 GPT 못 쓰는 분들 필독 | 내 PC에 나만의 AI 만들기",
+    "title": "회사에서 GPT 못 쓰는 분들 필독 | 내 PC에 나만의 AI 만들기 | HyperX OMEN 15",
     "description": "00:00 인트로\n01:22 오픈소스 모델이란?\n02:02 오픈소스 모델의 장점\n03:23 오픈소스 AI를 만들기위한 3요소 \n03:53 오픈소스 모델 선택방법\n05:13 양자화의 개념\n06:06 GPU좋은 노트북 추천 \n09:22 엔진의 종류 ( Ollama, Vllm)\n10:56 실습 시작 \n15:01 AI로 챗봇 만들기\n\n❤️누나랑 바이브코딩 배울사람!\nhttps://forms.gle/u8S8EcCbwQiqfm8Z6\n\n🚀코딩알려주는 누나 강의 듣는곳\nhttps://codingnoona.thinkific.com/\n뇌를 살찌우러 올래?\n\n누나 인스타 뭐야? 1008_shine\n공식인스타: codingnoona\n\n#ai코딩 #오픈소스모델 #ollama",
     "thumbnailUrl": "https://i.ytimg.com/vi/wAZmUtViDV0/hqdefault.jpg",
     "channelTitle": "코딩알려주는누나",
@@ -524,18 +524,6 @@
     "category": "Claude",
     "categories": [
       "Claude"
-    ]
-  },
-  {
-    "id": "nXnIww4YY48",
-    "title": "아침드라마를 완벽히 구현한 오픈소스 TTS",
-    "description": "✅ 조코딩과 코딩 공부하기\nhttps://jocoding.net/\n\nVVIP 멤버십 후원\n그림자그림자님, RadaGT3님, 차딩Chading TV님, prochild님, eyuri chi님, 정진균님, Tae hwan Kim님, 주정뱅이님, 시원-r9u님, deflepsteve님 감사드립니다.\nhttps://www.youtube.com/@jocoding/join\n\n#AI #TTS #아침드라마",
-    "thumbnailUrl": "https://i.ytimg.com/vi/nXnIww4YY48/hqdefault.jpg",
-    "channelTitle": "조코딩 JoCoding",
-    "publishedAt": "2026-04-16T06:00:00Z",
-    "category": "Llama",
-    "categories": [
-      "Llama"
     ]
   },
   {
