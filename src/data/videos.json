@@ -1,5 +1,31 @@
 [
   {
+    "id": "GOaWRhrsQC0",
+    "title": "클로드 AI 커넥터(MCP)로 스케치업 자동 모델링 + AI 렌더링 하는 법 (by 뽁숑이)",
+    "description": "클로드 AI 커넥터(MCP)라는 개념,\n건축·인테리어 실무에서는 어떻게 활용할 수 있을까요?\n\n이번 영상에서는 Claude AI 커넥터(MCP)의 개념을 바탕으로\n스케치업 모델링과 AI 렌더링을 어떻게 연결해서 볼 수 있는지\n실무 관점에서 쉽게 정리했습니다.\n\n단순히 AI 툴을 소개하는 영상이 아니라,\nPDF 도면이나 기본 정보에서 시작해\nClaude AI → SketchUp → AI Render로 이어지는 흐름을\n하나의 워크플로우로 이해할 수 있도록 구성했습니다.\n\n특히 이번 영상은\n“스케치업 모델링을 더 빠르게 할 수 있을까?”\n“AI 렌더링까지 한 번에 연결할 수 있을까?”\n“클로드 MCP 개념이 실무에 어떤 의미가 있을까?”\n이런 궁금증이 있는 분들을 위해 만들었습니다.\n\n📌 이 영상에서 다루는 내용\n✅ Claude AI 커넥터(MCP) 개념 쉽게 이해하기\n✅ 스케치업과 Claude를 연결해서 보는 방식\n✅ 모델링부터 AI 렌더링까지 이어지는 흐름\n✅ PDF/도면 기반 워크플로우의 가능성\n✅ 건축·인테리어 실무에 적용할 수 있는 활용 아이디어\n✅ 클로드와 스케치업 그리고 힉스필드의 MCP 연결법\n\n📌 이런 분들께 강력 추천!\n✅ 스케치업 작업 속도를 높이고 싶은 분\n✅ Claude MCP 개념이 궁금한 분\n✅ AI를 건축·인테리어 실무에 적용하고 싶은 분\n✅ 모델링과 렌더링을 하나의 흐름으로 보고 싶은 분\n✅ 새로운 AI 워크플로우를 찾는 분\n\n📌 뽁숑이 유튜브는?\nSketchUp / 인테리어 포트폴리오 / 실무 기초 모델링\nAutoCAD / SketchUp\n그리고 AI와 스케치업을 결합한 공간디자인 콘텐츠를 다룹니다.\n\n▶️ [스케치업&AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rNmlu9wqTImDiOOsjkuiLbI\n▶️ [초간단 공간 만들기 시리즈] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPxLwGAFNQYooJnqfb3Nly3\n▶️ [스케치업과 노하우+팁] : https://www.youtube.com/playlist?list=PL4a9sP2-60rP4A3mefLq-QVwWVDhGYOa1\n▶️ [입문자를 위한 스케치업] : https://www.youtube.com/playlist?list=PL4a9sP2-60rO2LeGQGmfF66KzQQBY0nd7\n▶️ [아이패드 스케치업+AI 융합] : https://www.youtube.com/playlist?list=PL4a9sP2-60rPDu7Q26CcxSt488S3x4mXF\n\n⏱ 타임스탬프\n00:00 인트로\n00:08 기본 MCP(커넥터) 개념은?\n00:46 스케치업 연결하기\n01:03 소스모델링 하기\n01:46 힉스필드 MCP 연결하기\n02:01 클로드의 커넥터 개념은?\n04:07 사용전에 알아야할 점들??\n04:43 플랫폼별 구독요금은?\n07:21 스케치업에 클로드 커넥터 연결하기\n08:50 제작예시는?\n11:28 힉스필드에 커넥터 연결하기\n14:39 에필로그\n\n💡 뽁숑이의 AI 스케치업 : 제작 노트\n✔️ Design & Modeling: SketchUp (직접 제작)\n✔️ Rendering & Visualization: Generative AI Tools\n✔️ Focus : 건축·인테리어 실무자를 위한 AI 입문 가이드\n✔️ Note : 본 영상의 공간 및 인테리어 디자인은 크리에이터가 직접 기획/모델링 하였으며, 시각적 표현 및 워크플로우 확장 과정에서 AI 기술의 도움을 받았습니다.\n\n#클로드AI #클로드커넥터 #ClaudeMCP #스케치업AI #AI렌더링 #스케치업렌더링 #건축AI #인테리어AI #SketchUpAI #AI워크플로우 #자동모델링 #스케치업입문자 #SketchUpAI #스케치업강좌 #스케치업기초",
+    "thumbnailUrl": "https://i.ytimg.com/vi/GOaWRhrsQC0/hqdefault.jpg",
+    "channelTitle": "뽁숑이의 AI 스케치업",
+    "publishedAt": "2026-05-01T10:32:37Z",
+    "category": "Claude",
+    "categories": [
+      "Claude",
+      "MCP"
+    ]
+  },
+  {
+    "id": "A3ovbV08TNw",
+    "title": "AI 1타 강사가 말아주는 AI 보고서 작성 마스터 클래스! 이 영상 하나면 누구나 AI 보고서 전문가! (보고서 프롬프트 생성기, 프로젝트 에이전트, 클로드 플로그인 무료)",
+    "description": "안녕하세요, AI 교육 컨설팅 기업 리얼리더십 대표이자 퇴사한아빠 신주일입니다!\n구독자 여러분의 엄청난 성원 덕분에 드디어 채널이 2만 구독자를 돌파했습니다. 진심으로 감사드립니다!\n\n이번 영상은 2만 구독자 달성 기념으로, 현재 가장 핫한 AI 강사의 'AI 보고서 작성 노하우'를 영혼까지 끌어모아 준비했습니다.\n임원 회의용 기획안을 단 10분 만에 끝내는 마법 같은 7단계 가이드를 낱낱이 공개합니다.\n영상 끝까지 시청하시고 여러분의 AI 보고서 라이프를 아예 바꿔보세요!\n\n🎁 [구독자 한정] AI 보고서 마스터 교재 무료 나눔 이벤트🎁\n참여 방법:\n    1. 영상에 좋아요 & 구독 꾹 눌러주기!\n    2. 이메일 realleadership@naver.com 또는 인스타그램 DM @toesahanappa (팔로우 필수!)로 \"AI 보고서 신청합니다\"라고 메시지를 보내주시면 바로 발송해 드립니다.\n\n※ [유의사항] 본 웹앱에 대한 모든 지식재산권은 리얼리더십(신주일)에게 있습니다. 공유받으신 구독자님 본인의 개인적인 학습 용도로만 사용해 주시길 부탁드립니다. 타인에게 무단으로 링크를 재공유하거나 상업적으로 배포하는 행위는 엄격히 금지합니다.\n\n💡 기업 출강 및 교육 문의\n우리 회사 직원들에게도 이런 실무 밀착형 AI 교육을 시키고 싶으시다면? 단순한 툴 소개가 아닌, 즉시 업무에 적용할 수 있는 찐 실무 AI 교육을 제공합니다!\n👉 [https://realleadership-profile.web.app]\n\n⏱️ 타임라인 (Timeline)\n00:00 인트로 & 보고서 마스터 플러그인 시연 미리보기\n00:44 리얼리더십 신주일 대표 인사 및 2만 구독자 돌파 감사 인사\n01:23 AI로 쓴 보고서 퀄리티가 매번 들쭉날쭉한 이유는?\n03:12 [1단계] AI의 확률 게임에서 승리하는 강력한 힌트: 제목과 목차 먼저 주기\n04:55 [2단계] RICE 프롬프트로 회사 맥락(Context) 꽉 채워서 지시하기\n06:39 [3단계] 빈칸만 채우면 끝! '보고서 프롬프트 생성기' 활용법\n08:43 [4단계] 무료 구독자를 위한 대화창 세팅법 (AI의 질문에 답하며 뼈대 잡기)\n11:01 [5단계] 유료 구독자를 위한 프로젝트/에이전트(GEM) 세팅으로 보고서 퀄리티 고정하기\n13:29 [7단계] 끝판왕 등장! 클로드 코웍(Co-work) 전용 리포트 마스터 플러그인 세팅 및 실전 적용\n16:37 2만 구독자 기념 교재 무료 나눔 이벤트 안내 및 기업 출강 문의\n\n#AI보고서 #보고서작성 #기획안작성 #챗GPT #클로드3 #클로드 #제미나이 #프롬프트엔지니어링 #업무자동화 #퇴사한아빠 #리얼리더십 #신주일강사 #직장인AI꿀팁 #칼퇴비법 #일잘러 #업무효율 #AI에이전트 #클로드프로젝트 #GPT스 #RICE프롬프트 #임원보고 #기획서 #실무AI #AI교육 #기업출강 #무료이벤트 #구독자이벤트 #AI1타강사 #AI강의 #ChatGPT #Claude3 #Gemini #Copilot #스마트워크 #문서작성 #사무자동화",
+    "thumbnailUrl": "https://i.ytimg.com/vi/A3ovbV08TNw/hqdefault.jpg",
+    "channelTitle": "퇴사한아빠",
+    "publishedAt": "2026-05-01T10:19:39Z",
+    "category": "Claude",
+    "categories": [
+      "Claude",
+      "Flow"
+    ]
+  },
+  {
     "id": "uyLt7FSrO48",
     "title": "세상에서 제일 하찮은 AI 프롬프트 | GPT 이미지 2.0",
     "description": "차원이 다른 AI 바이브코딩, 코드깎는노인클래스에서 경험하세요 https://cokac.com\n\n모든 사진, 그림을 그림판화 해서 하찮고 귀엽게 만들어버리는 프롬프트, 너무 하찮으니 주의해주세요!\n\n한글프롬프트 https://www.threads.com/@withgrdnrush/post/DXtQ_cDk7ux\n영문프롬프트 https://x.com/ChatGPTapp/status/2049942772803891376\n\n#gpt #인공지능 #ai #챗지피티",
@@ -377,18 +403,6 @@
       "ChatGPT",
       "Claude",
       "Grok"
-    ]
-  },
-  {
-    "id": "h1ZfSe3U930",
-    "title": "디자인까지 정복 선언한 클로드 ㄷㄷ",
-    "description": "✅ 조코딩과 코딩 공부하기\nhttps://jocoding.net/\n\nVVIP 멤버십 후원\n그림자그림자님, RadaGT3님, 차딩Chading TV님, prochild님, eyuri chi님, 정진균님, Tae hwan Kim님, 주정뱅이님, 시원-r9u님, deflepsteve님 감사드립니다.\nhttps://www.youtube.com/@jocoding/join\n\n#AI #클로드 #디자인 #개발자",
-    "thumbnailUrl": "https://i.ytimg.com/vi/h1ZfSe3U930/hqdefault.jpg",
-    "channelTitle": "조코딩 JoCoding",
-    "publishedAt": "2026-04-20T09:00:00Z",
-    "category": "Claude",
-    "categories": [
-      "Claude"
     ]
   },
   {
