@@ -1,23 +1,11 @@
 [
   {
-    "id": "Ljs7Z85oTzI",
-    "title": "[미시소] 노션으로 나만의 웹앱 만들기",
-    "description": "",
-    "thumbnailUrl": "https://i.ytimg.com/vi/Ljs7Z85oTzI/hqdefault.jpg",
+    "id": "9Y-F4nSAhc8",
+    "title": "노션 AI로 웹앱을 만든다고? 무제한 바이브코딩! 미친 프로그램 무료로 드려요! feat.코덱스",
+    "description": "🎁 코드 프리뷰어 선물받기!\n1. 코드 프리뷰어 신청서 제출하기\n👉 https://tally.so/r/NpJd9O?wh=misiso\n2. 영상 보신 후 후기 제출하기\n👉 https://misiso.com/review-form?c=live60502\n3. 아래 페이지에서 설치하기!\n(후기 제출 후 반영까지 5분정도 소요될 수 있어요!)\n👉 https://misiso.com/gifts/code-previewer\n\n🎁 노션 올인원 강의 5만원 할인권 받기!\n1. 5만원 할인 쿠폰 받기\n👉 https://pf.kakao.com/_gcMxkn\n2. 노션 올인원 강의 구경하기\n👉 https://misiso.com/pricing/notion-ai-complete\n\n단톡방 바로가기\n👉 https://open.kakao.com/o/g5YzMSPh\n---\n\n✨ 인생자동화 첫걸음 라이브 — 5/7 (목) 저녁 8시\n\n카톡·문자·메일·통화·AI 대화를 자동수집·분석하고\nTASK 자동 등록까지 — 라이브로 다 풀어드릴게요!\n\n😩 카톡방 +999개 다 못 봐서 중요한 약속·결정 매번 놓침\n😩 이메일·SMS·통화 다 흩어져서 안읽음 100만개\n😩 자동화 따라해봐도 API 막혀서 결국 포기\n😩 좋은 정보 url 공유받았던 것 같은데 찾을 수 없는…\n\n이 라이브 보고 나면\n✅ 카톡·문자·메일·통화·AI 대화가 매일 노션에 자동 정리\n✅ AI가 매일 새벽 어제 요약 + 오늘 우선순위 + 할 일 자동 추출 → TASK 자동 등록\n✅ 캘린더와 양방향 동기 → 약속·기념일 자동 알림\n\n✅ API 안 씁니다\n✅ 윈도우도 방법 찾아놨어요 (macOS/Windows 다 됨)\n✅ 방법 싹 다 알려드릴거예요!\n\n📍 Zoom\n📆 5/7 (목) 저녁 8시\n👇 사전 등록\nhttps://tally.so/r/Mer7LY?wh=misiso\n\n---\n\n노션 AI만으로 웹앱을 만들 수 있을까요?\n\n이번 라이브에서는 코딩을 직접 배우지 않아도\n내가 원하는 기능을 AI에게 설명하고,\n기획서부터 코드 생성, 프리뷰, 배포까지 이어가는\n‘노션 AI 기반 바이브코딩’ 흐름을 실전으로 보여드립니다.\n\n이번 영상에서 다룬 내용입니다.\n\n* 노션 AI로 웹앱을 만드는 기본 흐름\n* 코드 프리뷰어 설치 및 사용법\n* GitHub Pages 배포 방식\n* 메모리 카드 게임 만들기\n* 심리검사 웹앱 만들기\n* 노션 DB와 웹앱 연결\n* 팀 협업/할 일 관리 웹앱 예시\n* Supabase가 필요한 이유\n* Toss 결제 테스트 붙이는 흐름\n* Codex, Claude Code로 이어서 개발하는 방법\n* 자동화와 바이브코딩을 실제 사업에 연결하는 방식\n\n코딩을 몰라도 괜찮습니다.\n중요한 건 “내가 무엇을 만들고 싶은지”를 설명하는 힘입니다.\n\n---\n\n⏱️ 타임코드\n\n00:00 노션 AI + 바이브코딩 개념 설명\n01:09 오늘 라이브 목표 & 진행 방식 소개\n\n03:06 참가자 데이터 분석 (AI/노션 사용 현황)\n05:54 오늘 만들 앱 5개 전체 구조 설명\n\n08:41 GitHub 가입 및 역할 설명\n10:17 미시소 커뮤니티 구조 & 기능 소개\n\n11:22 노션 코드 프리뷰어 설치 및 연결 방법\n14:46 GitHub Pages로 웹앱 배포하기\n\n20:07 링딩던 부스트 (노션 AI 메모리/알림 해결)\n\n22:24 메모리 카드 게임 만들기 (바이브코딩 실습)\n26:49 프롬프트 작성법 핵심 (바이브코딩 본질)\n\n28:48 심리검사 웹앱 기획 (PRD 작성 방식)\n31:45 코드 구조 (HTML/CSS/JS 분리 방식)\n\n32:30 노션 AI로 기획서 → 코드 자동 생성 흐름\n36:14 코딩 몰라도 되는 이유 (피드백 기반 개발)\n\n40:38 노션 데이터베이스 생성 및 연결 구조\n46:19 노션 API 한계 (트래픽 터짐 이슈)\n48:35 Supabase 필요한 이유 (실서비스 구조)\n\n50:58 바이브코딩 효율 올리는 방법 (디자인/스킬)\n51:33 보안 구조 및 데이터 노출 방지\n\n53:19 미시소 플랫폼 실제 제작 구조\n54:37 실제 운영 비용 (Vercel + Supabase)\n\n57:52 바이브코딩에서 보안 처리 방법\n01:00:18 작은 프로젝트부터 시작해야 하는 이유\n\n01:00:52 팀 협업 SaaS 구조 (로그인/DB/권한)\n01:04:08 할일관리 시스템 구조 분석\n\n01:06:51 노션 DB → 모바일 웹앱(PWA) 활용\n01:09:46 노션 + 구글 캘린더 연동 구조\n\n01:10:20 노션 AI 채팅 세션 관리 (맥락 유지 방법)\n01:13:11 AI로 만든 시스템 확장 가능성\n\n01:14:43 알림톡 자동화 (DB → 메시지 발송 구조)\n\n01:18:26 Codex 소개 (로컬 AI 개발 방식)\n01:20:39 AI 대화 로그 저장 & 자동 기록 시스템\n\n01:21:58 GitHub 기반 작업 동기화 (멀티 환경)\n\n01:24:30 결제 시스템 붙이기 (Toss MCP)\n01:29:55 결제 구조 비교 (토스 vs 결제선생 vs 인앱)\n\n01:32:43 카카오톡 데이터 자동화 (노션/캘린더 연동)\n\n01:34:21 Supabase 연결 + API 키 구조\n01:36:02 결제 API 적용 방법 (문서 기반 구현)\n\n01:39:30 전체 구조 정리 + 실제 구현 가능 범위\n\n01:44:35 노션 vs Supabase 데이터베이스 구조 비교\n01:46:02 SEO도 AI로 처리하는 방법\n\n01:49:59 노션 ↔ Supabase 실시간 연동 한계\n\n01:50:50 노션 올인원 강의 소개\n01:54:17 자동화 시스템 실제 활용 사례\n\n01:56:44 텔레그램 → 노션 자동화 방법\n\n#바이브코딩 #notion #노션 #미리의시스템연구소 #노션AI #notionai #codex #코덱스 #미시소",
+    "thumbnailUrl": "https://i.ytimg.com/vi/9Y-F4nSAhc8/hqdefault.jpg",
     "channelTitle": "미리의 시스템 연구소 Miri System Lab",
-    "publishedAt": "2026-05-02T09:22:33Z",
-    "category": "Notion",
-    "categories": [
-      "Notion"
-    ]
-  },
-  {
-    "id": "DqogTN-iBtM",
-    "title": "[미시소] 노션으로 나만의 웹앱 만들기",
-    "description": "",
-    "thumbnailUrl": "https://i.ytimg.com/vi/DqogTN-iBtM/hqdefault.jpg",
-    "channelTitle": "미리의 시스템 연구소 Miri System Lab",
-    "publishedAt": "2026-05-02T09:22:25Z",
+    "publishedAt": "2026-05-03T06:09:33Z",
     "category": "Notion",
     "categories": [
       "Notion"
@@ -868,18 +856,6 @@
     "category": "ZenSpark",
     "categories": [
       "ZenSpark"
-    ]
-  },
-  {
-    "id": "oiPEaYj04xg",
-    "title": "씨댄스 드디어 국내출시! 실전튜토리얼 대공개 캐릭터 설정, 한국말 대사, 프롬프트 작성 꿀팁 대방출 Seedance 2.0",
-    "description": "씨댄스 2.0이 드디어 한국에서도 공식 출시되었습니다!\n\n이 영상에서 알려드리는 내용:\n✅ 실사 인물 이미지 생성 안 될 때 해결법 (캔바 그리드 꿀팁)\n✅ 미드저니 + 나노바나나로 캐릭터 & 씬 이미지 만드는 법\n✅ 옴니 레퍼런스 / 첫번째·마지막 프레임 / 멀티프레임 사용법\n✅ 한국어 대사 연기시키는 프롬프트 꿀팁\n✅ 타임스탬프 & 네거티브 프롬프트 활용법\n✅ Fast vs 스탠다드 크레딧 비교\n\n⏱️Chapters \n0:02 소개 및 제작 워크플로우\n2:36 캐릭터 이미지 설정\n3:29 이미지 생성 오류 해결\n4:50 옴니 레퍼런스 및 영상 생성\n7:23 한국어 대사 연기\n10:06 디테일 설정\n11:57 영상 연결 기술\n13:54 텍스트 영상 생성\n14:39 요금제 및 모델 설정\n\n\n\n📌 더보기\n👇 빨간 그리드 파일 무료 다운로드\nhttps://drive.google.com/file/d/1BE7gAn4hh9kCFSLmt7ynYIq2r2tuYcE-/view?usp=sharing\n👇 드리미나 바로가기\nhttps://dreamina.capcut.com/ai-tool/generate\n\n👇 AI 영상 수업 안내\nhttps://blog.naver.com/nice554/224198172595\n\n💬 씨댄스 써보시고 궁금한 점은 댓글로 남겨주세요!\n\n\n\n\n#씨댄스2 #Seedance2 #AI영상 #드리미나 #AI영상만들기\n#인공지능영상 #미드저니 #나노바나나 #AI튜토리얼",
-    "thumbnailUrl": "https://i.ytimg.com/vi/oiPEaYj04xg/hqdefault.jpg",
-    "channelTitle": "좋아하는 일로 먹고 살기",
-    "publishedAt": "2026-04-03T08:15:00Z",
-    "category": "Seedance",
-    "categories": [
-      "Seedance"
     ]
   }
 ]
